@@ -1,0 +1,2340 @@
+{
+    "data": [
+        {
+            "id": "3504565",
+            "type": "jobs",
+            "links": {
+                "careersite-job-url": "https://karriere.gus-group.com/jobs/3504565-ux-ui-developer-m-f-d",
+                "careersite-job-apply-url": "https://karriere.gus-group.com/jobs/3504565-ux-ui-developer-m-f-d/applications/new",
+                "careersite-job-apply-iframe-url": "https://karriere.gus-group.com/jobs/3504565-ux-ui-developer-m-f-d/applications/new?iframe=true",
+                "self": "https://api.teamtailor.com/v1/jobs/3504565"
+            },
+            "attributes": {
+                "apply-button-text": "",
+                "body": "<p> </p><p>GUS ERP GmbH has been a sought-after solution partner in the ERP environment since 1980. With the GUS-OS Suite, as a process specialist, we provide a web-based business solution for the pharmaceutical, medical technology, chemical, cosmetics, food and logistics industries. Our company is a member of the GUS Group. Over 660 employees of the GUS Group support more than 1,900 mostly medium-sized companies as well as corporations and authorities.</p><p>To support group-wide software development projects, we are looking for a UI / UX developer (m/f/d) at the Cologne, Munich and Hamburg locations as soon as possible.</p><h2>Your task:</h2><ul>\n<li>You take responsibility for the UX/UI design of our current and future products and coordinate requirements and optimization potential with stakeholders</li>\n<li>You implement prototypes and complete solutions in the core framework yourself and develop UX specifications for our development teams</li>\n<li>You coach our product managers and developers regarding optimal user experience so that our customers can work even more efficiently</li>\n</ul>\n\n\n<h2>What inspires us:</h2><ul>\n<li>A successfully completed degree in the areas of media and design management or user experience design or corresponding training </li>\n<li>Significant professional experience as a UX designer</li>\n<li>Strong knowledge of implementing designs and front ends with CSS, HTML, JavaScript</li>\n<li>A strong sense of design, fonts, colors and everything that the typical developer doesn't notice </li>\n<li>A communicative style that makes you a team player, coach and motivator </li>\n</ul>\n\n\n\n\n<h2>Awaiting you:</h2><ul>\n<li>An exciting and broad range of tasks within flat hierarchies in a high-growth environment with numerous development and design opportunities</li>\n<li>Comprehensive induction based on a training plan supported by long-standing employees</li>\n<li>Open corporate communication characterized by a first-name culture</li>\n<li>30 days of annual vacation, flexible working hours with the possibility of mobile working, discounts through corporate benefits, subsidies for sports activities through the Urban Sports Club as well as the possibility of a job bike and much more..</li>\n</ul>\n\n\n<p>Of course, we don't want to tell you everything in this job advertisement. In addition to the task and offer mentioned above, there are other exciting things to tell. If we have piqued your interest and you would like to know more details,  <strong>apply now!</strong></p><p>We look forward to your application, to which you kindly include your salary expectations and your earliest possible starting date. For further information, please visit our homepage <a href=\"www.gus-erp.com\" target=\"_blank\">www.gus-erp.com</a>.</p><p><br></p>",
+                "end-date": null,
+                "human-status": "published",
+                "internal": false,
+                "language-code": "",
+                "picture": {
+                    "original": "https://images.teamtailor-cdn.com/images/s3/teamtailor-production/original-v3/image_uploads/ecc04197-ee66-4537-a155-09cecea8baeb/original.jpeg",
+                    "standard": "https://images.teamtailor-cdn.com/images/s3/teamtailor-production/hero_picture_large-v6/image_uploads/ecc04197-ee66-4537-a155-09cecea8baeb/original.jpeg",
+                    "thumb": "https://images.teamtailor-cdn.com/images/s3/teamtailor-production/user_picture_800-v9/image_uploads/ecc04197-ee66-4537-a155-09cecea8baeb/original.jpeg"
+                },
+                "pinned": false,
+                "start-date": null,
+                "status": "open",
+                "tags": [],
+                "title": "UX/UI Developer (m/f/d)",
+                "internal-name": "UX/UI Developer (m/f/d)",
+                "pitch": "",
+                "external-application-url": null,
+                "name-requirement": "required",
+                "resume-requirement": "required",
+                "cover-letter-requirement": "optional",
+                "phone-requirement": "required",
+                "created-at": "2024-01-10T07:44:37.071+01:00",
+                "updated-at": "2024-01-10T07:50:04.466+01:00",
+                "sharing-image-layout": "default",
+                "mailbox": "job-0adcca85-85de-4da0-8a42-d8451780c35c@inbound.teamtailor.com",
+                "remote-status": "fully",
+                "currency": "",
+                "recruiter-email": "antonia.schmidt@gus-group.com"
+            },
+            "relationships": {
+                "activities": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504565/relationships/activities",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504565/activities"
+                    }
+                },
+                "department": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504565/relationships/department",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504565/department"
+                    }
+                },
+                "role": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504565/relationships/role",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504565/role"
+                    }
+                },
+                "location": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504565/relationships/location",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504565/location"
+                    }
+                },
+                "locations": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504565/relationships/locations",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504565/locations"
+                    }
+                },
+                "regions": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504565/relationships/regions",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504565/regions"
+                    }
+                },
+                "user": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504565/relationships/user",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504565/user"
+                    }
+                },
+                "questions": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504565/relationships/questions",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504565/questions"
+                    }
+                },
+                "candidates": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504565/relationships/candidates",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504565/candidates"
+                    }
+                },
+                "stages": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504565/relationships/stages",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504565/stages"
+                    }
+                },
+                "colleagues": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504565/relationships/colleagues",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504565/colleagues"
+                    }
+                },
+                "team-memberships": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504565/relationships/team-memberships",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504565/team-memberships"
+                    }
+                },
+                "picked-questions": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504565/relationships/picked-questions",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504565/picked-questions"
+                    }
+                },
+                "requisition": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504565/relationships/requisition",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504565/requisition"
+                    }
+                },
+                "custom-fields": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504565/relationships/custom-fields",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504565/custom-fields"
+                    }
+                },
+                "custom-field-values": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504565/relationships/custom-field-values",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504565/custom-field-values"
+                    }
+                },
+                "team": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504565/relationships/team",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504565/team"
+                    }
+                }
+            },
+            "departments_data": {
+                "data": {
+                    "id": "228496",
+                    "type": "departments",
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/departments/228496"
+                    },
+                    "attributes": {
+                        "name": "Projektbereich"
+                    },
+                    "relationships": {
+                        "manager": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/departments/228496/relationships/manager",
+                                "related": "https://api.teamtailor.com/v1/departments/228496/manager"
+                            }
+                        },
+                        "roles": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/departments/228496/relationships/roles",
+                                "related": "https://api.teamtailor.com/v1/departments/228496/roles"
+                            }
+                        },
+                        "teams": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/departments/228496/relationships/teams",
+                                "related": "https://api.teamtailor.com/v1/departments/228496/teams"
+                            }
+                        }
+                    }
+                },
+                "meta": {
+                    "texts": {
+                        "name-singular": "department",
+                        "name-plural": "departments",
+                        "all": "Alle departments"
+                    }
+                }
+            },
+            "locations_data": {
+                "data": [
+                    {
+                        "id": "462272",
+                        "type": "locations",
+                        "links": {
+                            "self": "https://api.teamtailor.com/v1/locations/462272"
+                        },
+                        "attributes": {
+                            "address": null,
+                            "city": "Hamburg",
+                            "country": "Germany",
+                            "email": null,
+                            "headquarters": false,
+                            "lat": "53.5488282",
+                            "long": "9.987170299999999",
+                            "name": null,
+                            "phone": null,
+                            "zip": null
+                        },
+                        "relationships": {
+                            "teams": {
+                                "links": {
+                                    "self": "https://api.teamtailor.com/v1/locations/462272/relationships/teams",
+                                    "related": "https://api.teamtailor.com/v1/locations/462272/teams"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "id": "462274",
+                        "type": "locations",
+                        "links": {
+                            "self": "https://api.teamtailor.com/v1/locations/462274"
+                        },
+                        "attributes": {
+                            "address": null,
+                            "city": "Cologne",
+                            "country": "Germany",
+                            "email": null,
+                            "headquarters": true,
+                            "lat": "50.9386437",
+                            "long": "6.9538847",
+                            "name": "Köln",
+                            "phone": null,
+                            "zip": "50667"
+                        },
+                        "relationships": {
+                            "teams": {
+                                "links": {
+                                    "self": "https://api.teamtailor.com/v1/locations/462274/relationships/teams",
+                                    "related": "https://api.teamtailor.com/v1/locations/462274/teams"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "id": "462273",
+                        "type": "locations",
+                        "links": {
+                            "self": "https://api.teamtailor.com/v1/locations/462273"
+                        },
+                        "attributes": {
+                            "address": null,
+                            "city": "Munich",
+                            "country": "Germany",
+                            "email": null,
+                            "headquarters": false,
+                            "lat": "48.1447027",
+                            "long": "11.5821606",
+                            "name": "München",
+                            "phone": null,
+                            "zip": "80539"
+                        },
+                        "relationships": {
+                            "teams": {
+                                "links": {
+                                    "self": "https://api.teamtailor.com/v1/locations/462273/relationships/teams",
+                                    "related": "https://api.teamtailor.com/v1/locations/462273/teams"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "meta": {
+                    "texts": {
+                        "all": "Alle Standorte"
+                    },
+                    "record-count": 3,
+                    "page-count": 1
+                },
+                "links": {
+                    "first": "https://api.teamtailor.com/v1/jobs/3504565/locations?page%5Bnumber%5D=1&page%5Bsize%5D=10",
+                    "last": "https://api.teamtailor.com/v1/jobs/3504565/locations?page%5Bnumber%5D=1&page%5Bsize%5D=10"
+                }
+            },
+            "roles_data": {
+                "data": {
+                    "id": "633432",
+                    "type": "roles",
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/roles/633432"
+                    },
+                    "attributes": {
+                        "name": "ERP-Beratung"
+                    },
+                    "relationships": {
+                        "department": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/roles/633432/relationships/department",
+                                "related": "https://api.teamtailor.com/v1/roles/633432/department"
+                            }
+                        },
+                        "teams": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/roles/633432/relationships/teams",
+                                "related": "https://api.teamtailor.com/v1/roles/633432/teams"
+                            }
+                        }
+                    }
+                },
+                "meta": {
+                    "texts": {
+                        "all": "Alle Rollen"
+                    }
+                }
+            }
+        },
+        {
+            "id": "3504557",
+            "type": "jobs",
+            "links": {
+                "careersite-job-url": "https://karriere.gus-group.com/jobs/3504557-inhouse-software-developer-m-w-d",
+                "careersite-job-apply-url": "https://karriere.gus-group.com/jobs/3504557-inhouse-software-developer-m-w-d/applications/new",
+                "careersite-job-apply-iframe-url": "https://karriere.gus-group.com/jobs/3504557-inhouse-software-developer-m-w-d/applications/new?iframe=true",
+                "self": "https://api.teamtailor.com/v1/jobs/3504557"
+            },
+            "attributes": {
+                "apply-button-text": "",
+                "body": "<p>GUS ERP GmbH has been a sought-after solution partner in the ERP environment since 1980. With the GUS-OS Suite, as a process specialist, we provide a web-based business solution for the pharmaceutical, medical technology, chemical, cosmetics, food and logistics industries. Our company is a member of the GUS Group. Over 660 employees of the GUS Group support more than 1,900 mostly medium-sized companies as well as corporations and authorities.</p><p>For our Let's connect team, which is responsible for the further development and operation of the application software we use internally, we are looking for a software developer (m/f/d) in Cologne as soon as possible.</p><p> </p><p><strong></strong></p><p><strong>Your task:</strong><br></p>\n\n\n<ul>\n<li>Further development of the software to support internal processes</li>\n<li>Setting up and maintaining the interfaces between the different systems used internally</li>\n<li>Bug fixing, maintenance and internal support</li>\n<li>Supporting users with special evaluations and requirements</li>\n<li>Specification of area requirements and their implementation into functional solutions</li>\n<li>Requirements analyzes and effort estimates</li>\n<li>Planning, conception and implementation of programming requirements</li>\n</ul><ul></ul><p><strong></strong></p><p><strong>What inspires us:</strong></p><p> </p><ul>\n<li>Successfully completed vocational training in the technical or IT sector</li>\n<li>Sound knowledge of an object-oriented programming language, ideally Java</li>\n<li>Knowledge of SQL, JSP, HTML, Java Script, Eclipse, Tomcat technologies is desirable</li>\n<li>Interest in business processes and (financial) economic relationships</li>\n<li>Desire to advance the internal processes of GUS within the GUS-OS Suite</li>\n</ul><ul>\n\n</ul><p><strong></strong></p><p><strong>We offer:</strong></p><p> </p><ul>\n<li>An exciting and broad range of tasks within flat hierarchies in a high-growth environment with numerous design options</li>\n<li>To optimally and individually challenge and develop both career starters and experienced professionals</li>\n<li>Comprehensive induction based on a training plan supported by a mentor</li>\n<li>Open corporate communication characterized by a first-name culture</li>\n<li>30 days of annual vacation, flexible working hours with the possibility of mobile working, discounts through corporate benefits, subsidies for sports activities through the Urban Sports Club as well as the possibility of a job bike and much more...</li>\n</ul><p>Of course, we don't want to tell you everything in this job advertisement, there is still a lot to tell. If you would like to know more interesting details, <strong>apply now!</strong></p><p>We look forward to your application, to which you kindly include your salary expectations and your earliest possible starting date. For further information you can visit our homepage <a href=\"www.gus-erp.com\" target=\"_blank\">www.gus-erp.com</a>.</p><p><br></p>",
+                "end-date": null,
+                "human-status": "published",
+                "internal": false,
+                "language-code": "",
+                "picture": {
+                    "original": "https://images.teamtailor-cdn.com/images/s3/teamtailor-production/original-v3/image_uploads/ecc04197-ee66-4537-a155-09cecea8baeb/original.jpeg",
+                    "standard": "https://images.teamtailor-cdn.com/images/s3/teamtailor-production/hero_picture_large-v6/image_uploads/ecc04197-ee66-4537-a155-09cecea8baeb/original.jpeg",
+                    "thumb": "https://images.teamtailor-cdn.com/images/s3/teamtailor-production/user_picture_800-v9/image_uploads/ecc04197-ee66-4537-a155-09cecea8baeb/original.jpeg"
+                },
+                "pinned": false,
+                "start-date": null,
+                "status": "open",
+                "tags": [],
+                "title": "(Inhouse) Software Developer (m/w/d)",
+                "internal-name": "(inhouse) Software Developer (m/f/d)",
+                "pitch": "",
+                "external-application-url": null,
+                "name-requirement": "required",
+                "resume-requirement": "required",
+                "cover-letter-requirement": "optional",
+                "phone-requirement": "required",
+                "created-at": "2024-01-10T07:33:14.682+01:00",
+                "updated-at": "2024-01-10T07:45:04.452+01:00",
+                "sharing-image-layout": "default",
+                "mailbox": "job-1ad02ae1-17b1-4272-ace0-a945ba325577@inbound.teamtailor.com",
+                "remote-status": "hybrid",
+                "currency": "",
+                "recruiter-email": "antonia.schmidt@gus-group.com"
+            },
+            "relationships": {
+                "activities": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504557/relationships/activities",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504557/activities"
+                    }
+                },
+                "department": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504557/relationships/department",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504557/department"
+                    }
+                },
+                "role": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504557/relationships/role",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504557/role"
+                    }
+                },
+                "location": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504557/relationships/location",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504557/location"
+                    }
+                },
+                "locations": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504557/relationships/locations",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504557/locations"
+                    }
+                },
+                "regions": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504557/relationships/regions",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504557/regions"
+                    }
+                },
+                "user": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504557/relationships/user",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504557/user"
+                    }
+                },
+                "questions": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504557/relationships/questions",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504557/questions"
+                    }
+                },
+                "candidates": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504557/relationships/candidates",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504557/candidates"
+                    }
+                },
+                "stages": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504557/relationships/stages",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504557/stages"
+                    }
+                },
+                "colleagues": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504557/relationships/colleagues",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504557/colleagues"
+                    }
+                },
+                "team-memberships": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504557/relationships/team-memberships",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504557/team-memberships"
+                    }
+                },
+                "picked-questions": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504557/relationships/picked-questions",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504557/picked-questions"
+                    }
+                },
+                "requisition": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504557/relationships/requisition",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504557/requisition"
+                    }
+                },
+                "custom-fields": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504557/relationships/custom-fields",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504557/custom-fields"
+                    }
+                },
+                "custom-field-values": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504557/relationships/custom-field-values",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504557/custom-field-values"
+                    }
+                },
+                "team": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/3504557/relationships/team",
+                        "related": "https://api.teamtailor.com/v1/jobs/3504557/team"
+                    }
+                }
+            },
+            "departments_data": {
+                "data": {
+                    "id": "228492",
+                    "type": "departments",
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/departments/228492"
+                    },
+                    "attributes": {
+                        "name": "IT"
+                    },
+                    "relationships": {
+                        "manager": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/departments/228492/relationships/manager",
+                                "related": "https://api.teamtailor.com/v1/departments/228492/manager"
+                            }
+                        },
+                        "roles": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/departments/228492/relationships/roles",
+                                "related": "https://api.teamtailor.com/v1/departments/228492/roles"
+                            }
+                        },
+                        "teams": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/departments/228492/relationships/teams",
+                                "related": "https://api.teamtailor.com/v1/departments/228492/teams"
+                            }
+                        }
+                    }
+                },
+                "meta": {
+                    "texts": {
+                        "name-singular": "department",
+                        "name-plural": "departments",
+                        "all": "Alle departments"
+                    }
+                }
+            },
+            "locations_data": {
+                "data": [
+                    {
+                        "id": "462274",
+                        "type": "locations",
+                        "links": {
+                            "self": "https://api.teamtailor.com/v1/locations/462274"
+                        },
+                        "attributes": {
+                            "address": null,
+                            "city": "Cologne",
+                            "country": "Germany",
+                            "email": null,
+                            "headquarters": true,
+                            "lat": "50.9386437",
+                            "long": "6.9538847",
+                            "name": "Köln",
+                            "phone": null,
+                            "zip": "50667"
+                        },
+                        "relationships": {
+                            "teams": {
+                                "links": {
+                                    "self": "https://api.teamtailor.com/v1/locations/462274/relationships/teams",
+                                    "related": "https://api.teamtailor.com/v1/locations/462274/teams"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "meta": {
+                    "texts": {
+                        "all": "Alle Standorte"
+                    },
+                    "record-count": 1,
+                    "page-count": 1
+                },
+                "links": {
+                    "first": "https://api.teamtailor.com/v1/jobs/3504557/locations?page%5Bnumber%5D=1&page%5Bsize%5D=10",
+                    "last": "https://api.teamtailor.com/v1/jobs/3504557/locations?page%5Bnumber%5D=1&page%5Bsize%5D=10"
+                }
+            },
+            "roles_data": {
+                "data": null,
+                "meta": {
+                    "texts": {
+                        "all": "Alle Rollen"
+                    }
+                }
+            }
+        },
+        {
+            "id": "2799373",
+            "type": "jobs",
+            "links": {
+                "careersite-job-url": "https://karriere.gus-group.com/jobs/2799373-1st-level-supporter-m-w-d",
+                "careersite-job-apply-url": "https://karriere.gus-group.com/jobs/2799373-1st-level-supporter-m-w-d/applications/new",
+                "careersite-job-apply-iframe-url": "https://karriere.gus-group.com/jobs/2799373-1st-level-supporter-m-w-d/applications/new?iframe=true",
+                "self": "https://api.teamtailor.com/v1/jobs/2799373"
+            },
+            "attributes": {
+                "apply-button-text": "",
+                "body": "<p>Die Sopra System GmbH stellt Software-Lösungen und Cloud-Services für die Nahrungs- und Genussmittelbranche bereit, die alle relevanten Unternehmensprozesse vollumfänglich abbilden. Speziell in der Milchindustrie ist Sopra mit dem Erzeugerverrechnungssystem (EVS) mit über 100 Kunden Marktführer in der D/A/CH Region. Es werden ca. 110.000 Erzeuger über das EVS abgerechnet. Seine Produktpalette rundet Sopra durch HR-Software, Middleware-Lösungen, Hosting-Angebote sowie dem Warenwirtschaftssystem Sopra ERP ab.  Neben den Geschäftsprozessen im Verwaltungsbereich (Einkauf, Verkauf, Finanzbuchhaltung) liegt ein weiterer Schwerpunkt auf dem Bereich MES (Manufacturing Execution System) und die dazugehörigen komplexen Anbindungen anderer Systeme unserer Kunden im Rahmen von Industrie 4.0 Projekten.</p><p>Das Unternehmen ist Mitglied der GUS Group, die ganzheitlich integrierte Software-Lösungen für die Prozessindustrie (Pharma, Medizintechnik, Chemie, Kosmetik, Food, Lebensmittel-Handel) und Logistik entwickelt und implementiert. Über 660 Mitarbeiter der GUS Group betreuen mehr als 2.00 großteils mittelständische Unternehmen sowie Konzerne und Behörden.</p><p>Zur Erweiterung des Teams bei der Sopra System GmbH suchen am Standorten München oder Hamburg zum nächstmöglichen Zeitpunkt eine/n 1st Level Supporter/in (m/w/d).</p><p><strong>Deine Aufgabe: </strong></p><ul>\n<li>Du bist erster Ansprechpartner für unsere Kunden, beantwortest Fragen und löst technische und produktspezifische Probleme serviceorientiert</li>\n<li>Supportanfragen werden von dir via Telefon oder E-Mail angenommen, beantwortet oder weitergeleitet</li>\n<li>Du unterstützt bei der Erstellung von Dokumentationen zu den verschiedenen Funktionen in unserer Software</li>\n</ul><p><strong>Uns begeistert: </strong></p><ul>\n<li>Erste Berufserfahrung im Kundenservice</li>\n<li>Dich begeistert, Ansprechpartner zu sein und Hilfestellungen zu geben</li>\n<li>Sehr gute Deutschkenntnisse in Wort und Schrift</li>\n<li>Du bist engagiert, hilfsbereit und hast Spaß daran Herausforderungen eigenständig zu lösen</li>\n</ul><p><strong>Dich erwartet: </strong></p><ul>\n<li>Ein spannendes und breites Aufgabenspektrum innerhalb flacher Hierarchien in einem wachstumsstarken Umfeld mit zahlreichen Gestaltungsmöglichkeiten</li>\n<li>Eine optimale und individuelle Forderung und Weiterentwicklung sowohl für Berufseinsteiger als auch für Berufserfahrende</li>\n<li>Eine offene Unternehmenskommunikation geprägt durch eine Duz-Kultur</li>\n<li>Ein großartiges Team, 30 Tage Jahresurlaub, flexible Arbeitszeiten mit der Möglichkeit auf mobiles Arbeiten, Zuschüsse zu Sportangeboten über Urban Sports Club, das Angebot neue Sprachen zu lernen und vieles mehr…</li>\n</ul><p>Natürlich wollen wir dir nicht alles in dieser Stellenausschreibung verraten. Neben der oben genannten Aufgabe und dem Angebot gibt es noch weitere spannende Dinge zu erzählen. Wenn wir dein Interesse geweckt haben und du weitere Details wissen möchtest, <strong>bewirb dich jetzt!</strong></p><p>Wir sehen mit Spannung deiner Bewerbung entgegen, der du freundlicherweise Deine Gehaltsvorstellung sowie Deinen frühestmöglichen Eintrittstermin beifügst. Für weitere Informationen besuche gerne unsere Homepage www.sopra-system.com.</p>",
+                "end-date": null,
+                "human-status": "published",
+                "internal": false,
+                "language-code": "",
+                "picture": {
+                    "original": "https://images.teamtailor-cdn.com/images/s3/teamtailor-production/original-v3/image_uploads/0804f4d5-cb67-4d77-80d7-8ad4a0545d08/original.jpeg",
+                    "standard": "https://images.teamtailor-cdn.com/images/s3/teamtailor-production/hero_picture_large-v6/image_uploads/0804f4d5-cb67-4d77-80d7-8ad4a0545d08/original.jpeg",
+                    "thumb": "https://images.teamtailor-cdn.com/images/s3/teamtailor-production/user_picture_800-v9/image_uploads/0804f4d5-cb67-4d77-80d7-8ad4a0545d08/original.jpeg"
+                },
+                "pinned": false,
+                "start-date": null,
+                "status": "open",
+                "tags": [],
+                "title": "1st Level Supporter (m/w/d)",
+                "internal-name": "1st Level Supporter (m/w/d)",
+                "pitch": "",
+                "external-application-url": "",
+                "name-requirement": "required",
+                "resume-requirement": "required",
+                "cover-letter-requirement": "optional",
+                "phone-requirement": "required",
+                "created-at": "2023-05-05T15:39:34.113+02:00",
+                "updated-at": "2023-05-10T07:25:24.721+02:00",
+                "sharing-image-layout": "default",
+                "mailbox": "job-7e0d1f94-f274-4746-a6f8-8d910a2d915f@inbound.teamtailor.com",
+                "remote-status": "hybrid",
+                "currency": "",
+                "recruiter-email": "antonia.schmidt@gus-group.com"
+            },
+            "relationships": {
+                "activities": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799373/relationships/activities",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799373/activities"
+                    }
+                },
+                "department": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799373/relationships/department",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799373/department"
+                    }
+                },
+                "role": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799373/relationships/role",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799373/role"
+                    }
+                },
+                "location": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799373/relationships/location",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799373/location"
+                    }
+                },
+                "locations": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799373/relationships/locations",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799373/locations"
+                    }
+                },
+                "regions": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799373/relationships/regions",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799373/regions"
+                    }
+                },
+                "user": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799373/relationships/user",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799373/user"
+                    }
+                },
+                "questions": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799373/relationships/questions",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799373/questions"
+                    }
+                },
+                "candidates": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799373/relationships/candidates",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799373/candidates"
+                    }
+                },
+                "stages": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799373/relationships/stages",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799373/stages"
+                    }
+                },
+                "colleagues": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799373/relationships/colleagues",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799373/colleagues"
+                    }
+                },
+                "team-memberships": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799373/relationships/team-memberships",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799373/team-memberships"
+                    }
+                },
+                "picked-questions": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799373/relationships/picked-questions",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799373/picked-questions"
+                    }
+                },
+                "requisition": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799373/relationships/requisition",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799373/requisition"
+                    }
+                },
+                "custom-fields": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799373/relationships/custom-fields",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799373/custom-fields"
+                    }
+                },
+                "custom-field-values": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799373/relationships/custom-field-values",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799373/custom-field-values"
+                    }
+                },
+                "team": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799373/relationships/team",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799373/team"
+                    }
+                }
+            },
+            "departments_data": {
+                "data": {
+                    "id": "228496",
+                    "type": "departments",
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/departments/228496"
+                    },
+                    "attributes": {
+                        "name": "Projektbereich"
+                    },
+                    "relationships": {
+                        "manager": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/departments/228496/relationships/manager",
+                                "related": "https://api.teamtailor.com/v1/departments/228496/manager"
+                            }
+                        },
+                        "roles": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/departments/228496/relationships/roles",
+                                "related": "https://api.teamtailor.com/v1/departments/228496/roles"
+                            }
+                        },
+                        "teams": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/departments/228496/relationships/teams",
+                                "related": "https://api.teamtailor.com/v1/departments/228496/teams"
+                            }
+                        }
+                    }
+                },
+                "meta": {
+                    "texts": {
+                        "name-singular": "department",
+                        "name-plural": "departments",
+                        "all": "Alle departments"
+                    }
+                }
+            },
+            "locations_data": {
+                "data": [
+                    {
+                        "id": "462289",
+                        "type": "locations",
+                        "links": {
+                            "self": "https://api.teamtailor.com/v1/locations/462289"
+                        },
+                        "attributes": {
+                            "address": null,
+                            "city": "Ismaning",
+                            "country": "Germany",
+                            "email": null,
+                            "headquarters": false,
+                            "lat": "48.2320646",
+                            "long": "11.7067787",
+                            "name": "Ismaning",
+                            "phone": null,
+                            "zip": "85737"
+                        },
+                        "relationships": {
+                            "teams": {
+                                "links": {
+                                    "self": "https://api.teamtailor.com/v1/locations/462289/relationships/teams",
+                                    "related": "https://api.teamtailor.com/v1/locations/462289/teams"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "id": "462272",
+                        "type": "locations",
+                        "links": {
+                            "self": "https://api.teamtailor.com/v1/locations/462272"
+                        },
+                        "attributes": {
+                            "address": null,
+                            "city": "Hamburg",
+                            "country": "Germany",
+                            "email": null,
+                            "headquarters": false,
+                            "lat": "53.5488282",
+                            "long": "9.987170299999999",
+                            "name": null,
+                            "phone": null,
+                            "zip": null
+                        },
+                        "relationships": {
+                            "teams": {
+                                "links": {
+                                    "self": "https://api.teamtailor.com/v1/locations/462272/relationships/teams",
+                                    "related": "https://api.teamtailor.com/v1/locations/462272/teams"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "meta": {
+                    "texts": {
+                        "all": "Alle Standorte"
+                    },
+                    "record-count": 2,
+                    "page-count": 1
+                },
+                "links": {
+                    "first": "https://api.teamtailor.com/v1/jobs/2799373/locations?page%5Bnumber%5D=1&page%5Bsize%5D=10",
+                    "last": "https://api.teamtailor.com/v1/jobs/2799373/locations?page%5Bnumber%5D=1&page%5Bsize%5D=10"
+                }
+            },
+            "roles_data": {
+                "data": null,
+                "meta": {
+                    "texts": {
+                        "all": "Alle Rollen"
+                    }
+                }
+            }
+        },
+        {
+            "id": "2799273",
+            "type": "jobs",
+            "links": {
+                "careersite-job-url": "https://karriere.gus-group.com/jobs/2799273-applikationsspezialist-m-w-d-fur-atlassian-produkte",
+                "careersite-job-apply-url": "https://karriere.gus-group.com/jobs/2799273-applikationsspezialist-m-w-d-fur-atlassian-produkte/applications/new",
+                "careersite-job-apply-iframe-url": "https://karriere.gus-group.com/jobs/2799273-applikationsspezialist-m-w-d-fur-atlassian-produkte/applications/new?iframe=true",
+                "self": "https://api.teamtailor.com/v1/jobs/2799273"
+            },
+            "attributes": {
+                "apply-button-text": "",
+                "body": "<p>Die GUS ERP GmbH ist seit 1980 ein gefragter Lösungspartner im ERP-Umfeld. Mit der GUS- OS Suite stellen wir als Prozessspezialist eine webbasierte Unternehmenslösung für die Branchen Pharma, Medizintechnik, Chemie, Kosmetik, Food sowie für die Logistik bereit. Unser Unternehmen ist Mitglied der GUS Group. Über 660 Mitarbeiter der GUS Group betreuen mehr als 1.900 größtenteils mittelständische Unternehmen sowie Konzerne und Behörden.</p><p>Für unsere interne IT suchen wir am Standort in Köln zum nächstmöglichen Zeitpunkt in Vollzeit einen Applikationsspezialisten (m/w/d).</p><p><strong>Deine Aufgabe: </strong></p><ul>\n<li>Einführung und Weiterentwicklung von Prozessen in Jira und Confluence</li>\n<li>Planung und Durchführung von Installationen, Migrationen und Upgrades</li>\n<li>Beratung der Fachbereiche bezüglich best-practices und neuer Möglichkeiten im Produkt</li>\n<li>Die kontinuierliche Suche nach Verbesserungspotenzial</li>\n<li>Schulung der Key-User im Umgang mit den Werkzeugen, die durch dich bereitgestellt werden</li>\n</ul><p><strong>Uns begeistert: </strong></p><ul>\n<li>Studium der Informatik, einer verwandten Fachrichtung oder eine vergleichbare Qualifikation im IT- Bereich</li>\n<li>Sehr gute Kenntnisse im Umgang mit Atlassian Produkten und die praktische Erfahrung in der Administration und Konfiguration</li>\n<li>Nachweisbares Verständnis für Softwareentwicklungen und/oder ITSM, um unsere Anforderungen in die entsprechende Lösung zu verwandeln</li>\n<li>Erfahrung in der Durchführung von Projekten – idealerweise nach agilem Vorgehen</li>\n<li>Eine kommunikative Art, die dich zum Teamplayer, Coach und Motivator macht</li>\n<li>Der Blick über den Tellerrand</li>\n</ul><p>Dich erwartet: </p><ul>\n<li>Ein spannendes und breites Aufgabenspektrum innerhalb flacher Hierarchien in einem wachstumsstarken Umfeld mit zahlreichen Entwicklungs- und Gestaltungsmöglichkeiten</li>\n<li>Umfassende Einarbeitung unterstützt durch einen Mentor</li>\n<li>Eine offene Unternehmenskommunikation geprägt durch eine Duz-Kultur</li>\n<li>30 Tage Jahresurlaub, flexible Arbeitszeiten mit der Möglichkeit auf mobiles Arbeiten, Rabatte über Corporate Benefits, Zuschüsse zu Sportangeboten über Urban Sports Club sowie die Möglichkeit auf ein JobRad und einiges mehr…</li>\n</ul><p>Natürlich wollen wir dir nicht alles in dieser Stellenausschreibung verraten. Neben der oben genannten Aufgabe und dem Angebot gibt es noch weitere spannende Dinge zu erzählen. Wenn wir dein Interesse geweckt haben und du weitere Details wissen möchtest, <strong>bewirb dich jetzt!</strong></p><p>Wir sehen mit Spannung deiner Bewerbung entgegen, der du freundlicherweise deine Gehaltsvorstellung sowie deinen frühestmöglichen Eintrittstermin beifügst. Für weitere Informationen besuche gerne unsere Homepage www.gus-erp.com.<strong></strong></p>",
+                "end-date": null,
+                "human-status": "published",
+                "internal": false,
+                "language-code": "",
+                "picture": {
+                    "original": "https://images.teamtailor-cdn.com/images/s3/teamtailor-production/original-v3/image_uploads/ecc04197-ee66-4537-a155-09cecea8baeb/original.jpeg",
+                    "standard": "https://images.teamtailor-cdn.com/images/s3/teamtailor-production/hero_picture_large-v6/image_uploads/ecc04197-ee66-4537-a155-09cecea8baeb/original.jpeg",
+                    "thumb": "https://images.teamtailor-cdn.com/images/s3/teamtailor-production/user_picture_800-v9/image_uploads/ecc04197-ee66-4537-a155-09cecea8baeb/original.jpeg"
+                },
+                "pinned": false,
+                "start-date": null,
+                "status": "open",
+                "tags": [],
+                "title": "Applikationsspezialist (m/w/d) für Atlassian Produkte",
+                "internal-name": "Applikationsspezialist (m/w/d) für Atlassian Produkte",
+                "pitch": "",
+                "external-application-url": "",
+                "name-requirement": "required",
+                "resume-requirement": "required",
+                "cover-letter-requirement": "optional",
+                "phone-requirement": "required",
+                "created-at": "2023-05-05T15:24:18.250+02:00",
+                "updated-at": "2023-05-05T15:30:10.346+02:00",
+                "sharing-image-layout": "default",
+                "mailbox": "job-2925e7c8-e015-4e3a-a828-2d6fcf7abd1b@inbound.teamtailor.com",
+                "remote-status": "hybrid",
+                "currency": "",
+                "recruiter-email": "antonia.schmidt@gus-group.com"
+            },
+            "relationships": {
+                "activities": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799273/relationships/activities",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799273/activities"
+                    }
+                },
+                "department": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799273/relationships/department",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799273/department"
+                    }
+                },
+                "role": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799273/relationships/role",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799273/role"
+                    }
+                },
+                "location": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799273/relationships/location",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799273/location"
+                    }
+                },
+                "locations": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799273/relationships/locations",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799273/locations"
+                    }
+                },
+                "regions": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799273/relationships/regions",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799273/regions"
+                    }
+                },
+                "user": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799273/relationships/user",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799273/user"
+                    }
+                },
+                "questions": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799273/relationships/questions",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799273/questions"
+                    }
+                },
+                "candidates": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799273/relationships/candidates",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799273/candidates"
+                    }
+                },
+                "stages": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799273/relationships/stages",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799273/stages"
+                    }
+                },
+                "colleagues": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799273/relationships/colleagues",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799273/colleagues"
+                    }
+                },
+                "team-memberships": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799273/relationships/team-memberships",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799273/team-memberships"
+                    }
+                },
+                "picked-questions": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799273/relationships/picked-questions",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799273/picked-questions"
+                    }
+                },
+                "requisition": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799273/relationships/requisition",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799273/requisition"
+                    }
+                },
+                "custom-fields": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799273/relationships/custom-fields",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799273/custom-fields"
+                    }
+                },
+                "custom-field-values": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799273/relationships/custom-field-values",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799273/custom-field-values"
+                    }
+                },
+                "team": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799273/relationships/team",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799273/team"
+                    }
+                }
+            },
+            "departments_data": {
+                "data": {
+                    "id": "228492",
+                    "type": "departments",
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/departments/228492"
+                    },
+                    "attributes": {
+                        "name": "IT"
+                    },
+                    "relationships": {
+                        "manager": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/departments/228492/relationships/manager",
+                                "related": "https://api.teamtailor.com/v1/departments/228492/manager"
+                            }
+                        },
+                        "roles": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/departments/228492/relationships/roles",
+                                "related": "https://api.teamtailor.com/v1/departments/228492/roles"
+                            }
+                        },
+                        "teams": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/departments/228492/relationships/teams",
+                                "related": "https://api.teamtailor.com/v1/departments/228492/teams"
+                            }
+                        }
+                    }
+                },
+                "meta": {
+                    "texts": {
+                        "name-singular": "department",
+                        "name-plural": "departments",
+                        "all": "Alle departments"
+                    }
+                }
+            },
+            "locations_data": {
+                "data": [
+                    {
+                        "id": "462274",
+                        "type": "locations",
+                        "links": {
+                            "self": "https://api.teamtailor.com/v1/locations/462274"
+                        },
+                        "attributes": {
+                            "address": null,
+                            "city": "Cologne",
+                            "country": "Germany",
+                            "email": null,
+                            "headquarters": true,
+                            "lat": "50.9386437",
+                            "long": "6.9538847",
+                            "name": "Köln",
+                            "phone": null,
+                            "zip": "50667"
+                        },
+                        "relationships": {
+                            "teams": {
+                                "links": {
+                                    "self": "https://api.teamtailor.com/v1/locations/462274/relationships/teams",
+                                    "related": "https://api.teamtailor.com/v1/locations/462274/teams"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "meta": {
+                    "texts": {
+                        "all": "Alle Standorte"
+                    },
+                    "record-count": 1,
+                    "page-count": 1
+                },
+                "links": {
+                    "first": "https://api.teamtailor.com/v1/jobs/2799273/locations?page%5Bnumber%5D=1&page%5Bsize%5D=10",
+                    "last": "https://api.teamtailor.com/v1/jobs/2799273/locations?page%5Bnumber%5D=1&page%5Bsize%5D=10"
+                }
+            },
+            "roles_data": {
+                "data": null,
+                "meta": {
+                    "texts": {
+                        "all": "Alle Rollen"
+                    }
+                }
+            }
+        },
+        {
+            "id": "2799174",
+            "type": "jobs",
+            "links": {
+                "careersite-job-url": "https://karriere.gus-group.com/jobs/2799174-ausbildung-zum-fachinformatiker-m-w-d-fuer-anwendungsentwicklung",
+                "careersite-job-apply-url": "https://karriere.gus-group.com/jobs/2799174-ausbildung-zum-fachinformatiker-m-w-d-fuer-anwendungsentwicklung/applications/new",
+                "careersite-job-apply-iframe-url": "https://karriere.gus-group.com/jobs/2799174-ausbildung-zum-fachinformatiker-m-w-d-fuer-anwendungsentwicklung/applications/new?iframe=true",
+                "self": "https://api.teamtailor.com/v1/jobs/2799174"
+            },
+            "attributes": {
+                "apply-button-text": "",
+                "body": "<p>Die GUS ERP GmbH ist seit 1980 ein gefragter Lösungspartner im ERP-Umfeld. Mit der GUS-OS Suite stellen wir als Prozessspezialist eine webbasierte Unternehmenslösung für die Branchen Pharma, Medizintechnik, Chemie, Kosmetik, Food sowie für die Logistik bereit. Unser Unternehmen ist Mitglied der GUS Group. Über 660 Mitarbeiter der GUS Group betreuen mehr als 1.200 größtenteils mittelständische Unternehmen sowie Konzerne und Behörden.</p><p>An unserem Standort in Köln vergeben wir ab dem 01.08.2023 mehrere Plätze für die Ausbildung zum Fachinformatiker für Anwendungsentwicklung (m/w/d).</p><p><strong>Inhalte der Ausbildung: </strong></p><ul>\n<li>Du erwirbst Kenntnisse und Fähikgeiten in der Anwendungsentwicklung (Schwerpunkt Java) und der Entwicklung von ERP-Software</li>\n<li>Einsatz in den verschiedenen Bereichen des Unternehmens</li>\n<li>Gemeinsame Erarbeitung deiner Schwerpunktsfelder / Interessen</li>\n<li>Weiterentwicklung unserer ERP-Software, z.B. durch Umsetzung von Kundenwünsche oder Fehlerbehebungen</li>\n</ul><p><strong>Uns begeistert: </strong></p><ul>\n<li>Ein guter Schulabschluss (Fachhochschulreife oder Abitur) oder die Motivation für einen Neustart nach Studienabbruch</li>\n<li>Freude an neuen Technologien und an der Informatik</li>\n<li>Erste Kenntnisse in mindestens einer Programmiersprache (z.B. Java, C++, C#) sowie in MySQL oder anderen Datenbanken</li>\n<li>Hohe Lernbereitschaft und ein analytisches Denkvermögen</li>\n<li>Teamsgeist ebenso wie Spaß am selbstständigen Arbeiten</li>\n<li>Engagement und ein hohes Maß an Zuverlässigkeit</li>\n</ul><p><strong>Dich erwartet: </strong></p><ul>\n<li>Ein idealer Einstieg ins Berufsleben durch eine abwechslungsreiche Ausbildung im spannenden ERP-Umfeld</li>\n<li>Einbindung in alle Phasen der Softwareentwicklung und des Projektgeschäftes, sowie regelmäßige Feedback- und Beurteilungsgespräche</li>\n<li>Sehr gute Übernahmechancen als Systementwickler im Anschluss an die Ausbildung</li>\n<li>Eine umfassende Einarbeitung auf Grundlage eines Schulungsplans unterstützt durch Mentoren</li>\n<li>Eine offene Unternehmenskommunikation geprägt durch eine Duz-Kultur</li>\n<li>30 Tage Jahresurlaub, flexible Arbeitszeiten, Rabatte über Corporate Benefits, Zuschüsse zu Sportangeboten über Urban Sports Club und einiges mehr…</li>\n</ul><p>Natürlich wollen wir dir nicht alles in dieser Stellenausschreibung verraten, es gibt noch viel zu erzählen. Wenn du weitere interessante Details wissen möchtest, bewirb dich jetzt!</p><p>Wir sehen mit Spannung deiner Bewerbung entgegen. Für weitere Informationen kannst du unsere Homepage www.gus-erp.com besuchen.<br><strong></strong><strong><br></strong></p>",
+                "end-date": null,
+                "human-status": "published",
+                "internal": false,
+                "language-code": "",
+                "picture": {
+                    "original": "https://images.teamtailor-cdn.com/images/s3/teamtailor-production/original-v3/image_uploads/ecc04197-ee66-4537-a155-09cecea8baeb/original.jpeg",
+                    "standard": "https://images.teamtailor-cdn.com/images/s3/teamtailor-production/hero_picture_large-v6/image_uploads/ecc04197-ee66-4537-a155-09cecea8baeb/original.jpeg",
+                    "thumb": "https://images.teamtailor-cdn.com/images/s3/teamtailor-production/user_picture_800-v9/image_uploads/ecc04197-ee66-4537-a155-09cecea8baeb/original.jpeg"
+                },
+                "pinned": false,
+                "start-date": null,
+                "status": "open",
+                "tags": [],
+                "title": "Ausbildung zum Fachinformatiker (m/w/d) für Anwendungsentwicklung",
+                "internal-name": "Ausbildung zum Fachinformatiker (m/w/d) für Anwendungsentwicklung",
+                "pitch": "",
+                "external-application-url": "",
+                "name-requirement": "required",
+                "resume-requirement": "required",
+                "cover-letter-requirement": "optional",
+                "phone-requirement": "required",
+                "created-at": "2023-05-05T15:08:56.158+02:00",
+                "updated-at": "2023-05-05T15:21:08.715+02:00",
+                "sharing-image-layout": "default",
+                "mailbox": "job-48f709a4-c1cc-424e-8bc5-95ecb8cdad06@inbound.teamtailor.com",
+                "remote-status": "none",
+                "currency": "",
+                "recruiter-email": "antonia.schmidt@gus-group.com"
+            },
+            "relationships": {
+                "activities": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799174/relationships/activities",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799174/activities"
+                    }
+                },
+                "department": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799174/relationships/department",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799174/department"
+                    }
+                },
+                "role": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799174/relationships/role",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799174/role"
+                    }
+                },
+                "location": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799174/relationships/location",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799174/location"
+                    }
+                },
+                "locations": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799174/relationships/locations",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799174/locations"
+                    }
+                },
+                "regions": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799174/relationships/regions",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799174/regions"
+                    }
+                },
+                "user": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799174/relationships/user",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799174/user"
+                    }
+                },
+                "questions": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799174/relationships/questions",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799174/questions"
+                    }
+                },
+                "candidates": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799174/relationships/candidates",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799174/candidates"
+                    }
+                },
+                "stages": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799174/relationships/stages",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799174/stages"
+                    }
+                },
+                "colleagues": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799174/relationships/colleagues",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799174/colleagues"
+                    }
+                },
+                "team-memberships": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799174/relationships/team-memberships",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799174/team-memberships"
+                    }
+                },
+                "picked-questions": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799174/relationships/picked-questions",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799174/picked-questions"
+                    }
+                },
+                "requisition": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799174/relationships/requisition",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799174/requisition"
+                    }
+                },
+                "custom-fields": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799174/relationships/custom-fields",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799174/custom-fields"
+                    }
+                },
+                "custom-field-values": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799174/relationships/custom-field-values",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799174/custom-field-values"
+                    }
+                },
+                "team": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799174/relationships/team",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799174/team"
+                    }
+                }
+            },
+            "departments_data": {
+                "data": {
+                    "id": "235877",
+                    "type": "departments",
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/departments/235877"
+                    },
+                    "attributes": {
+                        "name": "Ausbildung"
+                    },
+                    "relationships": {
+                        "manager": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/departments/235877/relationships/manager",
+                                "related": "https://api.teamtailor.com/v1/departments/235877/manager"
+                            }
+                        },
+                        "roles": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/departments/235877/relationships/roles",
+                                "related": "https://api.teamtailor.com/v1/departments/235877/roles"
+                            }
+                        },
+                        "teams": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/departments/235877/relationships/teams",
+                                "related": "https://api.teamtailor.com/v1/departments/235877/teams"
+                            }
+                        }
+                    }
+                },
+                "meta": {
+                    "texts": {
+                        "name-singular": "department",
+                        "name-plural": "departments",
+                        "all": "Alle departments"
+                    }
+                }
+            },
+            "locations_data": {
+                "data": [
+                    {
+                        "id": "462274",
+                        "type": "locations",
+                        "links": {
+                            "self": "https://api.teamtailor.com/v1/locations/462274"
+                        },
+                        "attributes": {
+                            "address": null,
+                            "city": "Cologne",
+                            "country": "Germany",
+                            "email": null,
+                            "headquarters": true,
+                            "lat": "50.9386437",
+                            "long": "6.9538847",
+                            "name": "Köln",
+                            "phone": null,
+                            "zip": "50667"
+                        },
+                        "relationships": {
+                            "teams": {
+                                "links": {
+                                    "self": "https://api.teamtailor.com/v1/locations/462274/relationships/teams",
+                                    "related": "https://api.teamtailor.com/v1/locations/462274/teams"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "meta": {
+                    "texts": {
+                        "all": "Alle Standorte"
+                    },
+                    "record-count": 1,
+                    "page-count": 1
+                },
+                "links": {
+                    "first": "https://api.teamtailor.com/v1/jobs/2799174/locations?page%5Bnumber%5D=1&page%5Bsize%5D=10",
+                    "last": "https://api.teamtailor.com/v1/jobs/2799174/locations?page%5Bnumber%5D=1&page%5Bsize%5D=10"
+                }
+            },
+            "roles_data": {
+                "data": null,
+                "meta": {
+                    "texts": {
+                        "all": "Alle Rollen"
+                    }
+                }
+            }
+        },
+        {
+            "id": "2799046",
+            "type": "jobs",
+            "links": {
+                "careersite-job-url": "https://karriere.gus-group.com/jobs/2799046-inhouse-it-recruiter-in-m-w-d",
+                "careersite-job-apply-url": "https://karriere.gus-group.com/jobs/2799046-inhouse-it-recruiter-in-m-w-d/applications/new",
+                "careersite-job-apply-iframe-url": "https://karriere.gus-group.com/jobs/2799046-inhouse-it-recruiter-in-m-w-d/applications/new?iframe=true",
+                "self": "https://api.teamtailor.com/v1/jobs/2799046"
+            },
+            "attributes": {
+                "apply-button-text": "",
+                "body": "<p>Die GUS ERP GmbH ist seit 1980 ein gefragter Lösungspartner im ERP-Umfeld. Mit der GUS-OS Suite stellen wir als Prozessspezialist eine webbasierte Unternehmenslösung für die Branchen Pharma, Medizintechnik, Chemie, Kosmetik, Food sowie für die Logistik bereit. Unser Unternehmen ist Mitglied der GUS Group. Über 660 Mitarbeiter der GUS Group betreuen mehr als 2.000 größtenteils mittelständische Unternehmen sowie Konzerne und Behörden.</p><p>In den letzten Jahren ist die GUS Group aus eigener Kraft aber auch durch mehrere Unternehmenskäufe stark gewachsen. Dieser Wachstumskurs soll auch in Zukunft fortgesetzt werden. Die Integration und Vereinheitlichung der HR-relevanten Prozesse ist ein wichtiges Aufgabenfeld der Personalabteilung. Dabei soll sie ein Arbeitsumfeld schaffen, in dem alle Kollegen und Kolleginnen ihr Potenzial voll entfalten und einbringen können.</p><p>Die Personalabteilung besteht aus derzeit aus sechs Teammitgliedern. Zur Verstärkung des Teams suchen wir ab sofort am Standort Köln eine/n inhouse IT-Recruiter/in (m/w/d).</p><p><strong>Deine Aufgabe: </strong></p><ul>\n<li>Vorauswahl der Bewerber für die ganze GUS Group</li>\n<li>Führung von Telefon-/Videointerviews und persönlichen Vorstellungsgesprächen mit den Fachabteilungen</li>\n<li>Konzeption von aussagekräftigen Stellenanzeigen und Bewerberprofilen</li>\n<li>Active Sourcing über verschiedene Social-Media-Kanäle</li>\n<li>Eigenverantwortliche Steuerung und Ausbau der Rekrutierungskanäle</li>\n<li>Begleitung neuer Mitarbeiter im Onboarding-Prozess</li>\n</ul><p><strong>Uns begeistert: </strong></p><ul>\n<li>Abgeschlossenes Studium im Bereich Psychologie oder Wirtschaftswissenschaften mit personalwirtschaftlichem Schwerpunkt</li>\n<li>Mind. 1 Jahre praktische Erfahrung im Personalbereich als Recruiter, gerne auch als Tech Recruiter</li>\n<li>Sehr gute Kommunikations- und Ausdrucksfähigkeit</li>\n<li>Strukturierte und eigenständige Arbeitsweise sowie Organisationstalent</li>\n<li>Sicheres Auftreten und unternehmerisches Denken</li>\n<li>Sehr gute Deutsch- und idealerweise gute Englischkenntnisse in Wort und Schrift</li>\n</ul><p>Dich erwartet: </p><ul>\n<li>Ein spannendes und vielseitiges Aufgabenspektrum innerhalb flacher Hierarchien in einem wachstumsstarken Umfeld mit zahlreichen Gestaltungsmöglichkeiten</li>\n<li>Eine offene Unternehmenskommunikation geprägt durch eine Duz-Kultur und ein tolles Team</li>\n<li>30 Tage Jahresurlaub, flexible Arbeitszeiten mit der Möglichkeit auf mobiles Arbeiten, Rabatte über Corporate Benefits, Zuschüsse zu Sportangeboten über Urban Sports Club und Sprachangebote bei Babbel sowie die Möglichkeit auf ein JobRad und vieles mehr…</li>\n</ul><p>Natürlich wollen wir dir nicht alles in dieser Stellenausschreibung verraten. Neben der oben genannten Aufgabe und dem Angebot gibt es noch weitere spannende Dinge zu erzählen. Wenn wir dein Interesse geweckt haben und du weitere Details wissen möchtest, <strong>bewirb dich jetzt!</strong></p><p>Wir sehen mit Spannung deiner Bewerbung entgegen, der du freundlicherweise deine Gehaltsvorstellung sowie deinen frühestmöglichen Eintrittstermin beifügst.</p><p>Für weitere Informationen kannst du gerne unsere Homepage <a href=\"http://www.gus-erp.com/\" target=\"_blank\">www.gus-erp.com</a> besuchen.<strong><br></strong><strong><br></strong></p> ",
+                "end-date": null,
+                "human-status": "published",
+                "internal": false,
+                "language-code": "",
+                "picture": {
+                    "original": "https://images.teamtailor-cdn.com/images/s3/teamtailor-production/original-v3/image_uploads/ecc04197-ee66-4537-a155-09cecea8baeb/original.jpeg",
+                    "standard": "https://images.teamtailor-cdn.com/images/s3/teamtailor-production/hero_picture_large-v6/image_uploads/ecc04197-ee66-4537-a155-09cecea8baeb/original.jpeg",
+                    "thumb": "https://images.teamtailor-cdn.com/images/s3/teamtailor-production/user_picture_800-v9/image_uploads/ecc04197-ee66-4537-a155-09cecea8baeb/original.jpeg"
+                },
+                "pinned": false,
+                "start-date": null,
+                "status": "open",
+                "tags": [],
+                "title": "(Inhouse) IT-Recruiter/in (m/w/d)",
+                "internal-name": "(Inhouse) IT-Recruiter/in (m/w/d)",
+                "pitch": "",
+                "external-application-url": "",
+                "name-requirement": "required",
+                "resume-requirement": "required",
+                "cover-letter-requirement": "optional",
+                "phone-requirement": "required",
+                "created-at": "2023-05-05T14:52:25.313+02:00",
+                "updated-at": "2023-05-05T15:00:07.451+02:00",
+                "sharing-image-layout": "default",
+                "mailbox": "job-5eaf16b5-fe3a-4388-bf37-b982de8625f0@inbound.teamtailor.com",
+                "remote-status": "hybrid",
+                "currency": "",
+                "recruiter-email": "antonia.schmidt@gus-group.com"
+            },
+            "relationships": {
+                "activities": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799046/relationships/activities",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799046/activities"
+                    }
+                },
+                "department": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799046/relationships/department",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799046/department"
+                    }
+                },
+                "role": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799046/relationships/role",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799046/role"
+                    }
+                },
+                "location": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799046/relationships/location",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799046/location"
+                    }
+                },
+                "locations": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799046/relationships/locations",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799046/locations"
+                    }
+                },
+                "regions": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799046/relationships/regions",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799046/regions"
+                    }
+                },
+                "user": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799046/relationships/user",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799046/user"
+                    }
+                },
+                "questions": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799046/relationships/questions",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799046/questions"
+                    }
+                },
+                "candidates": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799046/relationships/candidates",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799046/candidates"
+                    }
+                },
+                "stages": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799046/relationships/stages",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799046/stages"
+                    }
+                },
+                "colleagues": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799046/relationships/colleagues",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799046/colleagues"
+                    }
+                },
+                "team-memberships": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799046/relationships/team-memberships",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799046/team-memberships"
+                    }
+                },
+                "picked-questions": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799046/relationships/picked-questions",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799046/picked-questions"
+                    }
+                },
+                "requisition": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799046/relationships/requisition",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799046/requisition"
+                    }
+                },
+                "custom-fields": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799046/relationships/custom-fields",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799046/custom-fields"
+                    }
+                },
+                "custom-field-values": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799046/relationships/custom-field-values",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799046/custom-field-values"
+                    }
+                },
+                "team": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2799046/relationships/team",
+                        "related": "https://api.teamtailor.com/v1/jobs/2799046/team"
+                    }
+                }
+            },
+            "departments_data": {
+                "data": {
+                    "id": "228494",
+                    "type": "departments",
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/departments/228494"
+                    },
+                    "attributes": {
+                        "name": "Personal"
+                    },
+                    "relationships": {
+                        "manager": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/departments/228494/relationships/manager",
+                                "related": "https://api.teamtailor.com/v1/departments/228494/manager"
+                            }
+                        },
+                        "roles": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/departments/228494/relationships/roles",
+                                "related": "https://api.teamtailor.com/v1/departments/228494/roles"
+                            }
+                        },
+                        "teams": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/departments/228494/relationships/teams",
+                                "related": "https://api.teamtailor.com/v1/departments/228494/teams"
+                            }
+                        }
+                    }
+                },
+                "meta": {
+                    "texts": {
+                        "name-singular": "department",
+                        "name-plural": "departments",
+                        "all": "Alle departments"
+                    }
+                }
+            },
+            "locations_data": {
+                "data": [
+                    {
+                        "id": "462274",
+                        "type": "locations",
+                        "links": {
+                            "self": "https://api.teamtailor.com/v1/locations/462274"
+                        },
+                        "attributes": {
+                            "address": null,
+                            "city": "Cologne",
+                            "country": "Germany",
+                            "email": null,
+                            "headquarters": true,
+                            "lat": "50.9386437",
+                            "long": "6.9538847",
+                            "name": "Köln",
+                            "phone": null,
+                            "zip": "50667"
+                        },
+                        "relationships": {
+                            "teams": {
+                                "links": {
+                                    "self": "https://api.teamtailor.com/v1/locations/462274/relationships/teams",
+                                    "related": "https://api.teamtailor.com/v1/locations/462274/teams"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "meta": {
+                    "texts": {
+                        "all": "Alle Standorte"
+                    },
+                    "record-count": 1,
+                    "page-count": 1
+                },
+                "links": {
+                    "first": "https://api.teamtailor.com/v1/jobs/2799046/locations?page%5Bnumber%5D=1&page%5Bsize%5D=10",
+                    "last": "https://api.teamtailor.com/v1/jobs/2799046/locations?page%5Bnumber%5D=1&page%5Bsize%5D=10"
+                }
+            },
+            "roles_data": {
+                "data": null,
+                "meta": {
+                    "texts": {
+                        "all": "Alle Rollen"
+                    }
+                }
+            }
+        },
+        {
+            "id": "2798953",
+            "type": "jobs",
+            "links": {
+                "careersite-job-url": "https://karriere.gus-group.com/jobs/2798953-payroll-specialist-m-w-d",
+                "careersite-job-apply-url": "https://karriere.gus-group.com/jobs/2798953-payroll-specialist-m-w-d/applications/new",
+                "careersite-job-apply-iframe-url": "https://karriere.gus-group.com/jobs/2798953-payroll-specialist-m-w-d/applications/new?iframe=true",
+                "self": "https://api.teamtailor.com/v1/jobs/2798953"
+            },
+            "attributes": {
+                "apply-button-text": "",
+                "body": "<p>Die Sopra System GmbH stellt Software-Lösungen und Cloud-Services für die Nahrungs- und Genussmittelbranche bereit, die alle relevanten Unternehmensprozesse vollumfänglich abbilden. Speziell in der Milchindustrie ist Sopra mit dem Erzeugerverrechnungssystem (EVS) mit über 100 Kunden Marktführer in der D/A/CH Region. Es werden ca. 110.000 Erzeuger über das EVS abgerechnet. Seine Produktpalette rundet Sopra durch HR-Software, Middleware-Lösungen, Hosting-Angebote sowie dem Warenwirtschaftssystem Sopra ERP ab.  Neben den Geschäftsprozessen im Verwaltungsbereich (Einkauf, Verkauf, Finanzbuchhaltung) liegt ein weiterer Schwerpunkt auf dem Bereich MES (Manufacturing Execution System) und die dazugehörigen komplexen Anbindungen anderer Systeme unserer Kunden im Rahmen von Industrie 4.0 Projekten.</p><p>Das Unternehmen ist Mitglied der GUS Group, die ganzheitlich integrierte Software-Lösungen für die Prozessindustrie (Pharma, Medizintechnik, Chemie, Kosmetik, Food, Lebensmittel-Handel) und Logistik entwickelt und implementiert. Über 660 Mitarbeiter der GUS Group betreuen mehr als 2.000 großteils mittelständische Unternehmen sowie Konzerne und Behörden.</p><p>Zur Erweiterung des HR Consulting Software Teams suchen am Standorten München, Hamburg, Leipzig oder Remote zum nächstmöglichen Zeitpunkt einen Payroll Specialist (m/w/d).</p><p><strong>Deine Aufgabe: </strong></p><ul>\n<li>Erstellen der monatlichen Lohn- und Gehaltsabrechnungen für unsere Kunden</li>\n<li>Support von Kunden in Tagesgeschäftlichen Fragen zur Personalabrechnung</li>\n<li>Verantwortlichkeit für das Melde- Berichts- und Bescheinigungswesen</li>\n<li>Unterstützung des Teams im Tagesgeschäft</li>\n<li>Unterstützung in der Zeitwirtschaft, Reisekosten, Bewerbermanagement und im Controlling</li>\n</ul><p><strong>Uns begeistert: </strong></p><ul>\n<li>Eine erfolgreich abgeschlossene kaufmännische Ausbildung, ein Studienabschluss der Wirtschaftswissenschaften mit Schwerpunkt Personal oder eine vergleichbare Qualifikation</li>\n<li>Ein gutes Verständnis für Geschäftsprozesse im Payroll Umfeld</li>\n<li>Kenntnisse in einem Abrechnungs- und Zeiterfassungsprogramm</li>\n<li>Sehr gute Deutschkenntnisse in Wort und Schrift</li>\n<li>Selbstständige, kunden- und serviceorientierte Arbeitsweise</li>\n</ul><p><strong>Dich erwartet: </strong></p><ul>\n<li>Ein spannendes und breites Aufgabenspektrum innerhalb flacher Hierarchien in einem wachstumsstarken Umfeld mit zahlreichen Gestaltungsmöglichkeiten</li>\n<li>Eine optimale und individuelle Förderung und Weiterentwicklung sowohl für Berufseinsteiger als auch für Berufserfahrende</li>\n<li>Eine offene Unternehmenskommunikation geprägt durch eine Duz-Kultur</li>\n<li>30 Tage Jahresurlaub, flexible Arbeitszeiten mit der Möglichkeit auf mobiles Arbeiten, ein großartiges Team und vieles mehr…</li>\n</ul><p>Natürlich wollen wir dir nicht alles in dieser Stellenausschreibung verraten. Neben der oben genannten Aufgabe und dem Angebot gibt es noch weitere spannende Dinge zu erzählen. Wenn wir dein Interesse geweckt haben und du weitere Details wissen möchtest, <strong>bewirb dich jetzt!</strong></p><p>Wir sehen mit Spannung deiner Bewerbung entgegen, der du freundlicherweise deine Gehaltsvorstellung sowie deinen frühestmöglichen Eintrittstermin beifügst. Für weitere Informationen kannst du gerne unsere Webseite <a href=\"https://gus-lab.com/\" target=\"_blank\"></a><a href=\"https://sopra-system.com/\">https://sopra-system.com</a> besuchen.</p>",
+                "end-date": null,
+                "human-status": "published",
+                "internal": false,
+                "language-code": "",
+                "picture": {
+                    "original": "https://images.teamtailor-cdn.com/images/s3/teamtailor-production/original-v3/image_uploads/0804f4d5-cb67-4d77-80d7-8ad4a0545d08/original.jpeg",
+                    "standard": "https://images.teamtailor-cdn.com/images/s3/teamtailor-production/hero_picture_large-v6/image_uploads/0804f4d5-cb67-4d77-80d7-8ad4a0545d08/original.jpeg",
+                    "thumb": "https://images.teamtailor-cdn.com/images/s3/teamtailor-production/user_picture_800-v9/image_uploads/0804f4d5-cb67-4d77-80d7-8ad4a0545d08/original.jpeg"
+                },
+                "pinned": false,
+                "start-date": null,
+                "status": "open",
+                "tags": [],
+                "title": "Payroll Specialist (m/w/d)",
+                "internal-name": "Payroll Specialist (m/w/d)",
+                "pitch": "\n",
+                "external-application-url": "",
+                "name-requirement": "required",
+                "resume-requirement": "required",
+                "cover-letter-requirement": "optional",
+                "phone-requirement": "required",
+                "created-at": "2023-05-05T14:31:34.494+02:00",
+                "updated-at": "2024-01-10T13:31:22.113+01:00",
+                "sharing-image-layout": "default",
+                "mailbox": "job-f05ad775-0011-466b-8ecc-30266a358155@inbound.teamtailor.com",
+                "remote-status": "hybrid",
+                "currency": "",
+                "recruiter-email": "antonia.schmidt@gus-group.com"
+            },
+            "relationships": {
+                "activities": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2798953/relationships/activities",
+                        "related": "https://api.teamtailor.com/v1/jobs/2798953/activities"
+                    }
+                },
+                "department": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2798953/relationships/department",
+                        "related": "https://api.teamtailor.com/v1/jobs/2798953/department"
+                    }
+                },
+                "role": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2798953/relationships/role",
+                        "related": "https://api.teamtailor.com/v1/jobs/2798953/role"
+                    }
+                },
+                "location": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2798953/relationships/location",
+                        "related": "https://api.teamtailor.com/v1/jobs/2798953/location"
+                    }
+                },
+                "locations": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2798953/relationships/locations",
+                        "related": "https://api.teamtailor.com/v1/jobs/2798953/locations"
+                    }
+                },
+                "regions": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2798953/relationships/regions",
+                        "related": "https://api.teamtailor.com/v1/jobs/2798953/regions"
+                    }
+                },
+                "user": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2798953/relationships/user",
+                        "related": "https://api.teamtailor.com/v1/jobs/2798953/user"
+                    }
+                },
+                "questions": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2798953/relationships/questions",
+                        "related": "https://api.teamtailor.com/v1/jobs/2798953/questions"
+                    }
+                },
+                "candidates": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2798953/relationships/candidates",
+                        "related": "https://api.teamtailor.com/v1/jobs/2798953/candidates"
+                    }
+                },
+                "stages": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2798953/relationships/stages",
+                        "related": "https://api.teamtailor.com/v1/jobs/2798953/stages"
+                    }
+                },
+                "colleagues": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2798953/relationships/colleagues",
+                        "related": "https://api.teamtailor.com/v1/jobs/2798953/colleagues"
+                    }
+                },
+                "team-memberships": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2798953/relationships/team-memberships",
+                        "related": "https://api.teamtailor.com/v1/jobs/2798953/team-memberships"
+                    }
+                },
+                "picked-questions": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2798953/relationships/picked-questions",
+                        "related": "https://api.teamtailor.com/v1/jobs/2798953/picked-questions"
+                    }
+                },
+                "requisition": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2798953/relationships/requisition",
+                        "related": "https://api.teamtailor.com/v1/jobs/2798953/requisition"
+                    }
+                },
+                "custom-fields": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2798953/relationships/custom-fields",
+                        "related": "https://api.teamtailor.com/v1/jobs/2798953/custom-fields"
+                    }
+                },
+                "custom-field-values": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2798953/relationships/custom-field-values",
+                        "related": "https://api.teamtailor.com/v1/jobs/2798953/custom-field-values"
+                    }
+                },
+                "team": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2798953/relationships/team",
+                        "related": "https://api.teamtailor.com/v1/jobs/2798953/team"
+                    }
+                }
+            },
+            "departments_data": {
+                "data": {
+                    "id": "228494",
+                    "type": "departments",
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/departments/228494"
+                    },
+                    "attributes": {
+                        "name": "Personal"
+                    },
+                    "relationships": {
+                        "manager": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/departments/228494/relationships/manager",
+                                "related": "https://api.teamtailor.com/v1/departments/228494/manager"
+                            }
+                        },
+                        "roles": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/departments/228494/relationships/roles",
+                                "related": "https://api.teamtailor.com/v1/departments/228494/roles"
+                            }
+                        },
+                        "teams": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/departments/228494/relationships/teams",
+                                "related": "https://api.teamtailor.com/v1/departments/228494/teams"
+                            }
+                        }
+                    }
+                },
+                "meta": {
+                    "texts": {
+                        "name-singular": "department",
+                        "name-plural": "departments",
+                        "all": "Alle departments"
+                    }
+                }
+            },
+            "locations_data": {
+                "data": [
+                    {
+                        "id": "462289",
+                        "type": "locations",
+                        "links": {
+                            "self": "https://api.teamtailor.com/v1/locations/462289"
+                        },
+                        "attributes": {
+                            "address": null,
+                            "city": "Ismaning",
+                            "country": "Germany",
+                            "email": null,
+                            "headquarters": false,
+                            "lat": "48.2320646",
+                            "long": "11.7067787",
+                            "name": "Ismaning",
+                            "phone": null,
+                            "zip": "85737"
+                        },
+                        "relationships": {
+                            "teams": {
+                                "links": {
+                                    "self": "https://api.teamtailor.com/v1/locations/462289/relationships/teams",
+                                    "related": "https://api.teamtailor.com/v1/locations/462289/teams"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "id": "462272",
+                        "type": "locations",
+                        "links": {
+                            "self": "https://api.teamtailor.com/v1/locations/462272"
+                        },
+                        "attributes": {
+                            "address": null,
+                            "city": "Hamburg",
+                            "country": "Germany",
+                            "email": null,
+                            "headquarters": false,
+                            "lat": "53.5488282",
+                            "long": "9.987170299999999",
+                            "name": null,
+                            "phone": null,
+                            "zip": null
+                        },
+                        "relationships": {
+                            "teams": {
+                                "links": {
+                                    "self": "https://api.teamtailor.com/v1/locations/462272/relationships/teams",
+                                    "related": "https://api.teamtailor.com/v1/locations/462272/teams"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "id": "462292",
+                        "type": "locations",
+                        "links": {
+                            "self": "https://api.teamtailor.com/v1/locations/462292"
+                        },
+                        "attributes": {
+                            "address": null,
+                            "city": "Leipzig",
+                            "country": "Germany",
+                            "email": null,
+                            "headquarters": false,
+                            "lat": "51.3383504",
+                            "long": "12.3634475",
+                            "name": "Leipzig",
+                            "phone": null,
+                            "zip": "04109"
+                        },
+                        "relationships": {
+                            "teams": {
+                                "links": {
+                                    "self": "https://api.teamtailor.com/v1/locations/462292/relationships/teams",
+                                    "related": "https://api.teamtailor.com/v1/locations/462292/teams"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "meta": {
+                    "texts": {
+                        "all": "Alle Standorte"
+                    },
+                    "record-count": 3,
+                    "page-count": 1
+                },
+                "links": {
+                    "first": "https://api.teamtailor.com/v1/jobs/2798953/locations?page%5Bnumber%5D=1&page%5Bsize%5D=10",
+                    "last": "https://api.teamtailor.com/v1/jobs/2798953/locations?page%5Bnumber%5D=1&page%5Bsize%5D=10"
+                }
+            },
+            "roles_data": {
+                "data": {
+                    "id": "633427",
+                    "type": "roles",
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/roles/633427"
+                    },
+                    "attributes": {
+                        "name": "Personal Sachbearbeiter"
+                    },
+                    "relationships": {
+                        "department": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/roles/633427/relationships/department",
+                                "related": "https://api.teamtailor.com/v1/roles/633427/department"
+                            }
+                        },
+                        "teams": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/roles/633427/relationships/teams",
+                                "related": "https://api.teamtailor.com/v1/roles/633427/teams"
+                            }
+                        }
+                    }
+                },
+                "meta": {
+                    "texts": {
+                        "all": "Alle Rollen"
+                    }
+                }
+            }
+        },
+        {
+            "id": "2787635",
+            "type": "jobs",
+            "links": {
+                "careersite-job-url": "https://karriere.gus-group.com/jobs/2787635-business-analyst-m-w-d-fuer-lims-laborinformationsmanagementsysteme",
+                "careersite-job-apply-url": "https://karriere.gus-group.com/jobs/2787635-business-analyst-m-w-d-fuer-lims-laborinformationsmanagementsysteme/applications/new",
+                "careersite-job-apply-iframe-url": "https://karriere.gus-group.com/jobs/2787635-business-analyst-m-w-d-fuer-lims-laborinformationsmanagementsysteme/applications/new?iframe=true",
+                "self": "https://api.teamtailor.com/v1/jobs/2787635"
+            },
+            "attributes": {
+                "apply-button-text": "",
+                "body": "<p>Als führendes Softwareunternehmen im LIMS-Bereich bietet GUS LAB professionelle Lösungen zur ganzheitlichen Labororganisation. Über 500 Kunden weltweit setzen die Lösungen von GUS LAB bereits seit vielen Jahren erfolgreich ein. Das Unternehmen wurde durch den Zusammenschluss der beiden Labor-Softwareunternehmen Blomesystem GmbH und iCD System GmbH gegründet. GUS LAB ist Mitglied der GSG GENII Software Group – ein Netzwerk marktführender, unabhängiger Softwareunternehmen – die passgenaue Business-Lösungen vor allem für den Mittelstand anbietet. GUS LAB bietet branchenübergreifende und individuelle LIMS-Lösungen zur professionellen Organisation von Laboren und Kontrollbehörden.</p><p>Zur Erweiterung unserer Service-Teams suchen wir zum nächstmöglichen Zeitpunkt in Teil- oder Vollzeit am Standort in Gera einen Business Analyst (m/w/d) für Laborinformationsmanagementsysteme.</p><p><strong>Deine Aufgabe: </strong></p><ul>\n<li>Beratung unserer Kunden bei der Optimierung der Laborprozesse</li>\n<li>Eigenverantwortliche Entwicklung und Einführung unserer Softwarelösungen</li>\n<li>Beratung und Coaching bei Workshops und Prozessanalysen</li>\n<li>Konzeption und Erarbeitung von Pflichtenheften</li>\n<li>Mitwirkung bei der Projektplanung inkl. Bedarfsermittlung, Angebotserstellung, Machbarkeitsprüfung und -abschätzung</li>\n<li>Betreuung von Bestandskunden</li>\n<li>Durchführung von Schulungen</li>\n</ul><p><strong>Uns begeistert: </strong><strong><br></strong></p><ul>\n<li>Einen Hochschulabschluss der Fachrichtung Naturwissenschaft oder Informatik oder eine vergleichbare Ausbildung</li>\n<li>Erfahrung im Umgang mit relationalen Datenbanken und/oder erste Erfahrungen mit Programmiersprachen – im beruflichen oder auch privaten Umfeld</li>\n<li>Bereits gesammelte Einblicke in Prozesse rund um die Laborautomatisierung oder LIMS</li>\n<li>Gute MS-Office Kenntnisse, insbesondere Excel</li>\n<li>Sehr gute Deutschkenntnisse in Wort und Schrift, gute Englischkenntnisse sind von Vorteil</li>\n<li>Sicheres Auftreten und die Fähigkeit, komplexe Sachverhalte verständlich darstellen zu können</li>\n<li>Leidenschaft für neue Herausforderungen, Engagement und Eigeninitiative</li>\n</ul><p><strong>Dich erwartet: </strong></p><ul>\n<li>Ein spannendes und breites Aufgabenspektrum innerhalb flacher Hierarchien in einem wachstumsstarken Umfeld mit zahlreichen Entwicklungs- und Gestaltungsmöglichkeiten</li>\n<li>Umfassende Einarbeitung auf Grundlage eines Schulungsplans unterstützt durch einen Mentor</li>\n<li>Sowohl Berufseinsteiger als auch Berufserfahrende werden optimal und individuell gefordert und weiterentwickelt</li>\n<li>Eine offene Unternehmenskommunikation geprägt durch eine Duz-Kultur</li>\n<li>30 Tage Jahresurlaub, flexible Arbeitszeiten mit der Möglichkeit auf mobiles Arbeiten, ein großartiges Team und vieles mehr…</li>\n</ul><p>Natürlich wollen wir dir nicht alles in dieser Stellenausschreibung verraten. Neben der oben genannten Aufgabe und dem Angebot gibt es noch weitere spannende Dinge zu erzählen. Wenn wir dein Interesse geweckt haben und du weitere Details wissen möchtest, <strong>bewirb dich jetzt!</strong></p><p>Wir sehen mit Spannung deiner Bewerbung entgegen, der du freundlicherweise deine Gehaltsvorstellung sowie deinen frühestmöglichen Eintrittstermin beifügst. Für weitere Informationen kannst du gerne unsere Webseite <a href=\"https://gus-lab.com/\" target=\"_blank\">https://gus-lab.com</a> besuchen.<strong></strong><br></p><ul></ul><ul></ul>",
+                "end-date": null,
+                "human-status": "published",
+                "internal": false,
+                "language-code": "",
+                "picture": {
+                    "original": "https://images.teamtailor-cdn.com/images/s3/teamtailor-production/original-v3/image_uploads/f540b493-2474-4362-9bcc-84a3c6936468/original.jpeg",
+                    "standard": "https://images.teamtailor-cdn.com/images/s3/teamtailor-production/hero_picture_large-v6/image_uploads/f540b493-2474-4362-9bcc-84a3c6936468/original.jpeg",
+                    "thumb": "https://images.teamtailor-cdn.com/images/s3/teamtailor-production/user_picture_800-v9/image_uploads/f540b493-2474-4362-9bcc-84a3c6936468/original.jpeg"
+                },
+                "pinned": false,
+                "start-date": null,
+                "status": "open",
+                "tags": [],
+                "title": "Business Analyst (m/w/d) für LIMS - Laborinformationsmanagementsysteme",
+                "internal-name": "Business Analyst (m/w/d) für LIMS",
+                "pitch": "",
+                "external-application-url": "",
+                "name-requirement": "required",
+                "resume-requirement": "required",
+                "cover-letter-requirement": "optional",
+                "phone-requirement": "required",
+                "created-at": "2023-05-03T14:43:36.234+02:00",
+                "updated-at": "2023-05-05T14:39:49.032+02:00",
+                "sharing-image-layout": "default",
+                "mailbox": "job-12e1178d-34ec-4408-bd5e-af6d4f945aab@inbound.teamtailor.com",
+                "remote-status": "hybrid",
+                "currency": "",
+                "recruiter-email": "antonia.schmidt@gus-group.com"
+            },
+            "relationships": {
+                "activities": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2787635/relationships/activities",
+                        "related": "https://api.teamtailor.com/v1/jobs/2787635/activities"
+                    }
+                },
+                "department": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2787635/relationships/department",
+                        "related": "https://api.teamtailor.com/v1/jobs/2787635/department"
+                    }
+                },
+                "role": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2787635/relationships/role",
+                        "related": "https://api.teamtailor.com/v1/jobs/2787635/role"
+                    }
+                },
+                "location": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2787635/relationships/location",
+                        "related": "https://api.teamtailor.com/v1/jobs/2787635/location"
+                    }
+                },
+                "locations": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2787635/relationships/locations",
+                        "related": "https://api.teamtailor.com/v1/jobs/2787635/locations"
+                    }
+                },
+                "regions": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2787635/relationships/regions",
+                        "related": "https://api.teamtailor.com/v1/jobs/2787635/regions"
+                    }
+                },
+                "user": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2787635/relationships/user",
+                        "related": "https://api.teamtailor.com/v1/jobs/2787635/user"
+                    }
+                },
+                "questions": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2787635/relationships/questions",
+                        "related": "https://api.teamtailor.com/v1/jobs/2787635/questions"
+                    }
+                },
+                "candidates": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2787635/relationships/candidates",
+                        "related": "https://api.teamtailor.com/v1/jobs/2787635/candidates"
+                    }
+                },
+                "stages": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2787635/relationships/stages",
+                        "related": "https://api.teamtailor.com/v1/jobs/2787635/stages"
+                    }
+                },
+                "colleagues": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2787635/relationships/colleagues",
+                        "related": "https://api.teamtailor.com/v1/jobs/2787635/colleagues"
+                    }
+                },
+                "team-memberships": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2787635/relationships/team-memberships",
+                        "related": "https://api.teamtailor.com/v1/jobs/2787635/team-memberships"
+                    }
+                },
+                "picked-questions": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2787635/relationships/picked-questions",
+                        "related": "https://api.teamtailor.com/v1/jobs/2787635/picked-questions"
+                    }
+                },
+                "requisition": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2787635/relationships/requisition",
+                        "related": "https://api.teamtailor.com/v1/jobs/2787635/requisition"
+                    }
+                },
+                "custom-fields": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2787635/relationships/custom-fields",
+                        "related": "https://api.teamtailor.com/v1/jobs/2787635/custom-fields"
+                    }
+                },
+                "custom-field-values": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2787635/relationships/custom-field-values",
+                        "related": "https://api.teamtailor.com/v1/jobs/2787635/custom-field-values"
+                    }
+                },
+                "team": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2787635/relationships/team",
+                        "related": "https://api.teamtailor.com/v1/jobs/2787635/team"
+                    }
+                }
+            },
+            "departments_data": {
+                "data": {
+                    "id": "228496",
+                    "type": "departments",
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/departments/228496"
+                    },
+                    "attributes": {
+                        "name": "Projektbereich"
+                    },
+                    "relationships": {
+                        "manager": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/departments/228496/relationships/manager",
+                                "related": "https://api.teamtailor.com/v1/departments/228496/manager"
+                            }
+                        },
+                        "roles": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/departments/228496/relationships/roles",
+                                "related": "https://api.teamtailor.com/v1/departments/228496/roles"
+                            }
+                        },
+                        "teams": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/departments/228496/relationships/teams",
+                                "related": "https://api.teamtailor.com/v1/departments/228496/teams"
+                            }
+                        }
+                    }
+                },
+                "meta": {
+                    "texts": {
+                        "name-singular": "department",
+                        "name-plural": "departments",
+                        "all": "Alle departments"
+                    }
+                }
+            },
+            "locations_data": {
+                "data": [
+                    {
+                        "id": "462287",
+                        "type": "locations",
+                        "links": {
+                            "self": "https://api.teamtailor.com/v1/locations/462287"
+                        },
+                        "attributes": {
+                            "address": null,
+                            "city": "Gera",
+                            "country": "Germany",
+                            "email": null,
+                            "headquarters": false,
+                            "lat": "50.8805212",
+                            "long": "12.0805073",
+                            "name": "Gera",
+                            "phone": null,
+                            "zip": "07545"
+                        },
+                        "relationships": {
+                            "teams": {
+                                "links": {
+                                    "self": "https://api.teamtailor.com/v1/locations/462287/relationships/teams",
+                                    "related": "https://api.teamtailor.com/v1/locations/462287/teams"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "meta": {
+                    "texts": {
+                        "all": "Alle Standorte"
+                    },
+                    "record-count": 1,
+                    "page-count": 1
+                },
+                "links": {
+                    "first": "https://api.teamtailor.com/v1/jobs/2787635/locations?page%5Bnumber%5D=1&page%5Bsize%5D=10",
+                    "last": "https://api.teamtailor.com/v1/jobs/2787635/locations?page%5Bnumber%5D=1&page%5Bsize%5D=10"
+                }
+            },
+            "roles_data": {
+                "data": null,
+                "meta": {
+                    "texts": {
+                        "all": "Alle Rollen"
+                    }
+                }
+            }
+        },
+        {
+            "id": "2589876",
+            "type": "jobs",
+            "links": {
+                "careersite-job-url": "https://karriere.gus-group.com/jobs/2589876-teamleiter-in-m-w-d-it-services",
+                "careersite-job-apply-url": "https://karriere.gus-group.com/jobs/2589876-teamleiter-in-m-w-d-it-services/applications/new",
+                "careersite-job-apply-iframe-url": "https://karriere.gus-group.com/jobs/2589876-teamleiter-in-m-w-d-it-services/applications/new?iframe=true",
+                "self": "https://api.teamtailor.com/v1/jobs/2589876"
+            },
+            "attributes": {
+                "apply-button-text": "Jetzt bewerben",
+                "body": "<p>Die Sopra System GmbH stellt Software-Lösungen und Cloud-Services für die Nahrungs- und Genussmittelbranche bereit, die alle relevanten Unternehmensprozesse vollumfänglich abbilden. Speziell in der Milchindustrie ist Sopra mit dem Erzeugerverrechnungssystem (EVS) mit über 100 Kunden Marktführer in der D/A/CH Region. Es werden ca. 110.000 Erzeuger über das EVS abgerechnet. Seine Produktpalette rundet Sopra durch HR-Software, Middleware-Lösungen, Hosting-Angebote sowie dem Warenwirtschaftssystem Sopra ERP ab.  Neben den Geschäftsprozessen im Verwaltungsbereich (Einkauf, Verkauf, Finanzbuchhaltung) liegt ein weiterer Schwerpunkt auf dem Bereich MES (Manufacturing Execution System) und die dazugehörigen komplexen Anbindungen anderer Systeme unserer Kunden im Rahmen von Industrie 4.0 Projekten.</p><p>Das Unternehmen ist Mitglied der GUS Group, die ganzheitlich integrierte Software-Lösungen für die Prozessindustrie (Pharma, Medizintechnik, Chemie, Kosmetik, Food, Lebensmittel-Handel) und Logistik entwickelt und implementiert. Über 660 Mitarbeiter der GUS Group betreuen mehr als 2.000 großteils mittelständische Unternehmen sowie Konzerne und Behörden.</p><p>Zur Unterstützung unseres Teams suchen am Standort Hamburg oder München zum nächstmöglichen Zeitpunkt eine/n Teamleiter/in (m/w/d) IT- Services.</p><h2>Deine Aufgabe:</h2><p>Als „Teamleiter/in IT-Services“ führst du ein Team von Kollegen für unsere internen und externen Kunden innerhalb der Sopra und der GUS Group. Im Rahmen von abwechslungsreichen Projekten setzt dein Team und du in enger Zusammenarbeit mit Kunden und externen Dienstleistern Anforderungen im Bereich Hosting um. Darunter zählt:</p><ul>\n<li>Wartung und Pflege von VM’s, Netzwerk, AD, SQL-Servern, Anwendung (technische Aspekte)</li>\n<li>Fragestellungen rund um das Hosting</li>\n<li>Enge Zusammenarbeit mit den Projektteams in Sachen Fehleranalyse</li>\n<li>Interner 1st/2nd-Level-Support in der Sopra (Hardware, Office 365, mobile Arbeitsplätze)</li>\n</ul><p>Neben der Teamleitung gehören folgende Punkte ebenso zu deiner Aufgabe:</p><ul>\n<li>Enge Zusammenarbeit mit der Geschäftsführung in Bezug auf die IT-Sicherheit und die strategische Ausrichtung</li>\n<li>Erarbeitung von Organisation und Struktur (durch Einsatz von Tools)</li>\n<li>Platzierung der Abteilung als zentraler Dienstleister in der Gruppe</li>\n<li>Projektleitung<ul>\n<li>Kooperation in der Gruppe</li>\n<li>Systembereitstellungen für Projekte</li>\n<li>Sopra-Interne IT-Projekte</li>\n<li>Aufbau weiterer SaaS Betriebskonzepte für unsere Softwarelösungen</li>\n<li>ISO-Zertifikat, CSV-Zertifizierung</li>\n</ul>\n</li>\n<li>Unterstützung des Teams im Tagesgeschäft</li>\n<li>Permanente Verbesserung der IT-Infrastruktur</li>\n</ul><h2>Uns begeistert:</h2><ul>\n<li>Ein erfolgreich abgeschlossenes Studium der Informatik, Wirtschaftsinformatik oder eine vergleichbare Ausbildung</li>\n<li>Hohe Eigenmotivation sowie teamorientierte Arbeitsweise</li>\n<li>Eine schnelle Auffassungsgabe, Belastbarkeit und Durchsetzungsvermögen</li>\n<li>Kommunikationsstärke, Engagement und Zuverlässigkeit</li>\n<li>Sicherheitsbewusstsein für IT-Anwendungen</li>\n<li>Eine sehr ausgeprägte Technikaffinität</li>\n</ul><h2>Dich erwartet:</h2><ul>\n<li>Ein spannendes und breites Aufgabenspektrum innerhalb flacher Hierarchien in einem wachstumsstarken Umfeld mit zahlreichen Gestaltungsmöglichkeiten</li>\n<li>Eine optimale und individuelle Forderung und Weiterentwicklung sowohl für Berufseinsteiger als auch für Berufserfahrende</li>\n<li>Eine offene Unternehmenskommunikation geprägt durch eine Duz-Kultur</li>\n<li>Ein großartiges Team, 30 Tage Jahresurlaub, flexible Arbeitszeiten mit der Möglichkeit auf mobiles Arbeiten, Zuschüsse zu Sportangeboten über Urban Sports Club, das Angebot neue Sprachen zu lernen und vieles mehr…</li>\n</ul><p>Natürlich wollen wir dir nicht alles in dieser Stellenausschreibung verraten. Neben der oben genannten Aufgabe und dem Angebot gibt es noch weitere spannende Dinge zu erzählen. Wenn wir dein Interesse geweckt haben und du weitere Details wissen möchtest, <strong>bewirb dich jetzt!</strong><br><br>Wir sehen mit Spannung deiner Bewerbung entgegen, der du freundlicherweise deine Gehaltsvorstellung sowie deinen frühestmöglichen Eintrittstermin beifügst.<br><br>Für weitere Informationen besuche gerne unsere Homepage <a href=\"www.sopra-system.com\" target=\"_blank\">www.sopra-system.com</a>.</p>",
+                "end-date": null,
+                "human-status": "published",
+                "internal": false,
+                "language-code": "",
+                "picture": null,
+                "pinned": false,
+                "start-date": null,
+                "status": "open",
+                "tags": [],
+                "title": "Teamleiter/in (m/w/d) IT Services",
+                "internal-name": "Teamleiter/in (m/w/d) IT Services",
+                "pitch": "",
+                "external-application-url": "",
+                "name-requirement": "required",
+                "resume-requirement": "required",
+                "cover-letter-requirement": "optional",
+                "phone-requirement": "optional",
+                "created-at": "2023-03-24T11:18:55.855+01:00",
+                "updated-at": "2023-04-18T11:32:21.399+02:00",
+                "sharing-image-layout": "default",
+                "mailbox": "job-44c83de4-17ba-4da7-8375-f426593fbf8e@inbound.teamtailor.com",
+                "remote-status": "none",
+                "currency": "",
+                "recruiter-email": "antonia.schmidt@gus-group.com"
+            },
+            "relationships": {
+                "activities": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2589876/relationships/activities",
+                        "related": "https://api.teamtailor.com/v1/jobs/2589876/activities"
+                    }
+                },
+                "department": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2589876/relationships/department",
+                        "related": "https://api.teamtailor.com/v1/jobs/2589876/department"
+                    }
+                },
+                "role": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2589876/relationships/role",
+                        "related": "https://api.teamtailor.com/v1/jobs/2589876/role"
+                    }
+                },
+                "location": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2589876/relationships/location",
+                        "related": "https://api.teamtailor.com/v1/jobs/2589876/location"
+                    }
+                },
+                "locations": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2589876/relationships/locations",
+                        "related": "https://api.teamtailor.com/v1/jobs/2589876/locations"
+                    }
+                },
+                "regions": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2589876/relationships/regions",
+                        "related": "https://api.teamtailor.com/v1/jobs/2589876/regions"
+                    }
+                },
+                "user": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2589876/relationships/user",
+                        "related": "https://api.teamtailor.com/v1/jobs/2589876/user"
+                    }
+                },
+                "questions": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2589876/relationships/questions",
+                        "related": "https://api.teamtailor.com/v1/jobs/2589876/questions"
+                    }
+                },
+                "candidates": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2589876/relationships/candidates",
+                        "related": "https://api.teamtailor.com/v1/jobs/2589876/candidates"
+                    }
+                },
+                "stages": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2589876/relationships/stages",
+                        "related": "https://api.teamtailor.com/v1/jobs/2589876/stages"
+                    }
+                },
+                "colleagues": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2589876/relationships/colleagues",
+                        "related": "https://api.teamtailor.com/v1/jobs/2589876/colleagues"
+                    }
+                },
+                "team-memberships": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2589876/relationships/team-memberships",
+                        "related": "https://api.teamtailor.com/v1/jobs/2589876/team-memberships"
+                    }
+                },
+                "picked-questions": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2589876/relationships/picked-questions",
+                        "related": "https://api.teamtailor.com/v1/jobs/2589876/picked-questions"
+                    }
+                },
+                "requisition": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2589876/relationships/requisition",
+                        "related": "https://api.teamtailor.com/v1/jobs/2589876/requisition"
+                    }
+                },
+                "custom-fields": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2589876/relationships/custom-fields",
+                        "related": "https://api.teamtailor.com/v1/jobs/2589876/custom-fields"
+                    }
+                },
+                "custom-field-values": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2589876/relationships/custom-field-values",
+                        "related": "https://api.teamtailor.com/v1/jobs/2589876/custom-field-values"
+                    }
+                },
+                "team": {
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/jobs/2589876/relationships/team",
+                        "related": "https://api.teamtailor.com/v1/jobs/2589876/team"
+                    }
+                }
+            },
+            "departments_data": {
+                "data": {
+                    "id": "228492",
+                    "type": "departments",
+                    "links": {
+                        "self": "https://api.teamtailor.com/v1/departments/228492"
+                    },
+                    "attributes": {
+                        "name": "IT"
+                    },
+                    "relationships": {
+                        "manager": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/departments/228492/relationships/manager",
+                                "related": "https://api.teamtailor.com/v1/departments/228492/manager"
+                            }
+                        },
+                        "roles": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/departments/228492/relationships/roles",
+                                "related": "https://api.teamtailor.com/v1/departments/228492/roles"
+                            }
+                        },
+                        "teams": {
+                            "links": {
+                                "self": "https://api.teamtailor.com/v1/departments/228492/relationships/teams",
+                                "related": "https://api.teamtailor.com/v1/departments/228492/teams"
+                            }
+                        }
+                    }
+                },
+                "meta": {
+                    "texts": {
+                        "name-singular": "department",
+                        "name-plural": "departments",
+                        "all": "Alle departments"
+                    }
+                }
+            },
+            "locations_data": {
+                "data": [
+                    {
+                        "id": "462272",
+                        "type": "locations",
+                        "links": {
+                            "self": "https://api.teamtailor.com/v1/locations/462272"
+                        },
+                        "attributes": {
+                            "address": null,
+                            "city": "Hamburg",
+                            "country": "Germany",
+                            "email": null,
+                            "headquarters": false,
+                            "lat": "53.5488282",
+                            "long": "9.987170299999999",
+                            "name": null,
+                            "phone": null,
+                            "zip": null
+                        },
+                        "relationships": {
+                            "teams": {
+                                "links": {
+                                    "self": "https://api.teamtailor.com/v1/locations/462272/relationships/teams",
+                                    "related": "https://api.teamtailor.com/v1/locations/462272/teams"
+                                }
+                            }
+                        }
+                    },
+                    {
+                        "id": "462273",
+                        "type": "locations",
+                        "links": {
+                            "self": "https://api.teamtailor.com/v1/locations/462273"
+                        },
+                        "attributes": {
+                            "address": null,
+                            "city": "Munich",
+                            "country": "Germany",
+                            "email": null,
+                            "headquarters": false,
+                            "lat": "48.1447027",
+                            "long": "11.5821606",
+                            "name": "München",
+                            "phone": null,
+                            "zip": "80539"
+                        },
+                        "relationships": {
+                            "teams": {
+                                "links": {
+                                    "self": "https://api.teamtailor.com/v1/locations/462273/relationships/teams",
+                                    "related": "https://api.teamtailor.com/v1/locations/462273/teams"
+                                }
+                            }
+                        }
+                    }
+                ],
+                "meta": {
+                    "texts": {
+                        "all": "Alle Standorte"
+                    },
+                    "record-count": 2,
+                    "page-count": 1
+                },
+                "links": {
+                    "first": "https://api.teamtailor.com/v1/jobs/2589876/locations?page%5Bnumber%5D=1&page%5Bsize%5D=10",
+                    "last": "https://api.teamtailor.com/v1/jobs/2589876/locations?page%5Bnumber%5D=1&page%5Bsize%5D=10"
+                }
+            },
+            "roles_data": {
+                "data": null,
+                "meta": {
+                    "texts": {
+                        "all": "Alle Rollen"
+                    }
+                }
+            }
+        }
+    ],
+    "meta": {
+        "texts": {
+            "all-remote-statuses": "Alle Arbeitsorte",
+            "none": "Kein Homeoffice",
+            "temporary": "Vorübergehend im Homeoffice",
+            "hybrid": "Hybrid",
+            "fully": "Vollständig im Homeoffice",
+            "prev": "Zurück",
+            "next": "Weiter"
+        },
+        "record-count": 9,
+        "page-count": 1
+    },
+    "links": {
+        "first": "https://api.teamtailor.com/v1/jobs?page%5Bnumber%5D=1&page%5Bsize%5D=10",
+        "last": "https://api.teamtailor.com/v1/jobs?page%5Bnumber%5D=1&page%5Bsize%5D=10"
+    }
+}
