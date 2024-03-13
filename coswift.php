@@ -1,8 +1,8 @@
 <?php
 /**
- * Plugin Name: CoSwift
+ * Plugin Name: TeamTailor Integrator
  * Description: Integration with TeamTailor for WordPress.
- * Version: 0.3
+ * Version: 0.4.5
  * Author: Jonatan Jansson
  * URI: https://github.com/dotMavriQ/CoSwift
  */
@@ -155,8 +155,8 @@ function fetchTeamtailorData($api_key, $endpoint) {
 function coswift_register_custom_post_type() {
     register_post_type('coswift_jobs', [
         'labels' => [
-            'name' => 'CoSwift Jobs',
-            'singular_name' => 'CoSwift Job'
+            'name' => 'Teamtailor Jobs',
+            'singular_name' => 'TeamTailor Job'
         ],
         'public' => true,
         'has_archive' => true,
@@ -366,28 +366,28 @@ function coswift_jobs_shortcode($atts) {
     // The rest of your existing shortcode logic...
     // Check if we have posts
     if ($jobs_query->have_posts()) {
-        echo '<div class="coswift-jobs-listing">';
+        echo '<div class="teamtailor-jobs-listing">';
         while ($jobs_query->have_posts()) {
             $jobs_query->the_post();
             $post_id = get_the_ID();
-            echo '<div class="coswift-job">';
-            echo '<h2>' . get_the_title() . '</h2>';
+            echo '<div class="teamtailor-job">';
+            echo '<h3>' . get_the_title() . '</h3>';
             
             // Display all custom fields in divs
             $custom_fields = get_post_custom($post_id);
             foreach ($custom_fields as $key => $value) {
                 if (substr($key, 0, 1) !== '_') { // Skip hidden custom fields
-                    echo '<div class="coswift-job-meta"><strong>' . esc_html($key) . ':</strong> ' . esc_html($value[0]) . '</div>';
+                    echo '<div class="teamtailor-job-meta"><strong>' . esc_html($key) . ':</strong> ' . esc_html($value[0]) . '</div>';
                 }
             }
 
             // Link to the individual post
-            echo '<a href="' . get_permalink($post_id) . '" class="coswift-job-link">Read More</a>';
-            echo '</div>'; // Close .coswift-job
+            echo '<a href="' . get_permalink($post_id) . '" class="teamtailor-job-link">Read More</a>';
+            echo '</div>'; // Close .teamtailor-job
         }
-        echo '</div>'; // Close .coswift-jobs-listing
+        echo '</div>'; // Close .teamtailor-jobs-listing
     } else {
-        echo '<p>No job listings found.</p>';
+        echo '<span class="teamtailor-nojobs">No job listings found.</span>';
     }
 
     // Reset post data
@@ -429,7 +429,7 @@ add_action('init', function() {
         // Define the ACF field group
         acf_add_local_field_group(array(
             'key' => 'group_coswift_jobs',
-            'title' => 'CoSwift Jobs Fields',
+            'title' => 'TeamTailor Jobs Fields',
             'fields' => array(
                 array(
                     'key' => 'field_coswift_job_id',
@@ -526,11 +526,11 @@ return get_post_meta($post->ID, $this->field_key, true);
 };
 
 // Register each custom field
-$register_custom_field('_coswift_job_id', 'CoSwift Job ID');
-$register_custom_field('departments', 'CoSwift Departments');
-$register_custom_field('locations', 'CoSwift Locations');
-$register_custom_field('roles', 'CoSwift Roles');
-$register_custom_field('tt_custom_data', 'CoSwift Custom Data');
+$register_custom_field('_coswift_job_id', 'TeamTailor Job ID');
+$register_custom_field('departments', 'TeamTailor Departments');
+$register_custom_field('locations', 'TeamTailor Locations');
+$register_custom_field('roles', 'TeamTailor Roles');
+$register_custom_field('tt_custom_data', 'TeamTailor Custom Data');
 
 });
 function get_unique_meta_values($meta_key) {
