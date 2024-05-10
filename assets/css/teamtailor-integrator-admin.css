@@ -1,0 +1,599 @@
+/**
+ * TeamTailor Integrator Admin Styles
+ */
+
+/* Admin Page Container */
+.teamtailor-admin-wrap {
+  max-width: 1200px;
+  margin: 20px 0;
+}
+
+/* Dashboard Panel */
+.teamtailor-panel {
+  background: #fff;
+  border: 1px solid #e2e4e7;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  padding: 24px;
+  position: relative;
+}
+
+.teamtailor-panel h2 {
+  border-bottom: 1px solid #f0f0f0;
+  font-size: 18px;
+  padding-bottom: 12px;
+  margin-top: 0;
+  color: #23282d;
+  font-weight: 500;
+}
+
+.teamtailor-panel-intro {
+  margin-bottom: 20px;
+  color: #555d66;
+  line-height: 1.6;
+}
+
+/* Header with logo */
+.teamtailor-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 24px;
+  border-bottom: 1px solid #e2e4e7;
+  padding-bottom: 20px;
+}
+
+.teamtailor-logo {
+  width: 50px;
+  height: 50px;
+  margin-right: 15px;
+  border-radius: 3px;
+}
+
+.teamtailor-header h1 {
+  margin: 0;
+  padding: 0;
+  color: #23282d;
+  font-size: 24px;
+  font-weight: 500;
+}
+
+.teamtailor-header-version {
+  background: #f0f0f0;
+  border-radius: 3px;
+  color: #555;
+  display: inline-block;
+  font-size: 12px;
+  margin-left: 10px;
+  padding: 2px 8px;
+  vertical-align: middle;
+}
+
+/* Dashboard Grid Layout */
+.teamtailor-dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 20px;
+}
+
+.teamtailor-column-main {
+  grid-column: 1;
+}
+
+.teamtailor-column-sidebar {
+  grid-column: 2;
+}
+
+@media screen and (max-width: 782px) {
+  .teamtailor-dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .teamtailor-column-main, 
+  .teamtailor-column-sidebar {
+    grid-column: 1;
+  }
+}
+
+/* API Token Form */
+.teamtailor-token-form {
+  margin-bottom: 20px;
+}
+
+.teamtailor-token-form .form-table th {
+  width: 120px;
+  padding: 15px 10px 15px 0;
+}
+
+.teamtailor-token-form input[type="text"] {
+  width: 100%;
+  max-width: 350px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.07);
+  font-size: 14px;
+}
+
+/* Specific rule for API token input */
+input[name="teamtailor_integrator_api_token"] {
+  max-width: 350px;
+  width: 350px;
+}
+
+.teamtailor-token-form .button-primary {
+  background: #0073aa;
+  border-color: #0073aa;
+  box-shadow: none;
+  color: #fff;
+  text-decoration: none;
+  text-shadow: none;
+  padding: 6px 14px;
+  height: auto;
+  margin-top: 15px;
+}
+
+.teamtailor-token-form .button-primary:hover {
+  background: #006799;
+  border-color: #006799;
+}
+
+/* Actions Buttons */
+.teamtailor-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.teamtailor-actions .button {
+  padding: 8px 16px;
+  height: auto;
+  min-width: 120px;
+  text-align: center;
+  font-weight: 500;
+  box-shadow: none;
+}
+
+.teamtailor-actions .button-primary {
+  background: #0073aa;
+  border-color: #0073aa;
+  color: #fff;
+}
+
+.teamtailor-actions .button-primary:hover {
+  background: #006799;
+  border-color: #006799;
+}
+
+.teamtailor-actions .button-secondary {
+  background: #f7f7f7;
+  border-color: #ccc;
+  color: #555;
+}
+
+.teamtailor-actions .button-secondary:hover {
+  background: #f0f0f0;
+  border-color: #999;
+}
+
+/* Status Box */
+.teamtailor-status-box {
+  background: #f8f9fa;
+  border-left: 4px solid #0073aa;
+  padding: 8px 12px;
+  margin-bottom: 8px;
+  font-size: 13px;
+}
+
+.teamtailor-status-error {
+  border-left-color: #dc3232;
+}
+
+.teamtailor-status-success {
+  border-left-color: #46b450;
+}
+
+.teamtailor-status-warning {
+  border-left-color: #ffb900;
+}
+
+/* JSON Response Container */
+.teamtailor-json-container {
+  margin-top: 20px;
+  border: 1px solid #3c3836;
+  border-radius: 4px;
+  overflow: hidden;
+  background-color: #282828; /* Match Prism Gruvbox theme background */
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+}
+
+.teamtailor-json-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  background: #3c3836;
+  border-bottom: 1px solid #1d2021;
+  color: #ebdbb2;
+}
+
+.teamtailor-json-header h3 {
+  margin: 0;
+  font-size: 14px;
+  font-weight: 500;
+  color: #ebdbb2;
+}
+
+.teamtailor-json-container pre {
+  margin: 0;
+  height: 500px;
+  overflow-y: auto;
+  overflow-x: auto;
+  max-width: 100%;
+  width: auto;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.teamtailor-json-container code {
+  font-size: 13px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+  max-width: 100%;
+}
+
+/* Overrides for Prism.js */
+.teamtailor-json-container pre[class*="language-"] {
+  margin: 0;
+  border-radius: 0;
+  padding: 1.5em;
+  max-width: 100%;
+  box-sizing: border-box;
+  white-space: pre-wrap;
+  word-break: break-word;
+  border-left: 3px solid #504945;
+  font-family: 'Fira Code', 'Roboto Mono', 'Source Code Pro', monospace;
+}
+
+/* Improve JSON rendering with enhanced styles */
+.teamtailor-json-container pre[class*="language-json"] {
+  position: relative;
+}
+
+/* Brace matching highlight effect */
+.token.punctuation.brace-open,
+.token.punctuation.brace-close,
+.token.punctuation.bracket-open,
+.token.punctuation.bracket-close {
+  font-weight: bold;
+}
+
+/* Key-value pair contrast */
+.token.property {
+  font-weight: 500;
+}
+
+/* Line number styling if enabled */
+pre.line-numbers {
+  position: relative;
+  padding-left: 3.8em;
+  counter-reset: linenumber;
+}
+
+pre.line-numbers > code {
+  position: relative;
+  white-space: inherit;
+}
+
+.line-numbers .line-numbers-rows {
+  position: absolute;
+  pointer-events: none;
+  top: 0;
+  font-size: 100%;
+  left: -3.8em;
+  width: 3em;
+  border-right: 1px solid #504945;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+.line-numbers-rows > span {
+  display: block;
+  counter-increment: linenumber;
+}
+
+.line-numbers-rows > span:before {
+  content: counter(linenumber);
+  color: #7c6f64;
+  display: block;
+  padding-right: 0.8em;
+  text-align: right;
+}
+
+/* API Test section */
+#teamtailor-api-response {
+  margin-top: 20px;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
+#teamtailor-test-api-btn {
+  margin-bottom: 15px;
+}
+
+/* Help Sidebar */
+.teamtailor-help-box {
+  background: #f8f9fa;
+  border: 1px solid #e2e4e7;
+  border-radius: 4px;
+  padding: 15px;
+  margin-bottom: 20px;
+}
+
+.teamtailor-help-box h3 {
+  color: #23282d;
+  font-size: 14px;
+  margin-top: 0;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #eee;
+}
+
+.teamtailor-help-box ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.teamtailor-help-box li {
+  margin-bottom: 8px;
+}
+
+.teamtailor-help-box code {
+  background: #f0f0f0;
+  border-radius: 3px;
+  font-size: 12px;
+  padding: 2px 4px;
+}
+
+/* Stats Box */
+.teamtailor-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
+  gap: 15px;
+  margin: 20px 0;
+}
+
+.teamtailor-stat-box {
+  background: white;
+  border: 1px solid #e2e4e7;
+  border-radius: 4px;
+  padding: 15px;
+  text-align: center;
+}
+
+.teamtailor-stat-number {
+  font-size: 24px;
+  font-weight: 600;
+  color: #0073aa;
+  margin-bottom: 5px;
+}
+
+.teamtailor-stat-label {
+  color: #555d66;
+  font-size: 13px;
+}
+
+/* Notices */
+.teamtailor-notice {
+  background: #fff;
+  border-left: 4px solid #0073aa;
+  box-shadow: 0 1px 1px rgba(0, 0, 0, 0.04);
+  margin: 10px 0 20px;
+  padding: 12px;
+}
+
+/* Compact error and warning notices */
+.teamtailor-notice-error,
+.teamtailor-notice-warning {
+  padding: 8px 12px;
+  margin: 5px 0 10px;
+}
+
+.teamtailor-notice-error {
+  border-left-color: #dc3232;
+}
+
+.teamtailor-notice-error p,
+.teamtailor-notice-warning p {
+  margin: 0.25em 0;
+  padding: 0;
+  line-height: 1.3;
+}
+
+.teamtailor-notice p {
+  margin: 0.5em 0;
+  padding: 2px;
+}
+
+.teamtailor-status-box p {
+  margin: 0;
+  padding: 0;
+  line-height: 1.4;
+}
+
+.teamtailor-notice-error {
+  border-left-color: #dc3232;
+}
+
+.teamtailor-notice-success {
+  border-left-color: #46b450;
+}
+
+.teamtailor-notice-warning {
+  border-left-color: #ffb900;
+}
+
+/* Tabs */
+.teamtailor-tabs {
+  margin-bottom: 20px;
+}
+
+.teamtailor-tabs-list {
+  border-bottom: 1px solid #ccc;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+.teamtailor-tab {
+  background: #f7f7f7;
+  border: 1px solid #ccc;
+  border-bottom: none;
+  border-radius: 3px 3px 0 0;
+  color: #555;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: -1px;
+  margin-right: 5px;
+  padding: 8px 12px;
+  text-decoration: none;
+}
+
+.teamtailor-tab-active {
+  background: #fff;
+  border-bottom: 1px solid #fff;
+  color: #0073aa;
+}
+
+.teamtailor-tab-content {
+  background: #fff;
+  border: 1px solid #ccc;
+  border-top: none;
+  padding: 20px;
+}
+
+/* Loading Indicators */
+.teamtailor-loading {
+  position: relative;
+  opacity: 0.6;
+  pointer-events: none;
+}
+
+.teamtailor-loading::after {
+  border: 3px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top: 3px solid #0073aa;
+  content: "";
+  height: 20px;
+  left: 50%;
+  margin-left: -10px;
+  margin-top: -10px;
+  position: absolute;
+  top: 50%;
+  width: 20px;
+  z-index: 10;
+  animation: teamtailor-spin 1s linear infinite;
+}
+
+@keyframes teamtailor-spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Settings Checkbox */
+.teamtailor-settings-checkbox {
+  margin: 15px 0;
+  padding: 10px;
+  background: #f8f9fa;
+  border-radius: 4px;
+}
+
+.teamtailor-settings-checkbox label {
+  display: flex;
+  align-items: center;
+}
+
+.teamtailor-settings-checkbox input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.teamtailor-loading-message {
+  background-color: #f8f9fa;
+  border: 1px solid #e2e4e7;
+  border-radius: 4px;
+  padding: 30px 15px;
+  text-align: center;
+  margin: 20px 0;
+  color: #555;
+  font-size: 14px;
+  position: relative;
+}
+
+.teamtailor-loading-message::before {
+  content: "";
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ddd;
+  border-top: 2px solid #0073aa;
+  border-radius: 50%;
+  margin-right: 10px;
+  vertical-align: -5px;
+  animation: teamtailor-spin 1s linear infinite;
+}
+
+/* Dashboard Cards */
+.teamtailor-card {
+  background: #fff;
+  border: 1px solid #e2e4e7;
+  border-radius: 4px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  margin-bottom: 20px;
+  overflow: hidden;
+}
+
+.teamtailor-card-header {
+  background: #fbfbfb;
+  border-bottom: 1px solid #e2e4e7;
+  padding: 15px;
+}
+
+.teamtailor-card-title {
+  font-size: 16px;
+  font-weight: 500;
+  margin: 0;
+}
+
+.teamtailor-card-body {
+  padding: 15px;
+}
+
+.teamtailor-card-footer {
+  background: #fbfbfb;
+  border-top: 1px solid #e2e4e7;
+  padding: 10px 15px;
+  text-align: right;
+}
+
+/* Button Groups */
+.teamtailor-buttons-group {
+  margin: 15px 0;
+}
+
+.teamtailor-buttons-group a.button {
+  display: inline-block;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+
+.teamtailor-buttons-group p {
+  margin-bottom: 6px;
+  font-weight: 500;
+}
