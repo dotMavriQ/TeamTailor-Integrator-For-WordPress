@@ -55,7 +55,43 @@ A: Yes, job listings can be customized via CSS and the plugin's provided hooks a
 
 ## Changelog
 
-Detail updates and changes for each version of the plugin.
+### 1.1.1 (2024-05-10)
+- Improved admin UI with enhanced visual feedback
+- Added loading indicators for API requests
+- Fixed CSS conflicts with some WordPress themes
+- Optimized JavaScript performance for admin interface
+- Updated documentation with more detailed examples
+
+### 1.1.0 (2024-04-22)
+- Added support for filtering job listings by department
+- Implemented custom templates for job display
+- Enhanced shortcode functionality with additional parameters
+- Added caching layer for improved performance
+- Fixed pagination issues on job listing pages
+- Improved responsive design for mobile devices
+- Added option to customize application form fields
+
+### 1.0.2 (2024-03-18)
+- Fixed API connection timeout issues
+- Improved error handling and user feedback
+- Added support for multilingual sites
+- Updated TeamTailor API integration to latest version
+- Fixed bug with job location display
+
+### 1.0.1 (2024-03-02)
+- Added support for TeamTailor webhooks
+- Fixed CSS styling issues in admin panel
+- Improved sanitization and validation of user inputs
+- Added automatic daily synchronization option
+- Fixed compatibility issues with WordPress 6.4
+
+### 1.0.0 (2024-02-15)
+- Initial release
+- Basic TeamTailor API integration
+- Job listings synchronization
+- Settings page with API key configuration
+- Test API connection functionality
+- Basic shortcode support for displaying jobs
 
 ## Support
 
