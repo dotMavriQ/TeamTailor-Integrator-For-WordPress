@@ -8,10 +8,15 @@
  * @subpackage TeamTailor_Integrator/includes
  */
 
+// If this file is called directly, abort.
+if (!defined('ABSPATH')) {
+    exit;
+}
+
 /**
  * TeamTailor API integration.
  *
- * Handles all API communications with TeamTailor.
+ * Handles all API communications with TeamTailor using the WordPress HTTP API.
  *
  * @package    TeamTailor_Integrator
  * @subpackage TeamTailor_Integrator/includes
@@ -36,6 +41,15 @@ class TeamTailor_Integrator_API {
      * @var      bool    $debug_mode    Whether debug mode is enabled.
      */
     private $debug_mode;
+
+    /**
+     * Whether to use mock data instead of the live API.
+     *
+     * @since    1.2.0
+     * @access   private
+     * @var      bool
+     */
+    private $use_mock_data = false;
 
     /**
      * The base URL for the TeamTailor API.
@@ -65,18 +79,19 @@ class TeamTailor_Integrator_API {
     public function __construct($api_key, $debug_mode = false) {
         $this->api_key = $api_key;
         $this->debug_mode = $debug_mode;
+        $this->use_mock_data = (bool) get_option('teamtailor_integrator_use_mock_data', false);
     }
-    
+
     /**
      * Output debug information when debug mode is enabled.
      *
      * @since    1.0.0
      * @param    string    $message    The debug message.
      */
-    private function debug($message) {
-        if ($this->debug_mode) {
+    private function debug( $message ) {
+        if ( $this->debug_mode ) {
             echo '<div class="teamtailor-status-box">';
-            echo '<p><strong>▶</strong> ' . $message . '</p>';
+            echo '<p><strong>▶</strong> ' . esc_html( $message ) . '</p>';
             echo '</div>';
         }
     }
@@ -85,136 +100,204 @@ class TeamTailor_Integrator_API {
      * Get the common HTTP headers for API requests.
      *
      * @since    1.0.0
-     * @return   array    The HTTP headers.
+     * @return   array    The HTTP headers as an associative array.
      */
     private function get_headers() {
         $headers = array(
-            "Authorization: Token token={$this->api_key}",
-            "X-Api-Version: {$this->api_version}",
-            "Content-Type: application/json"
+            'Authorization' => "Token token={$this->api_key}",
+            'X-Api-Version' => $this->api_version,
+            'Content-Type'  => 'application/json',
         );
-        
-        // Debug headers
-        $this->debug('Request Headers: ' . json_encode($headers));
-        
+
+        $this->debug( 'Request Headers: ' . wp_json_encode( $headers ) );
+
         return $headers;
     }
 
     /**
-     * Make a GET request to the TeamTailor API.
+     * Get the HTTP request arguments for wp_remote_get/wp_remote_post.
+     *
+     * @since    1.1.1
+     * @return   array    The request arguments.
+     */
+    private function get_request_args() {
+        return array(
+            'headers' => $this->get_headers(),
+            'timeout' => 30,
+        );
+    }
+
+    /**
+     * Display an error notice.
+     *
+     * @since    1.1.1
+     * @param    string    $message    The error message.
+     * @param    string    $detail     Optional detail information.
+     */
+    private function show_error( $message, $detail = '' ) {
+        echo '<div class="teamtailor-notice teamtailor-notice-error">';
+        echo '<p>' . esc_html( $message ) . '</p>';
+        if ( ! empty( $detail ) && $this->debug_mode ) {
+            echo '<p>' . esc_html( $detail ) . '</p>';
+        }
+        echo '</div>';
+    }
+
+    /**
+     * Make a GET request to the TeamTailor API using the WordPress HTTP API.
+     *
+     * When mock mode is enabled, returns realistic test data instead of
+     * calling the live API — no API key required.
      *
      * @since    1.0.0
      * @param    string    $endpoint    The API endpoint.
-     * @return   mixed                  The API response or false on error.
+     * @return   mixed                  The decoded API response, or false on error.
      */
-    public function fetch_data($endpoint) {
+    public function fetch_data( $endpoint ) {
+        // ----- Mock data mode -------------------------------------------------
+        if ( $this->use_mock_data ) {
+            return $this->mock_fetch( $endpoint );
+        }
+
         $url = $this->base_url . $endpoint;
-        $ch = curl_init($url);
-        curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-        curl_setopt($ch, CURLOPT_HTTPHEADER, $this->get_headers());
-        
-        // Add verbose info for debugging when debug mode is on
-        if ($this->debug_mode) {
-            curl_setopt($ch, CURLOPT_VERBOSE, true);
-            $verbose = fopen('php://temp', 'w+');
-            curl_setopt($ch, CURLOPT_STDERR, $verbose);
-        }
+        $args = $this->get_request_args();
 
-        $response = curl_exec($ch);
-        $http_code = curl_getinfo($ch, CURLINFO_HTTP_CODE);
-        
-        // Debug API request info - handled by debug method, so no visible output if debug mode is off
-        $this->debug("API Request: $url (HTTP Code: $http_code)");
-        
-        if (curl_error($ch)) {
-            $error = curl_error($ch);
-            
-            // Get additional debug info if debug mode is on
-            if ($this->debug_mode) {
-                rewind($verbose);
-                $verboseLog = stream_get_contents($verbose);
-                
-                echo '<div class="teamtailor-notice teamtailor-notice-error">';
-                echo '<p>cURL Error: ' . $error . '</p>';
-                echo '<p>Request Details: ' . htmlspecialchars($verboseLog) . '</p>';
-                echo '</div>';
+        $this->debug( "API Request: $url" );
+
+        $response = wp_remote_get( $url, $args );
+
+        // Check for WordPress-level HTTP errors.
+        if ( is_wp_error( $response ) ) {
+            $error_message = $response->get_error_message();
+
+            if ( $this->debug_mode ) {
+                $this->show_error(
+                    /* translators: %s: HTTP error message from WordPress HTTP API */
+                    sprintf( __( 'HTTP Error: %s', 'teamtailor-integrator' ), $error_message )
+                );
             } else {
-                echo '<div class="teamtailor-notice teamtailor-notice-error">';
-                echo '<p>Error connecting to TeamTailor API. Enable debugging for more details.</p>';
-                echo '</div>';
+                $this->show_error(
+                    __( 'Error connecting to TeamTailor API. Enable debugging for more details.', 'teamtailor-integrator' )
+                );
             }
-            
-            curl_close($ch);
-            return "Error: $error";
+
+            return "Error: $error_message";
         }
 
-        curl_close($ch);
-        
-        // Check HTTP response code
-        if ($http_code < 200 || $http_code >= 300) {
-            echo '<div class="teamtailor-notice teamtailor-notice-error">';
-            echo '<p>API returned non-successful code: ' . $http_code . '</p>';
-            if ($this->debug_mode) {
-                echo '<p>Response: ' . substr($response, 0, 500) . '</p>';
-            }
-            echo '</div>';
+        $http_code = wp_remote_retrieve_response_code( $response );
+        $body      = wp_remote_retrieve_body( $response );
+
+        $this->debug( "API Response - HTTP Code: $http_code" );
+
+        // Check HTTP response code.
+        if ( $http_code < 200 || $http_code >= 300 ) {
+            $this->show_error(
+                /* translators: %d: HTTP status code */
+                sprintf( __( 'API returned non-successful code: %d', 'teamtailor-integrator' ), $http_code ),
+                $this->debug_mode ? substr( $body, 0, 500 ) : ''
+            );
         }
-        
-        // Try to decode JSON
-        $decoded = json_decode($response, true);
-        if (json_last_error() !== JSON_ERROR_NONE) {
-            echo '<div class="teamtailor-notice teamtailor-notice-error">';
-            echo '<p>JSON decode error: ' . json_last_error_msg() . '</p>';
-            if ($this->debug_mode) {
-                echo '<p>Raw response (first 500 chars): ' . substr($response, 0, 500) . '</p>';
-            }
-            echo '</div>';
+
+        // Try to decode JSON.
+        $decoded = json_decode( $body, true );
+
+        if ( JSON_ERROR_NONE !== json_last_error() ) {
+            $this->show_error(
+                /* translators: %s: JSON error message */
+                sprintf( __( 'JSON decode error: %s', 'teamtailor-integrator' ), json_last_error_msg() ),
+                $this->debug_mode ? substr( $body, 0, 500 ) : ''
+            );
+            return false;
         }
-        
+
         return $decoded;
     }
 
     /**
-     * Get jobs from TeamTailor.
+     * Route a mock-data fetch to the correct mock API method.
+     *
+     * @since    1.2.0
+     * @param    string    $endpoint    The API endpoint being requested.
+     * @return   mixed                  Mock response array.
+     */
+    private function mock_fetch( $endpoint ) {
+        if ( ! class_exists( 'TeamTailor_Integrator_Mock_API' ) ) {
+            require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-teamtailor-integrator-mock-api.php';
+        }
+
+        $this->debug( "Mock API request: $endpoint" );
+
+        $mock = new TeamTailor_Integrator_Mock_API( $this->debug_mode );
+
+        // Route by endpoint pattern.
+        if ( 'jobs' === $endpoint ) {
+            return $mock->get_jobs();
+        }
+
+        if ( 'company' === $endpoint ) {
+            return $mock->get_company();
+        }
+
+        if ( preg_match( '#^jobs/(\d+)/department$#', $endpoint, $m ) ) {
+            return $mock->get_department( $m[1] );
+        }
+
+        if ( preg_match( '#^jobs/(\d+)/locations$#', $endpoint, $m ) ) {
+            return $mock->get_locations( $m[1] );
+        }
+
+        if ( preg_match( '#^jobs/(\d+)/role$#', $endpoint, $m ) ) {
+            return $mock->get_role( $m[1] );
+        }
+
+        $this->debug( "Mock API: unknown endpoint '$endpoint', returning empty data." );
+        return array( 'data' => array() );
+    }
+
+    /**
+     * Get jobs from TeamTailor (or mock data when mock mode is enabled).
      *
      * @since    1.0.0
      * @return   mixed    The jobs data or false on error.
      */
     public function get_jobs() {
-        $this->debug('Fetching jobs from TeamTailor API...');
-        
-        // Show status message only in debug mode
-        if ($this->debug_mode) {
+        if ( $this->use_mock_data ) {
+            $this->debug( __( 'Fetching jobs from mock data (Meridian ERP)...', 'teamtailor-integrator' ) );
+        } else {
+            $this->debug( __( 'Fetching jobs from TeamTailor API...', 'teamtailor-integrator' ) );
+        }
+
+        if ( $this->debug_mode ) {
             echo '<div class="teamtailor-status-box">';
-            echo '<p><strong>▶</strong> API call: jobs</p>';
+            echo '<p><strong>▶</strong> ' . esc_html__( 'API call: jobs', 'teamtailor-integrator' ) . '</p>';
             echo '</div>';
         }
-        
-        $result = $this->fetch_data('jobs');
-        
-        if (is_array($result) && isset($result['data'])) {
-            $job_count = count($result['data']);
-            
-            // Always show a success message (for sync process)
-            if (strpos($_SERVER['REQUEST_URI'], 'wp-admin/admin-ajax.php') === false) {
-                // Not an AJAX request (regular sync)
+
+        $result = $this->fetch_data( 'jobs' );
+
+        if ( is_array( $result ) && isset( $result['data'] ) ) {
+            $job_count = count( $result['data'] );
+
+            // Show a success message for non-AJAX requests only.
+            if ( ! wp_doing_ajax() ) {
                 echo '<div class="teamtailor-notice teamtailor-notice-success">';
-                echo '<p><strong>Successfully connected to TeamTailor!</strong></p>';
+                if ( $this->use_mock_data ) {
+                    echo '<p><strong>' . esc_html__( 'Mock data mode active — using test data from Meridian ERP', 'teamtailor-integrator' ) . '</strong></p>';
+                } else {
+                    echo '<p><strong>' . esc_html__( 'Successfully connected to TeamTailor!', 'teamtailor-integrator' ) . '</strong></p>';
+                }
                 echo '</div>';
             }
-            
-            // Debug message about successful fetch
-            $this->debug('Successfully fetched ' . $job_count . ' jobs from API');
-            
+
+            /* translators: %d: number of jobs fetched */
+            $this->debug( sprintf( __( 'Successfully fetched %d jobs from API', 'teamtailor-integrator' ), $job_count ) );
         } else {
-            echo '<div class="teamtailor-notice teamtailor-notice-error">';
-            echo '<p><strong>API Error:</strong> Invalid response format. Expected array with data field.</p>';
-            if ($this->debug_mode) {
-                echo '<p>Response: ' . print_r($result, true) . '</p>';
-            }
-            echo '</div>';
+            $this->show_error(
+                __( 'API Error: Invalid response format. Expected array with data field.', 'teamtailor-integrator' ),
+                $this->debug_mode ? print_r( $result, true ) : ''
+            );
         }
-        
+
         return $result;
     }
 
@@ -222,11 +305,11 @@ class TeamTailor_Integrator_API {
      * Extract the department name from department data.
      *
      * @since    1.0.0
-     * @param    array    $departmentData    The department data.
-     * @return   string                      The department name.
+     * @param    array    $department_data    The department data.
+     * @return   string                       The department name.
      */
-    public function extract_department_name($departmentData) {
-        return isset($departmentData['data']['attributes']['name']) ? $departmentData['data']['attributes']['name'] : '';
+    public function extract_department_name( $department_data ) {
+        return isset( $department_data['data']['attributes']['name'] ) ? $department_data['data']['attributes']['name'] : '';
     }
 
     /**
@@ -236,35 +319,37 @@ class TeamTailor_Integrator_API {
      * @param    array    $data    The locations data.
      * @return   array             The extracted locations and countries.
      */
-    public function extract_locations($data) {
-        $locations = [];
-        $countries = [];
-        if (isset($data['data']) && is_array($data['data'])) {
-            foreach ($data['data'] as $item) {
-                if (isset($item['attributes']['name'])) {
+    public function extract_locations( $data ) {
+        $locations = array();
+        $countries = array();
+
+        if ( isset( $data['data'] ) && is_array( $data['data'] ) ) {
+            foreach ( $data['data'] as $item ) {
+                if ( isset( $item['attributes']['name'] ) ) {
                     $locations[] = $item['attributes']['name'];
                 }
-                if (isset($item['attributes']['country'])) {
+                if ( isset( $item['attributes']['country'] ) ) {
                     $countries[] = $item['attributes']['country'];
                 }
             }
         }
-        return [
-            'locations' => implode(', ', $locations),
-            'countries' => implode(', ', array_unique($countries))
-        ];
+
+        return array(
+            'locations' => implode( ', ', $locations ),
+            'countries' => implode( ', ', array_unique( $countries ) ),
+        );
     }
 
     /**
      * Fetch and extract the role name for a job.
      *
      * @since    1.0.0
-     * @param    string    $jobId    The job ID.
-     * @return   string              The role name.
+     * @param    string    $job_id    The job ID.
+     * @return   string               The role name.
      */
-    public function get_role_name($jobId) {
-        $roleData = $this->fetch_data("jobs/$jobId/role");
-        return isset($roleData['data']['attributes']['name']) ? $roleData['data']['attributes']['name'] : '';
+    public function get_role_name( $job_id ) {
+        $role_data = $this->fetch_data( "jobs/$job_id/role" );
+        return isset( $role_data['data']['attributes']['name'] ) ? $role_data['data']['attributes']['name'] : '';
     }
 
     /**
@@ -274,7 +359,7 @@ class TeamTailor_Integrator_API {
      * @return   string    The company name.
      */
     public function get_company_name() {
-        $companyData = $this->fetch_data("company");
-        return isset($companyData['data']['attributes']['name']) ? $companyData['data']['attributes']['name'] : '';
+        $company_data = $this->fetch_data( 'company' );
+        return isset( $company_data['data']['attributes']['name'] ) ? $company_data['data']['attributes']['name'] : '';
     }
 }

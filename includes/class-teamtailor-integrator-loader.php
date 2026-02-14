@@ -8,6 +8,11 @@
  * @subpackage TeamTailor_Integrator/includes
  */
 
+// If this file is called directly, abort.
+if (!defined('ABSPATH')) {
+    exit;
+}
+
 /**
  * Register all actions and filters for the plugin.
  *
