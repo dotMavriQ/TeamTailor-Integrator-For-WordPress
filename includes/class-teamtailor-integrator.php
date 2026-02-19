@@ -8,6 +8,11 @@
  * @subpackage TeamTailor_Integrator/includes
  */
 
+// If this file is called directly, abort.
+if (!defined('ABSPATH')) {
+    exit;
+}
+
 /**
  * The core plugin class.
  *
@@ -64,8 +69,31 @@ class TeamTailor_Integrator {
         $this->plugin_name = 'teamtailor-integrator';
 
         $this->load_dependencies();
+        $this->set_locale();
         $this->define_admin_hooks();
         $this->define_public_hooks();
+    }
+
+    /**
+     * Load the plugin text domain for translation.
+     *
+     * @since    1.1.1
+     */
+    public function set_locale() {
+        $this->loader->add_action( 'plugins_loaded', $this, 'load_plugin_textdomain' );
+    }
+
+    /**
+     * Load the plugin text domain.
+     *
+     * @since    1.1.1
+     */
+    public function load_plugin_textdomain() {
+        load_plugin_textdomain(
+            'teamtailor-integrator',
+            false,
+            dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
+        );
     }
 
     /**
@@ -146,7 +174,8 @@ class TeamTailor_Integrator {
         $public = new TeamTailor_Integrator_Public($this->get_plugin_name(), $this->get_version());
 
         $this->loader->add_action('wp_enqueue_scripts', $public, 'enqueue_styles');
-        
+        $this->loader->add_action('wp_enqueue_scripts', $public, 'enqueue_scripts');
+
         // Register shortcodes
         add_shortcode('teamtailor_jobs', array($public, 'jobs_shortcode'));
     }
