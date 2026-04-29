@@ -8,6 +8,11 @@
  * @subpackage TeamTailor_Integrator/public
  */
 
+// If this file is called directly, abort.
+if (!defined('ABSPATH')) {
+    exit;
+}
+
 /**
  * Public-facing functionality.
  *
@@ -62,6 +67,29 @@ class TeamTailor_Integrator_Public {
             $this->version,
             'all'
         );
+
+        // Load Google Font (Inter) for a clean, modern look — only on pages with the shortcode.
+        wp_enqueue_style(
+            $this->plugin_name . '-fonts',
+            'https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap',
+            array(),
+            null
+        );
+    }
+
+    /**
+     * Register the JavaScript for the public-facing side.
+     *
+     * @since    1.2.0
+     */
+    public function enqueue_scripts() {
+        wp_enqueue_script(
+            $this->plugin_name . '-public',
+            plugin_dir_url(__FILE__) . '../assets/js/teamtailor-integrator-public.js',
+            array(),
+            $this->version,
+            true
+        );
     }
 
     /**
@@ -69,7 +97,7 @@ class TeamTailor_Integrator_Public {
      *
      * @since    1.0.0
      * @param    string    $meta_key    The meta key.
-     * @return   array                 The unique meta values.
+     * @return   array                  The unique meta values.
      */
     private function get_unique_meta_values($meta_key) {
         global $wpdb;
@@ -82,7 +110,6 @@ class TeamTailor_Integrator_Public {
             ORDER BY pm.meta_value ASC
         ", $meta_key));
 
-        // Filter out any empty values
         return array_filter($meta_values, function($value) {
             return !empty($value);
         });
@@ -91,106 +118,205 @@ class TeamTailor_Integrator_Public {
     /**
      * Jobs shortcode callback.
      *
+     * Shortcode attributes:
+     *   title        — Heading text above the job board (default: '')
+     *   show_filters — Whether to show the filter bar (default: 'true')
+     *   navbar       — Whether to show the top navigation bar (default: 'true')
+     *
      * @since    1.0.0
      * @param    array    $atts    The shortcode attributes.
      * @return   string            The shortcode output.
      */
     public function jobs_shortcode($atts) {
-        global $wp;
-        ob_start(); // Start output buffering
+        $atts = shortcode_atts(array(
+            'title'        => '',
+            'show_filters' => 'true',
+            'navbar'       => 'true',
+        ), $atts, 'teamtailor_jobs');
 
-        // Dynamically fetch unique meta values for filters
-        $unique_departments = $this->get_unique_meta_values('departments');
-        $unique_locations = $this->get_unique_meta_values('locations');
-        $unique_roles = $this->get_unique_meta_values('roles');
+        $show_filters = filter_var($atts['show_filters'], FILTER_VALIDATE_BOOLEAN);
+        $show_navbar  = filter_var($atts['navbar'], FILTER_VALIDATE_BOOLEAN);
 
-        // Display dropdown filters
-        ?>
-        <form action="<?php echo esc_url(home_url($wp->request)); ?>" method="get" class="teamtailor-filter-form">
-            <select name="department">
-                <option value="">All Departments</option>
-                <?php foreach ($unique_departments as $department): ?>
-                    <option value="<?php echo esc_attr($department); ?>" <?php selected(isset($_GET['department']) ? $_GET['department'] : null, $department); ?>><?php echo esc_html($department); ?></option>
-                <?php endforeach; ?>
-            </select>
-            <select name="location">
-                <option value="">All Locations</option>
-                <?php foreach ($unique_locations as $location): ?>
-                    <option value="<?php echo esc_attr($location); ?>" <?php selected(isset($_GET['location']) ? $_GET['location'] : null, $location); ?>><?php echo esc_html($location); ?></option>
-                <?php endforeach; ?>
-            </select>
-            <select name="role">
-                <option value="">All Roles</option>
-                <?php foreach ($unique_roles as $role): ?>
-                    <option value="<?php echo esc_attr($role); ?>" <?php selected(isset($_GET['role']) ? $_GET['role'] : null, $role); ?>><?php echo esc_html($role); ?></option>
-                <?php endforeach; ?>
-            </select>
-            <input type="submit" value="Filter">
-        </form>
-        <?php
-
-        // Adjust your WP_Query arguments based on the filter selections
-        $meta_query_args = []; // Initialize meta query arguments array
-        if (!empty($_GET['department'])) {
-            $meta_query_args[] = [
-                'key' => 'departments',
-                'value' => sanitize_text_field($_GET['department']),
-                'compare' => '='
-            ];
-        }
-        if (!empty($_GET['location'])) {
-            $meta_query_args[] = [
-                'key' => 'locations',
-                'value' => sanitize_text_field($_GET['location']),
-                'compare' => '='
-            ];
-        }
-        if (!empty($_GET['role'])) {
-            $meta_query_args[] = [
-                'key' => 'roles',
-                'value' => sanitize_text_field($_GET['role']),
-                'compare' => '='
-            ];
-        }
-
-        // Query for 'teamtailor_jobs' posts including the meta query for filtering
+        // Build the WP_Query to get published jobs.
         $args = array(
-            'post_type' => 'teamtailor_jobs',
+            'post_type'      => 'teamtailor_jobs',
             'posts_per_page' => -1,
-            'meta_query' => $meta_query_args
+            'post_status'    => 'publish',
+            'orderby'        => 'title',
+            'order'          => 'ASC',
         );
-        $jobs_query = new WP_Query($args);
 
-        // Check if we have posts
+        $jobs_query = new WP_Query($args);
+        $jobs       = array();
+
         if ($jobs_query->have_posts()) {
-            echo '<div class="teamtailor-jobs-listing">';
             while ($jobs_query->have_posts()) {
                 $jobs_query->the_post();
-                $post_id = get_the_ID();
-                echo '<div class="teamtailor-job">';
-                echo '<h2>' . get_the_title() . '</h2>';
-                
-                // Display all custom fields in divs
-                $custom_fields = get_post_custom($post_id);
-                foreach ($custom_fields as $key => $value) {
-                    if (substr($key, 0, 1) !== '_') { // Skip hidden custom fields
-                        echo '<div class="teamtailor-job-meta"><strong>' . esc_html($key) . ':</strong> ' . esc_html($value[0]) . '</div>';
-                    }
-                }
+                $post_id   = get_the_ID();
+                $permalink = get_permalink($post_id);
 
-                // Link to the individual post
-                echo '<a href="' . get_permalink($post_id) . '" class="teamtailor-job-link">Read More</a>';
-                echo '</div>'; // Close .teamtailor-job
+                $jobs[] = array(
+                    'id'             => absint($post_id),
+                    'title'          => get_the_title(),
+                    'permalink'      => $permalink,
+                    'department'     => get_post_meta($post_id, 'teamtailor_departments', true),
+                    'location'       => get_post_meta($post_id, 'teamtailor_locations', true),
+                    'country'        => get_post_meta($post_id, 'teamtailor_countries', true),
+                    'role'           => get_post_meta($post_id, 'teamtailor_roles', true),
+                    'company'        => get_post_meta($post_id, 'teamtailor_company', true),
+                    'excerpt'        => get_the_excerpt(),
+                );
             }
-            echo '</div>'; // Close .teamtailor-jobs-listing
-        } else {
-            echo '<p>No job listings found.</p>';
+            wp_reset_postdata();
         }
 
-        // Reset post data
-        wp_reset_postdata();
+        // Collect unique values for the JS-driven dropdowns.
+        $departments = array_values(array_unique(array_filter(array_column($jobs, 'department'))));
+        $locations   = array_values(array_unique(array_filter(array_column($jobs, 'location'))));
+        $countries   = array_values(array_unique(array_filter(array_column($jobs, 'country'))));
+        $roles       = array_values(array_unique(array_filter(array_column($jobs, 'role'))));
 
-        // Return the buffer contents
+        sort($departments);
+        sort($locations);
+        sort($countries);
+        sort($roles);
+
+        ob_start();
+        ?>
+
+        <div class="tt-jobs" data-show-filters="<?php echo $show_filters ? '1' : '0'; ?>" data-show-navbar="<?php echo $show_navbar ? '1' : '0'; ?>">
+
+            <?php if (!empty($atts['title'])): ?>
+                <h2 class="tt-jobs__heading"><?php echo esc_html($atts['title']); ?></h2>
+            <?php endif; ?>
+
+            <?php if ($show_navbar): ?>
+                <div class="tt-jobs__navbar">
+                    <div class="tt-jobs__navbar-brand">
+                        <svg class="tt-jobs__navbar-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="7" width="20" height="14" rx="2" ry="2"></rect>
+                            <path d="M16 21V5a2 2 0 0 0-2-2h-4a2 2 0 0 0-2 2v16"></path>
+                        </svg>
+                        <span class="tt-jobs__navbar-title">Careers</span>
+                    </div>
+                    <div class="tt-jobs__navbar-count">
+                        <span class="tt-jobs__count-number"><?php echo count($jobs); ?></span>
+                        <span class="tt-jobs__count-label">open position<?php echo count($jobs) !== 1 ? 's' : ''; ?></span>
+                    </div>
+                </div>
+            <?php endif; ?>
+
+            <?php if ($show_filters): ?>
+                <div class="tt-jobs__filters">
+                    <div class="tt-jobs__filter-group">
+                        <label class="tt-jobs__filter-label" for="tt-filter-search">Search</label>
+                        <input
+                            type="text"
+                            id="tt-filter-search"
+                            class="tt-jobs__filter-input tt-jobs__filter-input--search"
+                            placeholder="Job title, keyword…"
+                            autocomplete="off"
+                        >
+                    </div>
+
+                    <div class="tt-jobs__filter-group">
+                        <label class="tt-jobs__filter-label" for="tt-filter-department">Department</label>
+                        <select id="tt-filter-department" class="tt-jobs__filter-input tt-jobs__filter-select">
+                            <option value="">All Departments</option>
+                            <?php foreach ($departments as $dep): ?>
+                                <option value="<?php echo esc_attr($dep); ?>"><?php echo esc_html($dep); ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+
+                    <div class="tt-jobs__filter-group">
+                        <label class="tt-jobs__filter-label" for="tt-filter-location">Location</label>
+                        <select id="tt-filter-location" class="tt-jobs__filter-input tt-jobs__filter-select">
+                            <option value="">All Locations</option>
+                            <?php foreach ($locations as $loc): ?>
+                                <option value="<?php echo esc_attr($loc); ?>"><?php echo esc_html($loc); ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+
+                    <div class="tt-jobs__filter-group">
+                        <label class="tt-jobs__filter-label" for="tt-filter-role">Role</label>
+                        <select id="tt-filter-role" class="tt-jobs__filter-input tt-jobs__filter-select">
+                            <option value="">All Roles</option>
+                            <?php foreach ($roles as $role): ?>
+                                <option value="<?php echo esc_attr($role); ?>"><?php echo esc_html($role); ?></option>
+                            <?php endforeach; ?>
+                        </select>
+                    </div>
+
+                    <button type="button" class="tt-jobs__filter-clear" id="tt-filter-clear" style="display:none;">
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="6" x2="6" y2="18"></line>
+                            <line x1="6" y1="6" x2="18" y2="18"></line>
+                        </svg>
+                        Clear
+                    </button>
+                </div>
+            <?php endif; ?>
+
+            <div class="tt-jobs__results" id="tt-jobs-results">
+                <div class="tt-jobs__grid" id="tt-jobs-grid">
+                    <?php foreach ($jobs as $job): ?>
+                        <div class="tt-jobs__card" data-title="<?php echo esc_attr(strtolower($job['title'])); ?>" data-department="<?php echo esc_attr(strtolower($job['department'])); ?>" data-location="<?php echo esc_attr(strtolower($job['location'])); ?>" data-role="<?php echo esc_attr(strtolower($job['role'])); ?>">
+                            <div class="tt-jobs__card-body">
+                                <h3 class="tt-jobs__card-title">
+                                    <a href="<?php echo esc_url($job['permalink']); ?>"><?php echo esc_html($job['title']); ?></a>
+                                </h3>
+                                <?php if (!empty($job['excerpt'])): ?>
+                                    <p class="tt-jobs__card-excerpt"><?php echo esc_html($job['excerpt']); ?></p>
+                                <?php endif; ?>
+                                <div class="tt-jobs__card-meta">
+                                    <?php if (!empty($job['department'])): ?>
+                                        <span class="tt-jobs__badge tt-jobs__badge--department"><?php echo esc_html($job['department']); ?></span>
+                                    <?php endif; ?>
+                                    <?php if (!empty($job['location'])): ?>
+                                        <span class="tt-jobs__badge tt-jobs__badge--location">
+                                            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                                <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"></path>
+                                                <circle cx="12" cy="10" r="3"></circle>
+                                            </svg>
+                                            <?php echo esc_html($job['location']); ?>
+                                            <?php if (!empty($job['country'])): ?>
+                                                <span class="tt-jobs__badge-country">, <?php echo esc_html($job['country']); ?></span>
+                                            <?php endif; ?>
+                                        </span>
+                                    <?php endif; ?>
+                                    <?php if (!empty($job['role'])): ?>
+                                        <span class="tt-jobs__badge tt-jobs__badge--role"><?php echo esc_html($job['role']); ?></span>
+                                    <?php endif; ?>
+                                </div>
+                            </div>
+                            <div class="tt-jobs__card-footer">
+                                <a href="<?php echo esc_url($job['permalink']); ?>" class="tt-jobs__card-link">
+                                    View Job
+                                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg>
+                                </a>
+                            </div>
+                        </div>
+                    <?php endforeach; ?>
+                </div>
+
+                <div class="tt-jobs__empty" id="tt-jobs-empty" style="display:none;">
+                    <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                        <circle cx="11" cy="11" r="8"></circle>
+                        <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+                        <line x1="8" y1="11" x2="14" y2="11"></line>
+                    </svg>
+                    <h3>No matching positions</h3>
+                    <p>Try adjusting your filters or search term.</p>
+                </div>
+            </div>
+        </div>
+
+        <?php
         return ob_get_clean();
     }
 }
