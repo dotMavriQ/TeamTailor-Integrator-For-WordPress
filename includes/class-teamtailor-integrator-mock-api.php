@@ -248,7 +248,7 @@ class TeamTailor_Integrator_Mock_API {
     private function debug($message) {
         if ($this->debug_mode) {
             echo '<div class="teamtailor-status-box">';
-            echo '<p><strong>▶</strong> ' . $message . '</p>';
+            echo '<p><strong>▶</strong> ' . esc_html( $message ) . '</p>';
             echo '</div>';
         }
     }

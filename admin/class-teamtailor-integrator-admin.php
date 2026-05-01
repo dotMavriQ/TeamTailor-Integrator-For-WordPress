@@ -427,16 +427,21 @@ class TeamTailor_Integrator_Admin {
     public function save_token_form() {
         // Check if the form has been submitted
         if (isset($_POST['teamtailor_integrator_api_token'])) {
-            $api_token = sanitize_text_field(wp_unslash($_POST['teamtailor_integrator_api_token']));
+            // Verify nonce for security
+            if (isset($_POST['teamtailor_token_nonce']) && wp_verify_nonce(wp_unslash($_POST['teamtailor_token_nonce']), 'teamtailor_save_token')) {
+                $api_token = sanitize_text_field(wp_unslash($_POST['teamtailor_integrator_api_token']));
 
-            // Validate the API token
-            if (!empty($api_token)) {
-                // Save the token
-                update_option('teamtailor_integrator_api_token', $api_token);
-                echo '<div class="teamtailor-notice teamtailor-notice-success"><p>' . esc_html__('API Token saved successfully.', 'teamtailor-integrator') . '</p></div>';
+                // Validate the API token
+                if (!empty($api_token)) {
+                    // Save the token
+                    update_option('teamtailor_integrator_api_token', $api_token);
+                    echo '<div class="teamtailor-notice teamtailor-notice-success"><p>' . esc_html__('API Token saved successfully.', 'teamtailor-integrator') . '</p></div>';
+                } else {
+                    // Display error message
+                    echo '<div class="teamtailor-notice teamtailor-notice-error"><p>' . esc_html__('API Token cannot be empty. Please check your token and try again.', 'teamtailor-integrator') . '</p></div>';
+                }
             } else {
-                // Display error message
-                echo '<div class="teamtailor-notice teamtailor-notice-error"><p>' . esc_html__('API Token cannot be empty. Please check your token and try again.', 'teamtailor-integrator') . '</p></div>';
+                echo '<div class="teamtailor-notice teamtailor-notice-error"><p>' . esc_html__('Security verification failed. Please try again.', 'teamtailor-integrator') . '</p></div>';
             }
         }
 
@@ -464,6 +469,7 @@ class TeamTailor_Integrator_Admin {
         ?>
         <div class="teamtailor-token-form">
             <form method="post" action="">
+                <?php wp_nonce_field('teamtailor_save_token', 'teamtailor_token_nonce'); ?>
                 <table class="form-table">
                     <tr valign="top">
                         <th scope="row"><?php esc_html_e('API Token:', 'teamtailor-integrator'); ?></th>

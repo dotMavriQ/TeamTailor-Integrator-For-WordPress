@@ -184,7 +184,7 @@ class TeamTailor_Integrator_Public {
         ob_start();
         ?>
 
-        <div class="tt-jobs" data-show-filters="<?php echo $show_filters ? '1' : '0'; ?>" data-show-navbar="<?php echo $show_navbar ? '1' : '0'; ?>">
+        <div class="tt-jobs" data-show-filters="<?php echo esc_attr($show_filters ? '1' : '0'); ?>" data-show-navbar="<?php echo esc_attr($show_navbar ? '1' : '0'); ?>">
 
             <?php if (!empty($atts['title'])): ?>
                 <h2 class="tt-jobs__heading"><?php echo esc_html($atts['title']); ?></h2>
