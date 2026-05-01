@@ -57,6 +57,15 @@ A: Yes, job listings can be customized via CSS and the plugin's provided hooks a
 
 ## Changelog
 
+### 1.2.2 (2026-05-01)
+- Fix CSRF - added nonce validation to API key save form
+- Fix escaping - added esc_attr() to shortcode data attributes and esc_html() to debug output
+- Fix i18n - ordered placeholders in sync strings and added translators comment for _n()
+- Fix compatibility - removed load_plugin_textdomain() (auto-loaded for .org plugins)
+- Fix security - sanitized post_type input, replaced rand() with wp_rand()
+- Fix metadata - updated Tested up to to WordPress 6.9
+- License updated to GPLv2 or later to meet WordPress requirements
+
 ### 1.2.0 (2026-05-01)
 - Added Mock Data Mode for testing without a live API key
 - Created 12 realistic test jobs for "Meridian ERP" across 12 European cities

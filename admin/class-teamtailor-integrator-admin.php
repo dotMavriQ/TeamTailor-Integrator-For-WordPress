@@ -667,7 +667,7 @@ class TeamTailor_Integrator_Admin {
         if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
             return $post_id;
         }
-        $post_type = isset($_POST['post_type']) ? wp_unslash($_POST['post_type']) : '';
+        $post_type = isset($_POST['post_type']) ? sanitize_key(wp_unslash($_POST['post_type'])) : '';
         if ('teamtailor_jobs' != $post_type || !current_user_can('edit_post', $post_id)) {
             return $post_id;
         }

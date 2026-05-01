@@ -5,7 +5,7 @@ Tags: teamtailor, jobs, recruitment, careers, job listings
 Requires at least: 5.8
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.2.0
+Stable tag: 1.2.2
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -80,6 +80,15 @@ This plugin only reads data from TeamTailor's API. It fetches job listings using
 3. API Test tab showing raw JSON response from TeamTailor.
 
 == Changelog ==
+
+= 1.2.2 =
+* Fix CSRF - added nonce validation to API key save form
+* Fix escaping - added esc_attr() to shortcode data attributes and esc_html() to debug output
+* Fix i18n - ordered placeholders in sync strings and added translators comment for _n()
+* Fix compatibility - removed load_plugin_textdomain() (auto-loaded for .org plugins)
+* Fix security - sanitized post_type input, replaced rand() with wp_rand()
+* Fix metadata - updated Tested up to to WordPress 6.9
+* License updated to GPLv2 or later to meet WordPress requirements
 
 = 1.2.0 =
 * Added Mock Data Mode for testing without a live API key
