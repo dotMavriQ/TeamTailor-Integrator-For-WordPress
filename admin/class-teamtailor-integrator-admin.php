@@ -598,7 +598,7 @@ class TeamTailor_Integrator_Admin {
                 'items_list' => __('Jobs list', 'teamtailor-integrator'),
             ],
             'public' => true,
-            'has_archive' => true,
+            'has_archive' => false,
             'supports' => ['title', 'editor', 'thumbnail', 'custom-fields'],
             'rewrite' => ['slug' => 'jobs'],
             'menu_icon' => 'dashicons-businessman',
