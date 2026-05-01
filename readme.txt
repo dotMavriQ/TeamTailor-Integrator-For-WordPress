@@ -1,15 +1,15 @@
 === TeamTailor Integrator ===
 Contributors: dotmavriq
 Donate link: https://github.com/sponsors/dotMavriQ
-Tags: teamtailor, jobs, recruitment, API, careers, job listings
+Tags: teamtailor, jobs, recruitment, careers, job listings
 Requires at least: 5.8
-Tested up to: 6.8
+Tested up to: 6.9
 Requires PHP: 7.4
 Stable tag: 1.2.0
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Seamlessly integrate TeamTailor recruitment services with your WordPress site. Sync job listings, display them via shortcodes, and manage your recruitment process directly through your website.
+Integrate TeamTailor recruitment with WordPress. Sync job listings, display via shortcodes, and manage recruitment directly from your dashboard.
 
 == Description ==
 

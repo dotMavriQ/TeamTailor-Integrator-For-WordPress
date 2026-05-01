@@ -342,9 +342,9 @@ class TeamTailor_Integrator_Mock_API {
                     'headline'         => $job_def['headline'],
                     'employment_title' => $job_def['employment_title'],
                     'status'           => $job_def['status'],
-                    'published_at'     => gmdate('Y-m-d\TH:i:s.000\Z', strtotime('-'.rand(1, 60).' days')),
-                    'created_at'       => gmdate('Y-m-d\TH:i:s.000\Z', strtotime('-'.rand(30, 120).' days')),
-                    'updated_at'       => gmdate('Y-m-d\TH:i:s.000\Z', strtotime('-'.rand(1, 14).' days')),
+                    'published_at'     => gmdate('Y-m-d\TH:i:s.000\Z', strtotime('-'.wp_rand(1, 60).' days')),
+                    'created_at'       => gmdate('Y-m-d\TH:i:s.000\Z', strtotime('-'.wp_rand(30, 120).' days')),
+                    'updated_at'       => gmdate('Y-m-d\TH:i:s.000\Z', strtotime('-'.wp_rand(1, 14).' days')),
                 ),
                 'links' => array(
                     'careers_url'                    => 'https://careers.meridianerp.example/jobs/' . $job_def['id'],

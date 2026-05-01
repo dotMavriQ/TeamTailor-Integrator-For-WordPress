@@ -524,6 +524,7 @@ class TeamTailor_Integrator_Admin {
 
             echo '<div class="teamtailor-notice teamtailor-notice-success">';
             echo '<p>' . esc_html( sprintf(
+                /* translators: %s: number of job listings received */
                 _n( 'Connection successful! Received data for %s job listing.', 'Connection successful! Received data for %s job listings.', $job_count, 'teamtailor-integrator' ),
                 number_format_i18n( $job_count )
             ) ) . '</p>';
@@ -872,7 +873,7 @@ class TeamTailor_Integrator_Admin {
                 }
 
                 public function get_title() {
-                    return __($this->field_label, 'teamtailor-integrator');
+                    return $this->field_label;
                 }
 
                 public function get_categories() {
@@ -886,10 +887,10 @@ class TeamTailor_Integrator_Admin {
             });
         };
 
-        // Register each custom field
-        $register_custom_field('_teamtailor_job_id', 'TeamTailor Job ID');
-        $register_custom_field('teamtailor_departments', 'TeamTailor Departments');
-        $register_custom_field('teamtailor_locations', 'TeamTailor Locations');
-        $register_custom_field('teamtailor_roles', 'TeamTailor Roles');
+        // Register each custom field (labels are already passed through __())
+        $register_custom_field('_teamtailor_job_id', __('TeamTailor Job ID', 'teamtailor-integrator'));
+        $register_custom_field('teamtailor_departments', __('TeamTailor Departments', 'teamtailor-integrator'));
+        $register_custom_field('teamtailor_locations', __('TeamTailor Locations', 'teamtailor-integrator'));
+        $register_custom_field('teamtailor_roles', __('TeamTailor Roles', 'teamtailor-integrator'));
     }
 }

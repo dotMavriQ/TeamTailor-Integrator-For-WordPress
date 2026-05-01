@@ -80,20 +80,7 @@ class TeamTailor_Integrator {
      * @since    1.1.1
      */
     public function set_locale() {
-        $this->loader->add_action( 'plugins_loaded', $this, 'load_plugin_textdomain' );
-    }
-
-    /**
-     * Load the plugin text domain.
-     *
-     * @since    1.1.1
-     */
-    public function load_plugin_textdomain() {
-        load_plugin_textdomain(
-            'teamtailor-integrator',
-            false,
-            dirname( dirname( plugin_basename( __FILE__ ) ) ) . '/languages/'
-        );
+        // Text domain is loaded automatically for WordPress.org-hosted plugins (WP 4.6+).
     }
 
     /**

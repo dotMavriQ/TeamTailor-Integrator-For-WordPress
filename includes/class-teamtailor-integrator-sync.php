@@ -225,18 +225,18 @@ class TeamTailor_Integrator_Sync {
         $summary = array();
 
         if ( $jobs_synced > 0 ) {
-            /* translators: %d: number of jobs imported */
-            $summary[] = sprintf( __( '<strong>%d</strong> new %s imported', 'teamtailor-integrator' ), $jobs_synced, _n( 'job', 'jobs', $jobs_synced, 'teamtailor-integrator' ) );
+            /* translators: %1$d: number of jobs imported, %2$s: job/jobs */
+            $summary[] = sprintf( __( '<strong>%1$d</strong> new %2$s imported', 'teamtailor-integrator' ), $jobs_synced, _n( 'job', 'jobs', $jobs_synced, 'teamtailor-integrator' ) );
         }
 
         if ( $jobs_updated > 0 ) {
-            /* translators: %d: number of jobs updated */
-            $summary[] = sprintf( __( '<strong>%d</strong> existing %s updated', 'teamtailor-integrator' ), $jobs_updated, _n( 'job', 'jobs', $jobs_updated, 'teamtailor-integrator' ) );
+            /* translators: %1$d: number of jobs updated, %2$s: job/jobs */
+            $summary[] = sprintf( __( '<strong>%1$d</strong> existing %2$s updated', 'teamtailor-integrator' ), $jobs_updated, _n( 'job', 'jobs', $jobs_updated, 'teamtailor-integrator' ) );
         }
 
         if ( $jobs_removed > 0 ) {
-            /* translators: %d: number of jobs removed */
-            $summary[] = sprintf( __( '<strong>%d</strong> obsolete %s removed', 'teamtailor-integrator' ), $jobs_removed, _n( 'job', 'jobs', $jobs_removed, 'teamtailor-integrator' ) );
+            /* translators: %1$d: number of jobs removed, %2$s: job/jobs */
+            $summary[] = sprintf( __( '<strong>%1$d</strong> obsolete %2$s removed', 'teamtailor-integrator' ), $jobs_removed, _n( 'job', 'jobs', $jobs_removed, 'teamtailor-integrator' ) );
         }
 
         if ( empty( $summary ) ) {
