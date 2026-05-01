@@ -1,71 +1,391 @@
 /**
- * TeamTailor Integrator Public Styles
+ * TeamTailor Integrator — Public Styles
+ *
+ * All classes are prefixed with tt-jobs- to avoid conflicts with theme styles.
+ * The component uses its own font stack (Inter via Google Fonts) and a
+ * neutral colour palette so it works in any WordPress theme.
+ *
+ * @package TeamTailor_Integrator
  */
 
-.teamtailor-jobs-listing {
-  margin: 20px 0;
+/* ───────── Reset / Base ──────────────────────────────────────────── */
+
+.tt-jobs *,
+.tt-jobs *::before,
+.tt-jobs *::after {
+  box-sizing: border-box;
 }
 
-.teamtailor-job {
-  margin-bottom: 30px;
-  padding: 20px;
-  border: 1px solid #eee;
-  border-radius: 5px;
-  background-color: #fff;
-  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+.tt-jobs {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-size: 16px;
+  line-height: 1.6;
+  color: #1a1a2e;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.teamtailor-job h2 {
-  margin-top: 0;
-  margin-bottom: 15px;
-  color: #333;
+/* ───────── Heading ───────────────────────────────────────────────── */
+
+.tt-jobs__heading {
+  font-size: 1.75rem;
+  font-weight: 700;
+  margin: 0 0 1.25rem;
+  color: #1a1a2e;
 }
 
-.teamtailor-job-meta {
-  margin-bottom: 10px;
-  font-size: 14px;
+/* ───────── Navbar ────────────────────────────────────────────────── */
+
+.tt-jobs__navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 1.5rem;
+  background: #ffffff;
+  border: 1px solid #e8ecf1;
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
 }
 
-.teamtailor-job-link {
-  display: inline-block;
-  padding: 8px 16px;
-  background-color: #0073aa;
-  color: #fff;
-  text-decoration: none;
-  border-radius: 3px;
-  margin-top: 15px;
+.tt-jobs__navbar-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
 }
 
-.teamtailor-job-link:hover {
-  background-color: #005f8b;
-  color: #fff;
+.tt-jobs__navbar-icon {
+  width: 22px;
+  height: 22px;
+  color: #6366f1;
 }
 
-/* Filter styles */
-.teamtailor-filter-form {
-  margin-bottom: 25px;
-  padding: 15px;
-  background-color: #f9f9f9;
-  border: 1px solid #eee;
-  border-radius: 5px;
+.tt-jobs__navbar-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1a1a2e;
 }
 
-.teamtailor-filter-form select {
-  margin-right: 10px;
-  padding: 8px;
-  border: 1px solid #ddd;
-  border-radius: 3px;
+.tt-jobs__navbar-count {
+  display: flex;
+  align-items: baseline;
+  gap: 0.375rem;
 }
 
-.teamtailor-filter-form input[type="submit"] {
-  padding: 8px 16px;
-  background-color: #0073aa;
-  color: #fff;
-  border: none;
-  border-radius: 3px;
+.tt-jobs__count-number {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #6366f1;
+  line-height: 1;
+}
+
+.tt-jobs__count-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #6b7280;
+}
+
+/* ───────── Filter Bar ────────────────────────────────────────────── */
+
+.tt-jobs__filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  padding: 1.25rem 1.5rem;
+  background: #ffffff;
+  border: 1px solid #e8ecf1;
+  border-radius: 12px;
+  margin-bottom: 1.25rem;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  align-items: flex-end;
+}
+
+.tt-jobs__filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.375rem;
+  min-width: 160px;
+  flex: 1 1 160px;
+}
+
+.tt-jobs__filter-label {
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  color: #6b7280;
+}
+
+.tt-jobs__filter-input {
+  width: 100%;
+  padding: 0.5rem 0.75rem;
+  font-size: 0.875rem;
+  font-family: 'Inter', sans-serif;
+  color: #1a1a2e;
+  background: #f9fafb;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  outline: none;
+  transition: border-color 0.2s, box-shadow 0.2s, background 0.2s;
+}
+
+.tt-jobs__filter-input:focus {
+  border-color: #6366f1;
+  box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.15);
+  background: #ffffff;
+}
+
+.tt-jobs__filter-select {
   cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 0.75rem center;
+  padding-right: 2.25rem;
 }
 
-.teamtailor-filter-form input[type="submit"]:hover {
-  background-color: #005f8b;
+.tt-jobs__filter-clear {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  font-family: 'Inter', sans-serif;
+  color: #6b7280;
+  background: #f3f4f6;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s, color 0.2s, border-color 0.2s;
+  white-space: nowrap;
+  align-self: flex-end;
+  height: fit-content;
+}
+
+.tt-jobs__filter-clear:hover {
+  background: #e5e7eb;
+  color: #374151;
+  border-color: #9ca3af;
+}
+
+/* ───────── Results / Empty ───────────────────────────────────────── */
+
+.tt-jobs__results {
+  position: relative;
+}
+
+/* ───────── Job Cards Grid ────────────────────────────────────────── */
+
+.tt-jobs__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 1.25rem;
+}
+
+.tt-jobs__card {
+  display: flex;
+  flex-direction: column;
+  background: #ffffff;
+  border: 1px solid #e8ecf1;
+  border-radius: 12px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+  transition: box-shadow 0.25s, transform 0.25s, border-color 0.25s;
+  overflow: hidden;
+}
+
+.tt-jobs__card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  transform: translateY(-2px);
+  border-color: #d1d5db;
+}
+
+.tt-jobs__card-body {
+  flex: 1;
+  padding: 1.5rem 1.5rem 1rem;
+}
+
+.tt-jobs__card-title {
+  margin: 0 0 0.5rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.tt-jobs__card-title a {
+  color: #1a1a2e;
+  text-decoration: none;
+  transition: color 0.2s;
+}
+
+.tt-jobs__card-title a:hover {
+  color: #6366f1;
+}
+
+.tt-jobs__card-excerpt {
+  margin: 0 0 1rem;
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.5;
+}
+
+/* ───────── Badges ────────────────────────────────────────────────── */
+
+.tt-jobs__card-meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.tt-jobs__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.25rem 0.625rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  border-radius: 6px;
+  white-space: nowrap;
+}
+
+.tt-jobs__badge--department {
+  background: #eef2ff;
+  color: #4338ca;
+}
+
+.tt-jobs__badge--location {
+  background: #f0fdf4;
+  color: #166534;
+}
+
+.tt-jobs__badge--location svg {
+  flex-shrink: 0;
+}
+
+.tt-jobs__badge-country {
+  font-weight: 400;
+  opacity: 0.75;
+}
+
+.tt-jobs__badge--role {
+  background: #fff7ed;
+  color: #9a3412;
+}
+
+/* ───────── Card Footer ───────────────────────────────────────────── */
+
+.tt-jobs__card-footer {
+  padding: 0.75rem 1.5rem 1.25rem;
+}
+
+.tt-jobs__card-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: #6366f1;
+  text-decoration: none;
+  transition: gap 0.2s;
+}
+
+.tt-jobs__card-link:hover {
+  gap: 0.625rem;
+  color: #4f46e5;
+}
+
+.tt-jobs__card-link svg {
+  transition: transform 0.2s;
+}
+
+.tt-jobs__card-link:hover svg {
+  transform: translateX(2px);
+}
+
+/* ───────── Empty State ───────────────────────────────────────────── */
+
+.tt-jobs__empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #9ca3af;
+}
+
+.tt-jobs__empty svg {
+  margin-bottom: 1rem;
+  opacity: 0.5;
+}
+
+.tt-jobs__empty h3 {
+  margin: 0 0 0.375rem;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #6b7280;
+}
+
+.tt-jobs__empty p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #9ca3af;
+}
+
+/* ───────── Animations ────────────────────────────────────────────── */
+
+@keyframes tt-fade-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.tt-jobs__card {
+  animation: tt-fade-in 0.35s ease-out both;
+}
+
+.tt-jobs__card:nth-child(1)  { animation-delay: 0.00s; }
+.tt-jobs__card:nth-child(2)  { animation-delay: 0.03s; }
+.tt-jobs__card:nth-child(3)  { animation-delay: 0.06s; }
+.tt-jobs__card:nth-child(4)  { animation-delay: 0.09s; }
+.tt-jobs__card:nth-child(5)  { animation-delay: 0.12s; }
+.tt-jobs__card:nth-child(6)  { animation-delay: 0.15s; }
+.tt-jobs__card:nth-child(7)  { animation-delay: 0.18s; }
+.tt-jobs__card:nth-child(8)  { animation-delay: 0.21s; }
+.tt-jobs__card:nth-child(9)  { animation-delay: 0.24s; }
+.tt-jobs__card:nth-child(10) { animation-delay: 0.27s; }
+.tt-jobs__card:nth-child(11) { animation-delay: 0.30s; }
+.tt-jobs__card:nth-child(12) { animation-delay: 0.33s; }
+
+/* ───────── Responsive ────────────────────────────────────────────── */
+
+@media (max-width: 768px) {
+  .tt-jobs__navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .tt-jobs__filters {
+    flex-direction: column;
+    padding: 1rem;
+  }
+
+  .tt-jobs__filter-group {
+    min-width: 100%;
+  }
+
+  .tt-jobs__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .tt-jobs__card-title {
+    font-size: 1rem;
+  }
 }

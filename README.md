@@ -8,6 +8,7 @@ The TeamTailor Integrator plugin seamlessly integrates TeamTailor's recruitment 
 
 - **Job Listings Synchronization**: Automatically syncs job listings from your TeamTailor account to your WordPress site.
 - **Application Forms**: Embeds TeamTailor application forms into your WordPress pages, allowing candidates to apply directly through your website.
+- **Mock Data Mode**: Test and develop with built-in simulated job data (Meridian ERP) without needing a live TeamTailor API key.
 - **API Key Integration**: Securely connects your TeamTailor account with WordPress using an API key.
 - **Shortcode Support**: Easily display job listings and application forms anywhere on your site with simple shortcodes.
 - **Customizable Settings**: Configure API settings and manage how job listings are displayed directly from the WordPress admin area.
@@ -29,6 +30,7 @@ After installation and configuration, you can start syncing job listings and emb
 
 - **API Key**: Obtain your API key from your TeamTailor account and enter it in the plugin settings.
 - **Test API Connection**: Use the "Test API" button in the plugin settings to ensure your site can communicate with TeamTailor.
+- **Mock Data Mode**: Go to TeamTailor Integrator → Advanced, check "Use Mock Data", and click Save. The plugin will use 12 realistic jobs from "Meridian ERP" — no API key needed. Sync normally and the mock data populates your site. Disable the option to return to live API mode.
 - **Customize Listings Display**: Configure how job listings are displayed through the plugin settings, including layout and fields shown.
 
 ## Development
@@ -54,6 +56,15 @@ A: Log in to your TeamTailor account, navigate to the API settings, and generate
 A: Yes, job listings can be customized via CSS and the plugin's provided hooks and filters.
 
 ## Changelog
+
+### 1.2.0 (2026-05-01)
+- Added Mock Data Mode for testing without a live API key
+- Created 12 realistic test jobs for "Meridian ERP" across 12 European cities
+- Added "Use Mock Data" checkbox to Advanced settings tab
+- Updated connection status indicator to show mock mode
+- Sidebar and API Test tab reflect mock mode status
+- Updated sync flow to work without API key in mock mode
+- Full cleanup of mock option on uninstall
 
 ### 1.1.1 (2024-05-10)
 - Improved admin UI with enhanced visual feedback
