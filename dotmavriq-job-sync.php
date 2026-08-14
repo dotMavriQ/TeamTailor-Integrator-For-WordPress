@@ -5,7 +5,7 @@
  * Description: Sync job listings from Teamtailor to your WordPress site. Display jobs via shortcodes and manage them from your dashboard. Independent integration; not affiliated with Teamtailor AB.
  * Version:     1.2.4
  * Requires at least: 5.8
- * Tested up to: 6.9
+ * Tested up to: 7.0
  * Requires PHP: 7.4
  * Author:      Jonatan Jansson
  * Author URI:  https://github.com/dotMavriQ

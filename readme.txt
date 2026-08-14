@@ -3,7 +3,7 @@ Contributors: dotmavriq
 Donate link: https://github.com/sponsors/dotMavriQ
 Tags: teamtailor, jobs, recruitment, careers, job listings
 Requires at least: 5.8
-Tested up to: 6.9
+Tested up to: 7.0
 Requires PHP: 7.4
 Stable tag: 1.2.4
 License: GPLv2 or later
@@ -98,6 +98,7 @@ This plugin only reads data from TeamTailor's API. It fetches job listings using
 * Prefixed all globals with `dotmavriq_job_sync` / `DotMavriQ_Job_Sync`: the bootstrap function, the version constant, all seven classes, and the uninstall routine's variables
 * Shortened the readme short description to fit the 150-character limit
 * Regenerated the translation catalogue as `languages/dotmavriq-job-sync.pot` (the previous file still declared the pre-rename text domain)
+* Bumped "Tested up to" to WordPress 7.0
 
 = 1.2.3 =
 * Renamed plugin and slug to "dotMavriQ's Job Sync for Teamtailor" / `dotmavriq-job-sync` to comply with WordPress.org trademark guidelines (no implied affiliation with Teamtailor AB)
