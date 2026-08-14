@@ -41,24 +41,6 @@ foreach ($dotmavriq_job_sync_jobs as $dotmavriq_job_sync_job) {
 }
 
 // Also clean up legacy meta keys from previous versions.
-global $wpdb;
-$wpdb->delete(
-    $wpdb->postmeta,
-    array('meta_key' => 'departments')
-);
-$wpdb->delete(
-    $wpdb->postmeta,
-    array('meta_key' => 'locations')
-);
-$wpdb->delete(
-    $wpdb->postmeta,
-    array('meta_key' => 'countries')
-);
-$wpdb->delete(
-    $wpdb->postmeta,
-    array('meta_key' => 'roles')
-);
-$wpdb->delete(
-    $wpdb->postmeta,
-    array('meta_key' => 'company')
-);
+foreach (array('departments', 'locations', 'countries', 'roles', 'company') as $dotmavriq_job_sync_legacy_key) {
+    delete_post_meta_by_key($dotmavriq_job_sync_legacy_key);
+}

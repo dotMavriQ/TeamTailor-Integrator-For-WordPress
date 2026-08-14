@@ -93,29 +93,6 @@ class DotMavriQ_Job_Sync_Public {
     }
 
     /**
-     * Get unique meta values for a given meta key.
-     *
-     * @since    1.0.0
-     * @param    string    $meta_key    The meta key.
-     * @return   array                  The unique meta values.
-     */
-    private function get_unique_meta_values($meta_key) {
-        global $wpdb;
-        $meta_values = $wpdb->get_col($wpdb->prepare("
-            SELECT DISTINCT pm.meta_value FROM {$wpdb->postmeta} pm
-            LEFT JOIN {$wpdb->posts} p ON pm.post_id = p.ID
-            WHERE pm.meta_key = %s
-            AND p.post_status = 'publish'
-            AND p.post_type = 'teamtailor_jobs'
-            ORDER BY pm.meta_value ASC
-        ", $meta_key));
-
-        return array_filter($meta_values, function($value) {
-            return !empty($value);
-        });
-    }
-
-    /**
      * Jobs shortcode callback.
      *
      * Shortcode attributes:

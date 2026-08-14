@@ -537,8 +537,9 @@ class DotMavriQ_Job_Sync_Admin {
         $this->test_api_call();
         $output = ob_get_clean();
 
-        // Send the formatted output
-        echo $output;
+        // Send the formatted output. The buffer holds markup this plugin
+        // generated itself, so it is filtered rather than escaped flat.
+        echo wp_kses_post($output);
         wp_die();
     }
 
@@ -731,8 +732,9 @@ class DotMavriQ_Job_Sync_Admin {
         // Get buffer contents
         $output = ob_get_clean();
 
-        // Send response
-        echo $output;
+        // Send response. The buffer holds markup this plugin generated
+        // itself, so it is filtered rather than escaped flat.
+        echo wp_kses_post($output);
         wp_die();
     }
 

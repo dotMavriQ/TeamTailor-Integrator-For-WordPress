@@ -5,7 +5,7 @@ Tags: teamtailor, jobs, recruitment, careers, job listings
 Requires at least: 5.8
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.2.4
+Stable tag: 1.2.5
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -92,6 +92,12 @@ This plugin only reads data from TeamTailor's API. It fetches job listings using
 3. API Test tab showing raw JSON response from TeamTailor.
 
 == Changelog ==
+
+= 1.2.5 =
+* Filtered buffered AJAX output through `wp_kses_post()` in the API test and sync handlers
+* Replaced `print_r()` debug output with `wp_json_encode()`
+* Replaced direct `$wpdb->delete()` calls in the uninstall routine with `delete_post_meta_by_key()`
+* Removed an unused private helper that ran a direct postmeta query
 
 = 1.2.4 =
 * Renamed the main plugin file to `dotmavriq-job-sync.php` to match the plugin slug

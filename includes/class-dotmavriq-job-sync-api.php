@@ -294,7 +294,7 @@ class DotMavriQ_Job_Sync_API {
         } else {
             $this->show_error(
                 __( 'API Error: Invalid response format. Expected array with data field.', 'dotmavriq-job-sync'),
-                $this->debug_mode ? print_r( $result, true ) : ''
+                $this->debug_mode ? wp_json_encode( $result ) : ''
             );
         }
 

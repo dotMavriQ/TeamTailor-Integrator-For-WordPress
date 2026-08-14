@@ -137,7 +137,7 @@ class DotMavriQ_Job_Sync_Sync {
             echo '<div class="teamtailor-notice teamtailor-notice-error">';
             echo '<p>' . esc_html__( 'Error fetching data from TeamTailor. Please check your API token and try again.', 'dotmavriq-job-sync') . '</p>';
             if ( $debug_mode ) {
-                echo '<p>' . esc_html__( 'Debug info:', 'dotmavriq-job-sync') . ' ' . esc_html( print_r( $jobs, true ) ) . '</p>';
+                echo '<p>' . esc_html__( 'Debug info:', 'dotmavriq-job-sync') . ' ' . esc_html( wp_json_encode( $jobs ) ) . '</p>';
             }
             echo '</div>';
             return;

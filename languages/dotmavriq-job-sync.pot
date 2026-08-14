@@ -2,14 +2,14 @@
 # This file is distributed under the GPLv2 or later.
 msgid ""
 msgstr ""
-"Project-Id-Version: dotMavriQ's Job Sync for Teamtailor 1.2.3\n"
+"Project-Id-Version: dotMavriQ's Job Sync for Teamtailor 1.2.5\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/dotmavriq-job-sync\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"POT-Creation-Date: 2026-08-14T20:20:43+00:00\n"
+"POT-Creation-Date: 2026-08-14T21:07:24+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.12.0\n"
 "X-Domain: dotmavriq-job-sync\n"
@@ -309,149 +309,149 @@ msgstr ""
 msgid "Copy JSON"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:553
+#: admin/class-dotmavriq-job-sync-admin.php:554
 msgid "TeamTailor Jobs"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:554
+#: admin/class-dotmavriq-job-sync-admin.php:555
 msgid "TeamTailor Job"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:555
+#: admin/class-dotmavriq-job-sync-admin.php:556
 msgid "Add New"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:556
+#: admin/class-dotmavriq-job-sync-admin.php:557
 msgid "Add New Job"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:557
+#: admin/class-dotmavriq-job-sync-admin.php:558
 msgid "Edit Job"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:558
+#: admin/class-dotmavriq-job-sync-admin.php:559
 msgid "New Job"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:559
+#: admin/class-dotmavriq-job-sync-admin.php:560
 msgid "View Job"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:560
+#: admin/class-dotmavriq-job-sync-admin.php:561
 msgid "Search Jobs"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:561
+#: admin/class-dotmavriq-job-sync-admin.php:562
 msgid "No jobs found"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:562
+#: admin/class-dotmavriq-job-sync-admin.php:563
 msgid "No jobs found in Trash"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:563
+#: admin/class-dotmavriq-job-sync-admin.php:564
 msgid "All Jobs"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:564
+#: admin/class-dotmavriq-job-sync-admin.php:565
 msgid "Job Archives"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:565
+#: admin/class-dotmavriq-job-sync-admin.php:566
 msgid "Insert into job"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:566
+#: admin/class-dotmavriq-job-sync-admin.php:567
 msgid "Uploaded to this job"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:567
+#: admin/class-dotmavriq-job-sync-admin.php:568
 msgid "Job Image"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:568
+#: admin/class-dotmavriq-job-sync-admin.php:569
 msgid "Set job image"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:569
+#: admin/class-dotmavriq-job-sync-admin.php:570
 msgid "Remove job image"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:570
+#: admin/class-dotmavriq-job-sync-admin.php:571
 msgid "Use as job image"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:571
+#: admin/class-dotmavriq-job-sync-admin.php:572
 msgid "Filter jobs list"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:572
+#: admin/class-dotmavriq-job-sync-admin.php:573
 msgid "Jobs list navigation"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:573
+#: admin/class-dotmavriq-job-sync-admin.php:574
 msgid "Jobs list"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:615
+#: admin/class-dotmavriq-job-sync-admin.php:616
 msgid "Job ID:"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:618
+#: admin/class-dotmavriq-job-sync-admin.php:619
 msgid "Job Type:"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:621
+#: admin/class-dotmavriq-job-sync-admin.php:622
 msgid "Company:"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:661
-#: admin/class-dotmavriq-job-sync-admin.php:751
-#: admin/class-dotmavriq-job-sync-admin.php:773
+#: admin/class-dotmavriq-job-sync-admin.php:662
+#: admin/class-dotmavriq-job-sync-admin.php:753
+#: admin/class-dotmavriq-job-sync-admin.php:775
 msgid "Job ID"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:687
+#: admin/class-dotmavriq-job-sync-admin.php:688
 msgid "Company"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:756
+#: admin/class-dotmavriq-job-sync-admin.php:758
 msgid "Date"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:769
+#: admin/class-dotmavriq-job-sync-admin.php:771
 msgid "TeamTailor Jobs Fields"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:779
+#: admin/class-dotmavriq-job-sync-admin.php:781
 msgid "Departments"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:785
+#: admin/class-dotmavriq-job-sync-admin.php:787
 msgid "Locations"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:791
+#: admin/class-dotmavriq-job-sync-admin.php:793
 msgid "Roles"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:797
+#: admin/class-dotmavriq-job-sync-admin.php:799
 msgid "Countries"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:859
+#: admin/class-dotmavriq-job-sync-admin.php:861
 msgid "TeamTailor Job ID"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:860
+#: admin/class-dotmavriq-job-sync-admin.php:862
 msgid "TeamTailor Departments"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:861
+#: admin/class-dotmavriq-job-sync-admin.php:863
 msgid "TeamTailor Locations"
 msgstr ""
 
-#: admin/class-dotmavriq-job-sync-admin.php:862
+#: admin/class-dotmavriq-job-sync-admin.php:864
 msgid "TeamTailor Roles"
 msgstr ""
 
