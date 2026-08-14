@@ -15,6 +15,22 @@ if (!defined('ABSPATH')) {
     define('ABSPATH', true);
 }
 
+// Minimal shims for the WordPress functions the mock API calls, so this
+// script stays runnable outside a WordPress bootstrap.
+if (!function_exists('wp_rand')) {
+    function wp_rand($min = 0, $max = 0) {
+        if ($min === 0 && $max === 0) {
+            $max = PHP_INT_MAX - 1;
+        }
+        return random_int($min, $max);
+    }
+}
+if (!function_exists('esc_html')) {
+    function esc_html($text) {
+        return htmlspecialchars($text, ENT_QUOTES, 'UTF-8');
+    }
+}
+
 // Load the mock API class.
 require_once dirname(__DIR__) . '/includes/class-dotmavriq-job-sync-mock-api.php';
 
