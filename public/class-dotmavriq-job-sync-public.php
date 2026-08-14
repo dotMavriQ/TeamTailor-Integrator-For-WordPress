@@ -4,8 +4,8 @@
  *
  * @since      1.0.0
  *
- * @package    TeamTailor_Integrator
- * @subpackage TeamTailor_Integrator/public
+ * @package    DotMavriQ_Job_Sync
+ * @subpackage DotMavriQ_Job_Sync/public
  */
 
 // If this file is called directly, abort.
@@ -18,11 +18,11 @@ if (!defined('ABSPATH')) {
  *
  * Defines the plugin name, version, and hooks for the public-facing side.
  *
- * @package    TeamTailor_Integrator
- * @subpackage TeamTailor_Integrator/public
+ * @package    DotMavriQ_Job_Sync
+ * @subpackage DotMavriQ_Job_Sync/public
  * @author     Jonatan Jansson
  */
-class TeamTailor_Integrator_Public {
+class DotMavriQ_Job_Sync_Public {
 
     /**
      * The ID of this plugin.

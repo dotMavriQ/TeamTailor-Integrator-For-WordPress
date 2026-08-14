@@ -5,11 +5,11 @@ Tags: teamtailor, jobs, recruitment, careers, job listings
 Requires at least: 5.8
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.2.3
+Stable tag: 1.2.4
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Sync job listings from Teamtailor into WordPress as a custom post type, with shortcode display and admin tooling. Independent integration; not affiliated with Teamtailor AB.
+Sync Teamtailor job listings into WordPress as a custom post type, with shortcode display. Not affiliated with Teamtailor AB.
 
 == Description ==
 
@@ -53,9 +53,9 @@ Note: "Teamtailor" is a trademark of Teamtailor AB. This plugin is an independen
 
 == Installation ==
 
-1. Upload the plugin files to the `/wp-content/plugins/teamtailor-integrator/` directory, or install the plugin through the WordPress plugins screen directly.
+1. Upload the plugin files to the `/wp-content/plugins/dotmavriq-job-sync/` directory, or install the plugin through the WordPress plugins screen directly.
 2. Activate the plugin through the 'Plugins' screen in WordPress.
-3. Use the Settings → TeamTailor Integrator screen to configure your API key.
+3. Use the plugin settings screen to configure your API key.
 4. Obtain your API key from your TeamTailor account under Settings → Integrations → API.
 5. Once configured, use the `[teamtailor_jobs]` shortcode to display job listings on any post or page.
 
@@ -71,7 +71,7 @@ Yes, job listings can be customized via CSS and the plugin's provided hooks and 
 
 = Can I test the plugin without a live TeamTailor API key? =
 
-Yes. Go to TeamTailor Integrator → Advanced and enable "Use Mock Data". The plugin will use 12 realistic jobs from "Meridian ERP" (a fictional European ERP company) spanning 8 departments, 12 European cities, 2 role types. You can fully test synchronization, filters, single job views, and the API test tab without any live API key.
+Yes. Go to the plugin's Advanced tab and enable "Use Mock Data". The plugin will use 12 realistic jobs from "Meridian ERP" (a fictional European ERP company) spanning 8 departments, 12 European cities, 2 role types. You can fully test synchronization, filters, single job views, and the API test tab without any live API key.
 
 = Does this plugin work with any theme? =
 
@@ -87,11 +87,17 @@ This plugin only reads data from TeamTailor's API. It fetches job listings using
 
 == Screenshots ==
 
-1. The TeamTailor Integrator settings page in the WordPress admin.
+1. The plugin settings page in the WordPress admin.
 2. Job listings displayed on the front-end using the `[teamtailor_jobs]` shortcode.
 3. API Test tab showing raw JSON response from TeamTailor.
 
 == Changelog ==
+
+= 1.2.4 =
+* Renamed the main plugin file to `dotmavriq-job-sync.php` to match the plugin slug
+* Prefixed all globals with `dotmavriq_job_sync` / `DotMavriQ_Job_Sync`: the bootstrap function, the version constant, all seven classes, and the uninstall routine's variables
+* Shortened the readme short description to fit the 150-character limit
+* Regenerated the translation catalogue as `languages/dotmavriq-job-sync.pot` (the previous file still declared the pre-rename text domain)
 
 = 1.2.3 =
 * Renamed plugin and slug to "dotMavriQ's Job Sync for Teamtailor" / `dotmavriq-job-sync` to comply with WordPress.org trademark guidelines (no implied affiliation with Teamtailor AB)

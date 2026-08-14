@@ -4,8 +4,8 @@
  *
  * @since      1.0.0
  *
- * @package    TeamTailor_Integrator
- * @subpackage TeamTailor_Integrator/includes
+ * @package    DotMavriQ_Job_Sync
+ * @subpackage DotMavriQ_Job_Sync/includes
  */
 
 // If this file is called directly, abort.
@@ -18,18 +18,18 @@ if (!defined('ABSPATH')) {
  *
  * Syncs jobs from TeamTailor to WordPress.
  *
- * @package    TeamTailor_Integrator
- * @subpackage TeamTailor_Integrator/includes
+ * @package    DotMavriQ_Job_Sync
+ * @subpackage DotMavriQ_Job_Sync/includes
  * @author     Jonatan Jansson
  */
-class TeamTailor_Integrator_Sync {
+class DotMavriQ_Job_Sync_Sync {
 
     /**
      * The API integration instance.
      *
      * @since    1.0.0
      * @access   private
-     * @var      TeamTailor_Integrator_API    $api    The API integration.
+     * @var      DotMavriQ_Job_Sync_API    $api    The API integration.
      */
     private $api;
 
@@ -122,8 +122,8 @@ class TeamTailor_Integrator_Sync {
             echo '</div>';
         }
 
-        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-teamtailor-integrator-api.php';
-        $this->api = new TeamTailor_Integrator_API( $api_key, $debug_mode );
+        require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-dotmavriq-job-sync-api.php';
+        $this->api = new DotMavriQ_Job_Sync_API( $api_key, $debug_mode );
 
         if ( $debug_mode ) {
             echo '<div class="teamtailor-status-box">';

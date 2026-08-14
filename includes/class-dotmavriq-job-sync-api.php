@@ -4,8 +4,8 @@
  *
  * @since      1.0.0
  *
- * @package    TeamTailor_Integrator
- * @subpackage TeamTailor_Integrator/includes
+ * @package    DotMavriQ_Job_Sync
+ * @subpackage DotMavriQ_Job_Sync/includes
  */
 
 // If this file is called directly, abort.
@@ -18,11 +18,11 @@ if (!defined('ABSPATH')) {
  *
  * Handles all API communications with TeamTailor using the WordPress HTTP API.
  *
- * @package    TeamTailor_Integrator
- * @subpackage TeamTailor_Integrator/includes
+ * @package    DotMavriQ_Job_Sync
+ * @subpackage DotMavriQ_Job_Sync/includes
  * @author     Jonatan Jansson
  */
-class TeamTailor_Integrator_API {
+class DotMavriQ_Job_Sync_API {
 
     /**
      * The API key for TeamTailor.
@@ -221,13 +221,13 @@ class TeamTailor_Integrator_API {
      * @return   mixed                  Mock response array.
      */
     private function mock_fetch( $endpoint ) {
-        if ( ! class_exists( 'TeamTailor_Integrator_Mock_API' ) ) {
-            require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-teamtailor-integrator-mock-api.php';
+        if ( ! class_exists( 'DotMavriQ_Job_Sync_Mock_API' ) ) {
+            require_once plugin_dir_path( dirname( __FILE__ ) ) . 'includes/class-dotmavriq-job-sync-mock-api.php';
         }
 
         $this->debug( "Mock API request: $endpoint" );
 
-        $mock = new TeamTailor_Integrator_Mock_API( $this->debug_mode );
+        $mock = new DotMavriQ_Job_Sync_Mock_API( $this->debug_mode );
 
         // Route by endpoint pattern.
         if ( 'jobs' === $endpoint ) {

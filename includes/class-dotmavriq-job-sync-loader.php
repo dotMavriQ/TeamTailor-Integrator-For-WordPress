@@ -4,8 +4,8 @@
  *
  * @since      1.0.0
  *
- * @package    TeamTailor_Integrator
- * @subpackage TeamTailor_Integrator/includes
+ * @package    DotMavriQ_Job_Sync
+ * @subpackage DotMavriQ_Job_Sync/includes
  */
 
 // If this file is called directly, abort.
@@ -20,11 +20,11 @@ if (!defined('ABSPATH')) {
  * the plugin, and register them with the WordPress API. Call the
  * run function to execute the list of actions and filters.
  *
- * @package    TeamTailor_Integrator
- * @subpackage TeamTailor_Integrator/includes
+ * @package    DotMavriQ_Job_Sync
+ * @subpackage DotMavriQ_Job_Sync/includes
  * @author     Jonatan Jansson
  */
-class TeamTailor_Integrator_Loader {
+class DotMavriQ_Job_Sync_Loader {
 
     /**
      * The array of actions registered with WordPress.

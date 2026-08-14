@@ -3,7 +3,7 @@
  * Fired when the plugin is uninstalled.
  *
  * @since      1.1.1
- * @package    TeamTailor_Integrator
+ * @package    DotMavriQ_Job_Sync
  */
 
 // If uninstall not called from WordPress, exit.
@@ -18,7 +18,7 @@ delete_option('teamtailor_integrator_use_mock_data');
 delete_option('teamtailor_last_sync_time');
 
 // Delete all job posts created by the plugin.
-$jobs = get_posts(
+$dotmavriq_job_sync_jobs = get_posts(
     array(
         'post_type'      => 'teamtailor_jobs',
         'posts_per_page' => -1,
@@ -26,18 +26,18 @@ $jobs = get_posts(
     )
 );
 
-foreach ($jobs as $job) {
+foreach ($dotmavriq_job_sync_jobs as $dotmavriq_job_sync_job) {
     // Delete all post meta associated with the job.
-    delete_post_meta($job->ID, '_teamtailor_job_id');
-    delete_post_meta($job->ID, '_teamtailor_job_type');
-    delete_post_meta($job->ID, 'teamtailor_departments');
-    delete_post_meta($job->ID, 'teamtailor_locations');
-    delete_post_meta($job->ID, 'teamtailor_countries');
-    delete_post_meta($job->ID, 'teamtailor_roles');
-    delete_post_meta($job->ID, 'teamtailor_company');
+    delete_post_meta($dotmavriq_job_sync_job->ID, '_teamtailor_job_id');
+    delete_post_meta($dotmavriq_job_sync_job->ID, '_teamtailor_job_type');
+    delete_post_meta($dotmavriq_job_sync_job->ID, 'teamtailor_departments');
+    delete_post_meta($dotmavriq_job_sync_job->ID, 'teamtailor_locations');
+    delete_post_meta($dotmavriq_job_sync_job->ID, 'teamtailor_countries');
+    delete_post_meta($dotmavriq_job_sync_job->ID, 'teamtailor_roles');
+    delete_post_meta($dotmavriq_job_sync_job->ID, 'teamtailor_company');
 
     // Delete the post itself.
-    wp_delete_post($job->ID, true);
+    wp_delete_post($dotmavriq_job_sync_job->ID, true);
 }
 
 // Also clean up legacy meta keys from previous versions.

@@ -4,8 +4,8 @@
  *
  * @since      1.0.0
  *
- * @package    TeamTailor_Integrator
- * @subpackage TeamTailor_Integrator/includes
+ * @package    DotMavriQ_Job_Sync
+ * @subpackage DotMavriQ_Job_Sync/includes
  */
 
 // If this file is called directly, abort.
@@ -17,11 +17,11 @@ if (!defined('ABSPATH')) {
  * The core plugin class.
  *
  * @since      1.0.0
- * @package    TeamTailor_Integrator
- * @subpackage TeamTailor_Integrator/includes
+ * @package    DotMavriQ_Job_Sync
+ * @subpackage DotMavriQ_Job_Sync/includes
  * @author     Jonatan Jansson
  */
-class TeamTailor_Integrator {
+class DotMavriQ_Job_Sync {
 
     /**
      * The loader that's responsible for maintaining and registering all hooks that power
@@ -29,7 +29,7 @@ class TeamTailor_Integrator {
      *
      * @since    1.0.0
      * @access   protected
-     * @var      TeamTailor_Integrator_Loader    $loader    Maintains and registers all hooks for the plugin.
+     * @var      DotMavriQ_Job_Sync_Loader    $loader    Maintains and registers all hooks for the plugin.
      */
     protected $loader;
 
@@ -61,8 +61,8 @@ class TeamTailor_Integrator {
      * @since    1.0.0
      */
     public function __construct() {
-        if (defined('TEAMTAILOR_INTEGRATOR_VERSION')) {
-            $this->version = TEAMTAILOR_INTEGRATOR_VERSION;
+        if (defined('DOTMAVRIQ_JOB_SYNC_VERSION')) {
+            $this->version = DOTMAVRIQ_JOB_SYNC_VERSION;
         } else {
             $this->version = '1.0.0';
         }
@@ -88,9 +88,9 @@ class TeamTailor_Integrator {
      *
      * Include the following files that make up the plugin:
      *
-     * - TeamTailor_Integrator_Loader. Orchestrates the hooks of the plugin.
-     * - TeamTailor_Integrator_Admin. Defines all hooks for the admin area.
-     * - TeamTailor_Integrator_Public. Defines all hooks for the public side of the site.
+     * - DotMavriQ_Job_Sync_Loader. Orchestrates the hooks of the plugin.
+     * - DotMavriQ_Job_Sync_Admin. Defines all hooks for the admin area.
+     * - DotMavriQ_Job_Sync_Public. Defines all hooks for the public side of the site.
      *
      * Create an instance of the loader which will be used to register the hooks
      * with WordPress.
@@ -103,20 +103,20 @@ class TeamTailor_Integrator {
          * The class responsible for orchestrating the actions and filters of the
          * core plugin.
          */
-        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-teamtailor-integrator-loader.php';
+        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-dotmavriq-job-sync-loader.php';
 
         /**
          * The class responsible for defining all actions that occur in the admin area.
          */
-        require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class-teamtailor-integrator-admin.php';
+        require_once plugin_dir_path(dirname(__FILE__)) . 'admin/class-dotmavriq-job-sync-admin.php';
 
         /**
          * The class responsible for defining all actions that occur in the public-facing
          * side of the site.
          */
-        require_once plugin_dir_path(dirname(__FILE__)) . 'public/class-teamtailor-integrator-public.php';
+        require_once plugin_dir_path(dirname(__FILE__)) . 'public/class-dotmavriq-job-sync-public.php';
 
-        $this->loader = new TeamTailor_Integrator_Loader();
+        $this->loader = new DotMavriQ_Job_Sync_Loader();
     }
 
     /**
@@ -127,7 +127,7 @@ class TeamTailor_Integrator {
      * @access   private
      */
     private function define_admin_hooks() {
-        $admin = new TeamTailor_Integrator_Admin($this->get_plugin_name(), $this->get_version());
+        $admin = new DotMavriQ_Job_Sync_Admin($this->get_plugin_name(), $this->get_version());
 
         $this->loader->add_action('admin_enqueue_scripts', $admin, 'enqueue_styles');
         $this->loader->add_action('admin_enqueue_scripts', $admin, 'enqueue_scripts');
@@ -158,7 +158,7 @@ class TeamTailor_Integrator {
      * @access   private
      */
     private function define_public_hooks() {
-        $public = new TeamTailor_Integrator_Public($this->get_plugin_name(), $this->get_version());
+        $public = new DotMavriQ_Job_Sync_Public($this->get_plugin_name(), $this->get_version());
 
         $this->loader->add_action('wp_enqueue_scripts', $public, 'enqueue_styles');
         $this->loader->add_action('wp_enqueue_scripts', $public, 'enqueue_scripts');
@@ -191,7 +191,7 @@ class TeamTailor_Integrator {
      * The reference to the class that orchestrates the hooks with the plugin.
      *
      * @since     1.0.0
-     * @return    TeamTailor_Integrator_Loader    Orchestrates the hooks of the plugin.
+     * @return    DotMavriQ_Job_Sync_Loader    Orchestrates the hooks of the plugin.
      */
     public function get_loader() {
         return $this->loader;

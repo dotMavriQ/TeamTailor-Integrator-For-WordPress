@@ -4,8 +4,8 @@
  *
  * @since      1.0.0
  *
- * @package    TeamTailor_Integrator
- * @subpackage TeamTailor_Integrator/admin
+ * @package    DotMavriQ_Job_Sync
+ * @subpackage DotMavriQ_Job_Sync/admin
  */
 
 // If this file is called directly, abort.
@@ -18,11 +18,11 @@ if (!defined('ABSPATH')) {
  *
  * Defines the plugin name, version, and hooks for the admin area.
  *
- * @package    TeamTailor_Integrator
- * @subpackage TeamTailor_Integrator/admin
+ * @package    DotMavriQ_Job_Sync
+ * @subpackage DotMavriQ_Job_Sync/admin
  * @author     Jonatan Jansson
  */
-class TeamTailor_Integrator_Admin {
+class DotMavriQ_Job_Sync_Admin {
 
     /**
      * The ID of this plugin.
@@ -243,8 +243,8 @@ class TeamTailor_Integrator_Admin {
                                         }
 
                                         // Load sync class
-                                        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-teamtailor-integrator-sync.php';
-                                        $sync = new TeamTailor_Integrator_Sync();
+                                        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-dotmavriq-job-sync-sync.php';
+                                        $sync = new DotMavriQ_Job_Sync_Sync();
                                         $sync->sync_teamtailor();
 
                                         // Update last sync time
@@ -478,8 +478,8 @@ class TeamTailor_Integrator_Admin {
             return;
         }
 
-        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-teamtailor-integrator-api.php';
-        $api = new TeamTailor_Integrator_API($api_key, $debug_mode);
+        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-dotmavriq-job-sync-api.php';
+        $api = new DotMavriQ_Job_Sync_API($api_key, $debug_mode);
         $response = $api->get_jobs();
 
         if ($response === false) {
@@ -721,8 +721,8 @@ class TeamTailor_Integrator_Admin {
         ob_start();
 
         // Load sync class
-        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-teamtailor-integrator-sync.php';
-        $sync = new TeamTailor_Integrator_Sync();
+        require_once plugin_dir_path(dirname(__FILE__)) . 'includes/class-dotmavriq-job-sync-sync.php';
+        $sync = new DotMavriQ_Job_Sync_Sync();
         $sync->sync_teamtailor();
 
         // Update last sync time

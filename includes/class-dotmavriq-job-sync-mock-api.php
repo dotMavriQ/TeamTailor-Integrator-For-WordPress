@@ -4,8 +4,8 @@
  *
  * @since      1.2.0
  *
- * @package    TeamTailor_Integrator
- * @subpackage TeamTailor_Integrator/includes
+ * @package    DotMavriQ_Job_Sync
+ * @subpackage DotMavriQ_Job_Sync/includes
  */
 
 // If this file is called directly, abort.
@@ -16,14 +16,14 @@ if (!defined('ABSPATH')) {
 /**
  * Mock API — returns realistic test data matching the TeamTailor v1 JSON:API format.
  *
- * Every method mirrors TeamTailor_Integrator_API so the sync / test flows
+ * Every method mirrors DotMavriQ_Job_Sync_API so the sync / test flows
  * work identically whether the real API or mock data is used.
  *
- * @package    TeamTailor_Integrator
- * @subpackage TeamTailor_Integrator/includes
+ * @package    DotMavriQ_Job_Sync
+ * @subpackage DotMavriQ_Job_Sync/includes
  * @author     Jonatan Jansson
  */
-class TeamTailor_Integrator_Mock_API {
+class DotMavriQ_Job_Sync_Mock_API {
 
     /**
      * Debug mode flag.

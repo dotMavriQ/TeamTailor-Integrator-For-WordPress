@@ -7,7 +7,7 @@
  * Validates every data structure matches what the plugin's sync,
  * API test, and shortcode flows expect.
  *
- * @package TeamTailor_Integrator
+ * @package DotMavriQ_Job_Sync
  */
 
 // Prevent WP constant errors when running standalone.
@@ -16,7 +16,7 @@ if (!defined('ABSPATH')) {
 }
 
 // Load the mock API class.
-require_once dirname(__DIR__) . '/includes/class-teamtailor-integrator-mock-api.php';
+require_once dirname(__DIR__) . '/includes/class-dotmavriq-job-sync-mock-api.php';
 
 $pass = 0;
 $fail = 0;
@@ -41,8 +41,8 @@ echo "\n=== TeamTailor Mock API — Structure Validation ===\n\n";
 // ---------------------------------------------------------------------------
 echo "1. Instantiation\n";
 try {
-    $mock = new TeamTailor_Integrator_Mock_API(false);
-    test('Class loads and instantiates', $mock instanceof TeamTailor_Integrator_Mock_API);
+    $mock = new DotMavriQ_Job_Sync_Mock_API(false);
+    test('Class loads and instantiates', $mock instanceof DotMavriQ_Job_Sync_Mock_API);
 } catch (Throwable $e) {
     test('Class loads and instantiates', false, $e->getMessage());
     echo "\nFATAL — cannot continue\n";
