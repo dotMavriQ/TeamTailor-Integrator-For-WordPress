@@ -173,11 +173,11 @@ class TeamTailor_Integrator_API {
             if ( $this->debug_mode ) {
                 $this->show_error(
                     /* translators: %s: HTTP error message from WordPress HTTP API */
-                    sprintf( __( 'HTTP Error: %s', 'teamtailor-integrator' ), $error_message )
+                    sprintf( __( 'HTTP Error: %s', 'dotmavriq-job-sync'), $error_message )
                 );
             } else {
                 $this->show_error(
-                    __( 'Error connecting to TeamTailor API. Enable debugging for more details.', 'teamtailor-integrator' )
+                    __( 'Error connecting to TeamTailor API. Enable debugging for more details.', 'dotmavriq-job-sync')
                 );
             }
 
@@ -193,7 +193,7 @@ class TeamTailor_Integrator_API {
         if ( $http_code < 200 || $http_code >= 300 ) {
             $this->show_error(
                 /* translators: %d: HTTP status code */
-                sprintf( __( 'API returned non-successful code: %d', 'teamtailor-integrator' ), $http_code ),
+                sprintf( __( 'API returned non-successful code: %d', 'dotmavriq-job-sync'), $http_code ),
                 $this->debug_mode ? substr( $body, 0, 500 ) : ''
             );
         }
@@ -204,7 +204,7 @@ class TeamTailor_Integrator_API {
         if ( JSON_ERROR_NONE !== json_last_error() ) {
             $this->show_error(
                 /* translators: %s: JSON error message */
-                sprintf( __( 'JSON decode error: %s', 'teamtailor-integrator' ), json_last_error_msg() ),
+                sprintf( __( 'JSON decode error: %s', 'dotmavriq-job-sync'), json_last_error_msg() ),
                 $this->debug_mode ? substr( $body, 0, 500 ) : ''
             );
             return false;
@@ -262,14 +262,14 @@ class TeamTailor_Integrator_API {
      */
     public function get_jobs() {
         if ( $this->use_mock_data ) {
-            $this->debug( __( 'Fetching jobs from mock data (Meridian ERP)...', 'teamtailor-integrator' ) );
+            $this->debug( __( 'Fetching jobs from mock data (Meridian ERP)...', 'dotmavriq-job-sync') );
         } else {
-            $this->debug( __( 'Fetching jobs from TeamTailor API...', 'teamtailor-integrator' ) );
+            $this->debug( __( 'Fetching jobs from TeamTailor API...', 'dotmavriq-job-sync') );
         }
 
         if ( $this->debug_mode ) {
             echo '<div class="teamtailor-status-box">';
-            echo '<p><strong>▶</strong> ' . esc_html__( 'API call: jobs', 'teamtailor-integrator' ) . '</p>';
+            echo '<p><strong>▶</strong> ' . esc_html__( 'API call: jobs', 'dotmavriq-job-sync') . '</p>';
             echo '</div>';
         }
 
@@ -282,18 +282,18 @@ class TeamTailor_Integrator_API {
             if ( ! wp_doing_ajax() ) {
                 echo '<div class="teamtailor-notice teamtailor-notice-success">';
                 if ( $this->use_mock_data ) {
-                    echo '<p><strong>' . esc_html__( 'Mock data mode active — using test data from Meridian ERP', 'teamtailor-integrator' ) . '</strong></p>';
+                    echo '<p><strong>' . esc_html__( 'Mock data mode active — using test data from Meridian ERP', 'dotmavriq-job-sync') . '</strong></p>';
                 } else {
-                    echo '<p><strong>' . esc_html__( 'Successfully connected to TeamTailor!', 'teamtailor-integrator' ) . '</strong></p>';
+                    echo '<p><strong>' . esc_html__( 'Successfully connected to TeamTailor!', 'dotmavriq-job-sync') . '</strong></p>';
                 }
                 echo '</div>';
             }
 
             /* translators: %d: number of jobs fetched */
-            $this->debug( sprintf( __( 'Successfully fetched %d jobs from API', 'teamtailor-integrator' ), $job_count ) );
+            $this->debug( sprintf( __( 'Successfully fetched %d jobs from API', 'dotmavriq-job-sync'), $job_count ) );
         } else {
             $this->show_error(
-                __( 'API Error: Invalid response format. Expected array with data field.', 'teamtailor-integrator' ),
+                __( 'API Error: Invalid response format. Expected array with data field.', 'dotmavriq-job-sync'),
                 $this->debug_mode ? print_r( $result, true ) : ''
             );
         }

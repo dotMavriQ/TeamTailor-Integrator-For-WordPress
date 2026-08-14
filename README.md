@@ -1,8 +1,10 @@
-# TeamTailor Integrator WordPress Plugin
+# dotMavriQ's Job Sync for Teamtailor
+
+A WordPress plugin that syncs job listings from Teamtailor. Independent integration; not affiliated with Teamtailor AB.
 
 ## Description
 
-The TeamTailor Integrator plugin seamlessly integrates TeamTailor's recruitment services with your WordPress site, enabling you to display job listings, receive applications, and manage your recruitment process directly through your website. This plugin utilizes the TeamTailor API to offer a straightforward method for enhancing your site with powerful recruitment capabilities.
+This plugin integrates TeamTailor's recruitment services with your WordPress site, enabling you to display job listings, receive applications, and manage your recruitment process directly through your website. This plugin utilizes the TeamTailor API to offer a straightforward method for enhancing your site with powerful recruitment capabilities.
 
 ## Features
 
@@ -17,8 +19,8 @@ The TeamTailor Integrator plugin seamlessly integrates TeamTailor's recruitment 
 ## Installation
 
 1. **Upload Plugin**: Download the plugin zip file and upload it to your WordPress site via the Plugins > Add New > Upload Plugin page.
-2. **Activate Plugin**: Once uploaded, activate the TeamTailor Integrator plugin through the 'Plugins' menu in WordPress.
-3. **Configure API Key**: Navigate to the TeamTailor Integrator settings page under the main WordPress settings menu. Enter your TeamTailor API key and save the settings.
+2. **Activate Plugin**: Once uploaded, activate the plugin through the 'Plugins' menu in WordPress.
+3. **Configure API Key**: Navigate to the plugin settings page under the main WordPress settings menu. Enter your TeamTailor API key and save the settings.
 
 ## Usage
 
@@ -30,7 +32,7 @@ After installation and configuration, you can start syncing job listings and emb
 
 - **API Key**: Obtain your API key from your TeamTailor account and enter it in the plugin settings.
 - **Test API Connection**: Use the "Test API" button in the plugin settings to ensure your site can communicate with TeamTailor.
-- **Mock Data Mode**: Go to TeamTailor Integrator → Advanced, check "Use Mock Data", and click Save. The plugin will use 12 realistic jobs from "Meridian ERP" — no API key needed. Sync normally and the mock data populates your site. Disable the option to return to live API mode.
+- **Mock Data Mode**: Go to the plugin's Advanced tab, check "Use Mock Data", and click Save. The plugin will use 12 realistic jobs from "Meridian ERP" — no API key needed. Sync normally and the mock data populates your site. Disable the option to return to live API mode.
 - **Customize Listings Display**: Configure how job listings are displayed through the plugin settings, including layout and fields shown.
 
 ## Development

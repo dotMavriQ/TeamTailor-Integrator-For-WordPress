@@ -222,6 +222,32 @@
         });
     });
     
+    // API Test button handler (data + i18n via wp_localize_script as teamtailorAdmin)
+    $(document).on('click', '#teamtailor-test-api-btn', function(e) {
+        e.preventDefault();
+        var cfg = window.teamtailorAdmin || {};
+        $('#teamtailor-api-response').html('<div class="teamtailor-loading-message">' + (cfg.i18nLoading || '') + '</div>');
+        $.ajax({
+            url: cfg.ajaxUrl,
+            type: 'POST',
+            data: { action: 'teamtailor_test_api', nonce: cfg.testApiNonce },
+            success: function(response) {
+                $('#teamtailor-api-response').html(response);
+                if (typeof Prism !== 'undefined') { Prism.highlightAll(); }
+                $('#teamtailor-test-api-btn').removeClass('teamtailor-loading').prop('disabled', false);
+            },
+            error: function() {
+                $('#teamtailor-api-response').html('<div class="teamtailor-notice teamtailor-notice-error"><p>' + (cfg.i18nError || '') + '</p></div>');
+                $('#teamtailor-test-api-btn').removeClass('teamtailor-loading').prop('disabled', false);
+            },
+            complete: function() {
+                setTimeout(function() {
+                    $('#teamtailor-test-api-btn').removeClass('teamtailor-loading').prop('disabled', false);
+                }, 500);
+            }
+        });
+    });
+
     // Detect when page has fully loaded and reset any loading indicators
     $(window).on('load', function() {
         // Reset all loading buttons

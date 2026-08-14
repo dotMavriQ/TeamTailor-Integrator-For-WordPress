@@ -1,9 +1,9 @@
 <?php
 /**
- * Plugin Name: TeamTailor Integrator
+ * Plugin Name: dotMavriQ's Job Sync for Teamtailor
  * Plugin URI:  https://github.com/dotMavriQ/TeamTailor-Integrator-For-WordPress
- * Description: Seamlessly integrate TeamTailor recruitment services with your WordPress site. Sync job listings, display them via shortcodes, and manage your recruitment process directly through your website.
- * Version:     1.2.2
+ * Description: Sync job listings from Teamtailor to your WordPress site. Display jobs via shortcodes and manage them from your dashboard. Independent integration; not affiliated with Teamtailor AB.
+ * Version:     1.2.3
  * Requires at least: 5.8
  * Tested up to: 6.9
  * Requires PHP: 7.4
@@ -11,7 +11,7 @@
  * Author URI:  https://github.com/dotMavriQ
  * License:     GPLv2 or later
  * License URI: https://www.gnu.org/licenses/gpl-2.0.html
- * Text Domain: teamtailor-integrator
+ * Text Domain: dotmavriq-job-sync
  * Domain Path: /languages
  *
  * @package TeamTailor_Integrator
@@ -27,7 +27,7 @@ if (!defined('WPINC')) {
  * Start at version 1.0.0 and use SemVer - https://semver.org
  * Rename this for your plugin and update it as you release new versions.
  */
-define('TEAMTAILOR_INTEGRATOR_VERSION', '1.2.2');
+define('TEAMTAILOR_INTEGRATOR_VERSION', '1.2.3');
 
 /**
  * The core plugin class that is used to define internationalization,

@@ -66,7 +66,7 @@ class TeamTailor_Integrator {
         } else {
             $this->version = '1.0.0';
         }
-        $this->plugin_name = 'teamtailor-integrator';
+        $this->plugin_name = 'dotmavriq-job-sync';
 
         $this->load_dependencies();
         $this->set_locale();

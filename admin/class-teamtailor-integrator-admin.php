@@ -66,7 +66,7 @@ class TeamTailor_Integrator_Admin {
         $screen = get_current_screen();
 
         // Only load on our plugin pages
-        if (!isset($screen->id) || strpos($screen->id, 'teamtailor-integrator') === false) {
+        if (!isset($screen->id) || strpos($screen->id, 'dotmavriq-job-sync') === false) {
             return;
         }
 
@@ -97,7 +97,7 @@ class TeamTailor_Integrator_Admin {
         $screen = get_current_screen();
 
         // Only load on our plugin pages
-        if (!isset($screen->id) || strpos($screen->id, 'teamtailor-integrator') === false) {
+        if (!isset($screen->id) || strpos($screen->id, 'dotmavriq-job-sync') === false) {
             return;
         }
 
@@ -108,6 +108,17 @@ class TeamTailor_Integrator_Admin {
             array('jquery'),
             $this->version,
             true
+        );
+
+        wp_localize_script(
+            $this->plugin_name . '-admin',
+            'teamtailorAdmin',
+            array(
+                'ajaxUrl'      => admin_url('admin-ajax.php'),
+                'testApiNonce' => wp_create_nonce('teamtailor_test_api_nonce'),
+                'i18nLoading'  => esc_html__('Loading API response...', 'dotmavriq-job-sync'),
+                'i18nError'    => esc_html__('Error: Failed to fetch API response. Please try again.', 'dotmavriq-job-sync'),
+            )
         );
 
         // Enqueue Prism.js for syntax highlighting
@@ -127,10 +138,10 @@ class TeamTailor_Integrator_Admin {
      */
     public function add_admin_menu() {
         add_menu_page(
-            esc_html__( 'TeamTailor Integrator', 'teamtailor-integrator' ),
-            esc_html__( 'TeamTailor Integrator', 'teamtailor-integrator' ),
+            esc_html__( "dotMavriQ's Job Sync for Teamtailor", 'dotmavriq-job-sync'),
+            esc_html__( "dotMavriQ's Job Sync for Teamtailor", 'dotmavriq-job-sync'),
             'manage_options',
-            'teamtailor-integrator',
+            'dotmavriq-job-sync',
             array($this, 'display_settings_page'),
             'dashicons-businessman',
             26
@@ -160,7 +171,7 @@ class TeamTailor_Integrator_Admin {
 
         // Get latest sync time
         $last_sync = get_option('teamtailor_last_sync_time', false);
-        $last_sync_text = $last_sync ? sprintf(/* translators: %s: time since last sync */ esc_html__('%s ago', 'teamtailor-integrator'), human_time_diff($last_sync, current_time('timestamp'))) : esc_html__('Never', 'teamtailor-integrator');
+        $last_sync_text = $last_sync ? sprintf(/* translators: %s: time since last sync */ esc_html__('%s ago', 'dotmavriq-job-sync'), human_time_diff($last_sync, current_time('timestamp'))) : esc_html__('Never', 'dotmavriq-job-sync');
 
         // Check if API key is set (or mock mode is active)
         $api_key = get_option('teamtailor_integrator_api_token');
@@ -171,7 +182,7 @@ class TeamTailor_Integrator_Admin {
         <div class="wrap teamtailor-admin-wrap">
             <!-- Header -->
             <div class="teamtailor-header">
-                <img src="<?php echo plugin_dir_url(dirname(__FILE__)) . 'assets/images/TTWapuu.png'; ?>" alt="TeamTailor Integrator" class="teamtailor-logo">
+                <img src="<?php echo esc_url( plugin_dir_url(dirname(__FILE__)) . 'assets/images/TTWapuu.png' ); ?>" alt="TeamTailor Integrator" class="teamtailor-logo">
                 <div>
                     <h1><?php echo esc_html(get_admin_page_title()); ?>
                         <span class="teamtailor-header-version">v<?php echo esc_html($this->version); ?></span>
@@ -187,17 +198,17 @@ class TeamTailor_Integrator_Admin {
                     <!-- Tabs Navigation -->
                     <div class="teamtailor-tabs">
                         <div class="teamtailor-tabs-list">
-                            <a href="#" class="teamtailor-tab" data-tab="tab-settings"><?php esc_html_e('Settings', 'teamtailor-integrator'); ?></a>
-                            <a href="#" class="teamtailor-tab" data-tab="tab-api"><?php esc_html_e('API Test', 'teamtailor-integrator'); ?></a>
-                            <a href="#" class="teamtailor-tab" data-tab="tab-advanced"><?php esc_html_e('Advanced', 'teamtailor-integrator'); ?></a>
+                            <a href="#" class="teamtailor-tab" data-tab="tab-settings"><?php esc_html_e('Settings', 'dotmavriq-job-sync'); ?></a>
+                            <a href="#" class="teamtailor-tab" data-tab="tab-api"><?php esc_html_e('API Test', 'dotmavriq-job-sync'); ?></a>
+                            <a href="#" class="teamtailor-tab" data-tab="tab-advanced"><?php esc_html_e('Advanced', 'dotmavriq-job-sync'); ?></a>
                         </div>
 
                         <!-- Settings Tab -->
                         <div id="tab-settings" class="teamtailor-tab-content">
                             <div class="teamtailor-panel">
-                                <h2><?php esc_html_e('API Configuration', 'teamtailor-integrator'); ?></h2>
+                                <h2><?php esc_html_e('API Configuration', 'dotmavriq-job-sync'); ?></h2>
                                 <p class="teamtailor-panel-intro">
-                                    <?php esc_html_e('To connect with TeamTailor, you need to provide your TeamTailor API token. You can find this in your TeamTailor account under Settings > Integrations > API.', 'teamtailor-integrator'); ?>
+                                    <?php esc_html_e('To connect with TeamTailor, you need to provide your TeamTailor API token. You can find this in your TeamTailor account under Settings > Integrations > API.', 'dotmavriq-job-sync'); ?>
                                 </p>
 
                                 <?php $this->save_token_form(); ?>
@@ -205,29 +216,29 @@ class TeamTailor_Integrator_Admin {
 
                             <?php if ($api_connected): ?>
                             <div class="teamtailor-panel">
-                                <h2><?php esc_html_e('Synchronization', 'teamtailor-integrator'); ?></h2>
+                                <h2><?php esc_html_e('Synchronization', 'dotmavriq-job-sync'); ?></h2>
                                 <p class="teamtailor-panel-intro">
-                                    <?php esc_html_e('Sync your TeamTailor job listings to WordPress. This will import all active job listings and update any existing ones.', 'teamtailor-integrator'); ?>
+                                    <?php esc_html_e('Sync your TeamTailor job listings to WordPress. This will import all active job listings and update any existing ones.', 'dotmavriq-job-sync'); ?>
                                 </p>
 
                                 <div class="teamtailor-status-box">
-                                    <p><strong><?php esc_html_e('Last Sync:', 'teamtailor-integrator'); ?></strong> <?php echo esc_html($last_sync_text); ?></p>
+                                    <p><strong><?php esc_html_e('Last Sync:', 'dotmavriq-job-sync'); ?></strong> <?php echo esc_html($last_sync_text); ?></p>
                                 </div>
 
                                 <form method="post" action="">
                                     <?php wp_nonce_field('teamtailor_sync_action', 'teamtailor_sync_nonce'); ?>
-                                    <input type="submit" id="teamtailor-sync-btn" name="sync_teamtailor" class="button button-primary" value="<?php esc_attr_e('Sync from TeamTailor', 'teamtailor-integrator'); ?>" data-loading-text="<?php echo esc_attr__('Syncing...', 'teamtailor-integrator'); ?>">
+                                    <input type="submit" id="teamtailor-sync-btn" name="sync_teamtailor" class="button button-primary" value="<?php esc_attr_e('Sync from TeamTailor', 'dotmavriq-job-sync'); ?>" data-loading-text="<?php echo esc_attr__('Syncing...', 'dotmavriq-job-sync'); ?>">
                                 </form>
 
                                 <?php
                                 // Check if sync button was clicked
                                 if (isset($_POST['sync_teamtailor'])) {
                                     // Verify nonce for security
-                                    if (isset($_POST['teamtailor_sync_nonce']) && wp_verify_nonce(wp_unslash($_POST['teamtailor_sync_nonce']), 'teamtailor_sync_action')) {
+                                    if (isset($_POST['teamtailor_sync_nonce']) && wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['teamtailor_sync_nonce'])), 'teamtailor_sync_action')) {
                                         // Debugging - only show if debug mode is enabled
                                         if (get_option('teamtailor_integrator_debug_mode')) {
                                             echo '<div class="teamtailor-status-box">';
-                                            echo '<p><strong>▶</strong> ' . esc_html__( 'Sync initiated', 'teamtailor-integrator' ) . '</p>';
+                                            echo '<p><strong>▶</strong> ' . esc_html__( 'Sync initiated', 'dotmavriq-job-sync') . '</p>';
                                             echo '</div>';
                                         }
 
@@ -240,7 +251,7 @@ class TeamTailor_Integrator_Admin {
                                         update_option('teamtailor_last_sync_time', current_time('timestamp'));
                                     } else {
                                         echo '<div class="teamtailor-notice teamtailor-notice-error">';
-                                        echo '<p>' . esc_html__( 'Security verification failed. Please try again.', 'teamtailor-integrator' ) . '</p>';
+                                        echo '<p>' . esc_html__( 'Security verification failed. Please try again.', 'dotmavriq-job-sync') . '</p>';
                                         echo '</div>';
                                     }
                                 }
@@ -252,65 +263,22 @@ class TeamTailor_Integrator_Admin {
                         <!-- API Test Tab -->
                         <div id="tab-api" class="teamtailor-tab-content">
                             <div class="teamtailor-panel">
-                                <h2><?php esc_html_e('API Test', 'teamtailor-integrator'); ?></h2>
+                                <h2><?php esc_html_e('API Test', 'dotmavriq-job-sync'); ?></h2>
                                 <p class="teamtailor-panel-intro">
-                                    <?php esc_html_e('Test your TeamTailor API connection and view the raw JSON data returned by the API. This helps you understand the structure of the data that will be imported.', 'teamtailor-integrator'); ?>
+                                    <?php esc_html_e('Test your TeamTailor API connection and view the raw JSON data returned by the API. This helps you understand the structure of the data that will be imported.', 'dotmavriq-job-sync'); ?>
                                 </p>
 
 
                                 <?php if (!$api_connected): ?>
                                     <div class="teamtailor-notice teamtailor-notice-warning">
-                                        <p><?php esc_html_e('You need to set up your API token in the Settings tab or enable "Use Mock Data" in the Advanced tab before testing the API.', 'teamtailor-integrator'); ?></p>
+                                        <p><?php esc_html_e('You need to set up your API token in the Settings tab or enable "Use Mock Data" in the Advanced tab before testing the API.', 'dotmavriq-job-sync'); ?></p>
                                     </div>
                                 <?php else: ?>
-                                    <button id="teamtailor-test-api-btn" class="button button-primary"><?php esc_html_e('Test API', 'teamtailor-integrator'); ?></button>
+                                    <button id="teamtailor-test-api-btn" class="button button-primary"><?php esc_html_e('Test API', 'dotmavriq-job-sync'); ?></button>
 
                                     <div id="teamtailor-api-response" style="margin-top: 20px;">
                                         <!-- API Response will be loaded here via AJAX -->
                                     </div>
-
-                                    <script>
-                                        jQuery(document).ready(function($) {
-                                            $('#teamtailor-test-api-btn').on('click', function(e) {
-                                                e.preventDefault();
-
-                                                // Show loading indicator
-                                                $('#teamtailor-api-response').html('<div class="teamtailor-loading-message"><?php echo esc_html__('Loading API response...', 'teamtailor-integrator'); ?></div>');
-
-                                                // Make AJAX request to test API
-                                                $.ajax({
-                                                    url: ajaxurl,
-                                                    type: 'POST',
-                                                    data: {
-                                                        action: 'teamtailor_test_api',
-                                                        nonce: '<?php echo esc_js(wp_create_nonce('teamtailor_test_api_nonce')); ?>'
-                                                    },
-                                                    success: function(response) {
-                                                        $('#teamtailor-api-response').html(response);
-
-                                                        // Initialize Prism.js highlighting after content is loaded
-                                                        if (typeof Prism !== 'undefined') {
-                                                            Prism.highlightAll();
-                                                        }
-
-                                                        // Reset button loading state
-                                                        $('#teamtailor-test-api-btn').removeClass('teamtailor-loading').prop('disabled', false);
-                                                    },
-                                                    error: function() {
-                                                        $('#teamtailor-api-response').html('<div class="teamtailor-notice teamtailor-notice-error"><p><?php echo esc_html__('Error: Failed to fetch API response. Please try again.', 'teamtailor-integrator'); ?></p></div>');
-                                                        // Also reset button loading state on error
-                                                        $('#teamtailor-test-api-btn').removeClass('teamtailor-loading').prop('disabled', false);
-                                                    },
-                                                    complete: function() {
-                                                        // Final safety check to ensure button is reset
-                                                        setTimeout(function() {
-                                                            $('#teamtailor-test-api-btn').removeClass('teamtailor-loading').prop('disabled', false);
-                                                        }, 500);
-                                                    }
-                                                });
-                                            });
-                                        });
-                                    </script>
                                 <?php endif; ?>
                             </div>
                         </div>
@@ -318,9 +286,9 @@ class TeamTailor_Integrator_Admin {
                         <!-- Advanced Tab -->
                         <div id="tab-advanced" class="teamtailor-tab-content">
                             <div class="teamtailor-panel">
-                                <h2><?php esc_html_e('Advanced Settings', 'teamtailor-integrator'); ?></h2>
+                                <h2><?php esc_html_e('Advanced Settings', 'dotmavriq-job-sync'); ?></h2>
                                 <p class="teamtailor-panel-intro">
-                                    <?php esc_html_e('These advanced settings allow you to customize the behavior of the TeamTailor Integrator plugin.', 'teamtailor-integrator'); ?>
+                                    <?php esc_html_e('These advanced settings allow you to customize the behavior of the TeamTailor Integrator plugin.', 'dotmavriq-job-sync'); ?>
                                 </p>
 
                                 <form method="post" action="options.php">
@@ -334,7 +302,7 @@ class TeamTailor_Integrator_Admin {
                                                 value="1"
                                                 <?php checked(1, get_option('teamtailor_integrator_debug_mode'), true); ?>
                                             />
-                                            <strong><?php esc_html_e('Debugging', 'teamtailor-integrator'); ?></strong> - <?php esc_html_e('Show detailed debug information during sync', 'teamtailor-integrator'); ?>
+                                            <strong><?php esc_html_e('Debugging', 'dotmavriq-job-sync'); ?></strong> - <?php esc_html_e('Show detailed debug information during sync', 'dotmavriq-job-sync'); ?>
                                         </label>
                                     </div>
 
@@ -346,7 +314,7 @@ class TeamTailor_Integrator_Admin {
                                                 value="1"
                                                 <?php checked(1, get_option('teamtailor_integrator_use_mock_data'), true); ?>
                                             />
-                                            <strong><?php esc_html_e('Use Mock Data', 'teamtailor-integrator'); ?></strong> - <?php esc_html_e('Use simulated job data (Meridian ERP) instead of the live TeamTailor API — useful for testing and development without a real API key', 'teamtailor-integrator'); ?>
+                                            <strong><?php esc_html_e('Use Mock Data', 'dotmavriq-job-sync'); ?></strong> - <?php esc_html_e('Use simulated job data (Meridian ERP) instead of the live TeamTailor API — useful for testing and development without a real API key', 'dotmavriq-job-sync'); ?>
                                         </label>
                                     </div>
 
@@ -354,7 +322,7 @@ class TeamTailor_Integrator_Admin {
                                     <input type="hidden" name="teamtailor_integrator_api_token" value="<?php echo esc_attr(get_option('teamtailor_integrator_api_token')); ?>" />
 
                                     <p>
-                                        <input type="submit" name="submit" id="submit" class="button button-primary" value="<?php esc_attr_e('Save Advanced Settings', 'teamtailor-integrator'); ?>">
+                                        <input type="submit" name="submit" id="submit" class="button button-primary" value="<?php esc_attr_e('Save Advanced Settings', 'dotmavriq-job-sync'); ?>">
                                     </p>
                                 </form>
                             </div>
@@ -366,25 +334,25 @@ class TeamTailor_Integrator_Admin {
                 <div class="teamtailor-column-sidebar">
                     <!-- Help Box -->
                     <div class="teamtailor-help-box">
-                        <h3><?php esc_html_e('Quick Help', 'teamtailor-integrator'); ?></h3>
+                        <h3><?php esc_html_e('Quick Help', 'dotmavriq-job-sync'); ?></h3>
                         <ul>
-                            <li><strong><?php esc_html_e('API Token:', 'teamtailor-integrator'); ?></strong> <?php esc_html_e('Required to connect to TeamTailor', 'teamtailor-integrator'); ?></li>
-                            <li><strong><?php esc_html_e('Mock Data:', 'teamtailor-integrator'); ?></strong> <?php esc_html_e('Enable in Advanced tab to test without a live API key', 'teamtailor-integrator'); ?></li>
-                            <li><strong><?php esc_html_e('Sync:', 'teamtailor-integrator'); ?></strong> <?php esc_html_e('Import and update jobs from TeamTailor', 'teamtailor-integrator'); ?></li>
-                            <li><strong><?php esc_html_e('Shortcode:', 'teamtailor-integrator'); ?></strong> <?php esc_html_e('Use', 'teamtailor-integrator'); ?> <code>[teamtailor_jobs]</code> <?php esc_html_e('to display jobs', 'teamtailor-integrator'); ?></li>
+                            <li><strong><?php esc_html_e('API Token:', 'dotmavriq-job-sync'); ?></strong> <?php esc_html_e('Required to connect to TeamTailor', 'dotmavriq-job-sync'); ?></li>
+                            <li><strong><?php esc_html_e('Mock Data:', 'dotmavriq-job-sync'); ?></strong> <?php esc_html_e('Enable in Advanced tab to test without a live API key', 'dotmavriq-job-sync'); ?></li>
+                            <li><strong><?php esc_html_e('Sync:', 'dotmavriq-job-sync'); ?></strong> <?php esc_html_e('Import and update jobs from TeamTailor', 'dotmavriq-job-sync'); ?></li>
+                            <li><strong><?php esc_html_e('Shortcode:', 'dotmavriq-job-sync'); ?></strong> <?php esc_html_e('Use', 'dotmavriq-job-sync'); ?> <code>[teamtailor_jobs]</code> <?php esc_html_e('to display jobs', 'dotmavriq-job-sync'); ?></li>
                         </ul>
                     </div>
 
                     <!-- API Info Box -->
                     <div class="teamtailor-help-box">
-                        <h3><?php esc_html_e('About the API Test', 'teamtailor-integrator'); ?></h3>
-                        <p><?php esc_html_e('The API Test helps you verify that your TeamTailor connection is working correctly. Additionally:', 'teamtailor-integrator'); ?></p>
+                        <h3><?php esc_html_e('About the API Test', 'dotmavriq-job-sync'); ?></h3>
+                        <p><?php esc_html_e('The API Test helps you verify that your TeamTailor connection is working correctly. Additionally:', 'dotmavriq-job-sync'); ?></p>
                         <ul>
-                            <li><?php esc_html_e('See the exact format of data from TeamTailor', 'teamtailor-integrator'); ?></li>
-                            <li><?php esc_html_e('Verify job listings are available', 'teamtailor-integrator'); ?></li>
-                            <li><?php esc_html_e('Understand the data structure before import', 'teamtailor-integrator'); ?></li>
+                            <li><?php esc_html_e('See the exact format of data from TeamTailor', 'dotmavriq-job-sync'); ?></li>
+                            <li><?php esc_html_e('Verify job listings are available', 'dotmavriq-job-sync'); ?></li>
+                            <li><?php esc_html_e('Understand the data structure before import', 'dotmavriq-job-sync'); ?></li>
                             <?php if ($use_mock): ?>
-                            <li><em><?php esc_html_e('Currently showing mock data (Meridian ERP)', 'teamtailor-integrator'); ?></em></li>
+                            <li><em><?php esc_html_e('Currently showing mock data (Meridian ERP)', 'dotmavriq-job-sync'); ?></em></li>
                             <?php endif; ?>
                         </ul>
                     </div>
@@ -392,23 +360,23 @@ class TeamTailor_Integrator_Admin {
                     <!-- Documentation Box -->
                     <div class="teamtailor-card">
                         <div class="teamtailor-card-header">
-                            <h3 class="teamtailor-card-title"><?php esc_html_e('Documentation', 'teamtailor-integrator'); ?></h3>
+                            <h3 class="teamtailor-card-title"><?php esc_html_e('Documentation', 'dotmavriq-job-sync'); ?></h3>
                         </div>
                         <div class="teamtailor-card-body">
                             <div class="teamtailor-buttons-group">
-                                <p><?php esc_html_e('For TeamTailor API documentation, visit:', 'teamtailor-integrator'); ?></p>
+                                <p><?php esc_html_e('For TeamTailor API documentation, visit:', 'dotmavriq-job-sync'); ?></p>
                                 <a href="https://docs.teamtailor.com/" target="_blank" class="button button-secondary">
-                                    <?php esc_html_e('TeamTailor API Docs', 'teamtailor-integrator'); ?>
+                                    <?php esc_html_e('TeamTailor API Docs', 'dotmavriq-job-sync'); ?>
                                 </a>
 
-                                <p style="margin-top: 15px;"><?php esc_html_e('See our plugin documentation and keep up with updates:', 'teamtailor-integrator'); ?></p>
+                                <p style="margin-top: 15px;"><?php esc_html_e('See our plugin documentation and keep up with updates:', 'dotmavriq-job-sync'); ?></p>
                                 <a href="https://github.com/dotmavriq/TeamTailor-Integrator-For-WordPress" target="_blank" class="button button-secondary">
-                                    <?php esc_html_e('GitHub Repository', 'teamtailor-integrator'); ?>
+                                    <?php esc_html_e('GitHub Repository', 'dotmavriq-job-sync'); ?>
                                 </a>
 
-                                <p style="margin-top: 15px;"><?php esc_html_e('Request features or report bugs:', 'teamtailor-integrator'); ?></p>
+                                <p style="margin-top: 15px;"><?php esc_html_e('Request features or report bugs:', 'dotmavriq-job-sync'); ?></p>
                                 <a href="https://github.com/dotmavriq/TeamTailor-Integrator-For-WordPress/issues" target="_blank" class="button button-secondary">
-                                    <?php esc_html_e('GitHub Issues', 'teamtailor-integrator'); ?>
+                                    <?php esc_html_e('GitHub Issues', 'dotmavriq-job-sync'); ?>
                                 </a>
                             </div>
                         </div>
@@ -428,20 +396,20 @@ class TeamTailor_Integrator_Admin {
         // Check if the form has been submitted
         if (isset($_POST['teamtailor_integrator_api_token'])) {
             // Verify nonce for security
-            if (isset($_POST['teamtailor_token_nonce']) && wp_verify_nonce(wp_unslash($_POST['teamtailor_token_nonce']), 'teamtailor_save_token')) {
+            if (isset($_POST['teamtailor_token_nonce']) && wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['teamtailor_token_nonce'])), 'teamtailor_save_token')) {
                 $api_token = sanitize_text_field(wp_unslash($_POST['teamtailor_integrator_api_token']));
 
                 // Validate the API token
                 if (!empty($api_token)) {
                     // Save the token
                     update_option('teamtailor_integrator_api_token', $api_token);
-                    echo '<div class="teamtailor-notice teamtailor-notice-success"><p>' . esc_html__('API Token saved successfully.', 'teamtailor-integrator') . '</p></div>';
+                    echo '<div class="teamtailor-notice teamtailor-notice-success"><p>' . esc_html__('API Token saved successfully.', 'dotmavriq-job-sync') . '</p></div>';
                 } else {
                     // Display error message
-                    echo '<div class="teamtailor-notice teamtailor-notice-error"><p>' . esc_html__('API Token cannot be empty. Please check your token and try again.', 'teamtailor-integrator') . '</p></div>';
+                    echo '<div class="teamtailor-notice teamtailor-notice-error"><p>' . esc_html__('API Token cannot be empty. Please check your token and try again.', 'dotmavriq-job-sync') . '</p></div>';
                 }
             } else {
-                echo '<div class="teamtailor-notice teamtailor-notice-error"><p>' . esc_html__('Security verification failed. Please try again.', 'teamtailor-integrator') . '</p></div>';
+                echo '<div class="teamtailor-notice teamtailor-notice-error"><p>' . esc_html__('Security verification failed. Please try again.', 'dotmavriq-job-sync') . '</p></div>';
             }
         }
 
@@ -453,15 +421,15 @@ class TeamTailor_Integrator_Admin {
         // Connection status indicator
         if ($use_mock) {
             echo '<div class="teamtailor-status-box teamtailor-status-success">';
-            echo '<p><strong>' . esc_html__('Status:', 'teamtailor-integrator') . '</strong> ' . esc_html__('Mock data mode — using test data (Meridian ERP)', 'teamtailor-integrator') . '</p>';
+            echo '<p><strong>' . esc_html__('Status:', 'dotmavriq-job-sync') . '</strong> ' . esc_html__('Mock data mode — using test data (Meridian ERP)', 'dotmavriq-job-sync') . '</p>';
             echo '</div>';
         } elseif ($has_key) {
             echo '<div class="teamtailor-status-box teamtailor-status-success">';
-            echo '<p><strong>' . esc_html__('Status:', 'teamtailor-integrator') . '</strong> ' . esc_html__('Connected to TeamTailor API', 'teamtailor-integrator') . '</p>';
+            echo '<p><strong>' . esc_html__('Status:', 'dotmavriq-job-sync') . '</strong> ' . esc_html__('Connected to TeamTailor API', 'dotmavriq-job-sync') . '</p>';
             echo '</div>';
         } else {
             echo '<div class="teamtailor-status-box teamtailor-status-warning">';
-            echo '<p><strong>' . esc_html__('Status:', 'teamtailor-integrator') . '</strong> ' . esc_html__('Not connected — API token or mock data required', 'teamtailor-integrator') . '</p>';
+            echo '<p><strong>' . esc_html__('Status:', 'dotmavriq-job-sync') . '</strong> ' . esc_html__('Not connected — API token or mock data required', 'dotmavriq-job-sync') . '</p>';
             echo '</div>';
         }
 
@@ -472,22 +440,22 @@ class TeamTailor_Integrator_Admin {
                 <?php wp_nonce_field('teamtailor_save_token', 'teamtailor_token_nonce'); ?>
                 <table class="form-table">
                     <tr valign="top">
-                        <th scope="row"><?php esc_html_e('API Token:', 'teamtailor-integrator'); ?></th>
+                        <th scope="row"><?php esc_html_e('API Token:', 'dotmavriq-job-sync'); ?></th>
                         <td>
                             <input
                                 type="text"
                                 name="teamtailor_integrator_api_token"
                                 value="<?php echo esc_attr(get_option('teamtailor_integrator_api_token')); ?>"
-                                placeholder="<?php esc_attr_e('Enter your TeamTailor API token', 'teamtailor-integrator'); ?>"
+                                placeholder="<?php esc_attr_e('Enter your TeamTailor API token', 'dotmavriq-job-sync'); ?>"
                             />
                             <p class="description">
-                                <?php esc_html_e('Enter your TeamTailor API token here.', 'teamtailor-integrator'); ?>
-                                <a href="https://docs.teamtailor.com/" target="_blank"><?php esc_html_e('Learn how to get your API token', 'teamtailor-integrator'); ?></a>
+                                <?php esc_html_e('Enter your TeamTailor API token here.', 'dotmavriq-job-sync'); ?>
+                                <a href="https://docs.teamtailor.com/" target="_blank"><?php esc_html_e('Learn how to get your API token', 'dotmavriq-job-sync'); ?></a>
                             </p>
                         </td>
                     </tr>
                 </table>
-                <input type="submit" name="submit" id="submit" class="button button-primary" value="<?php esc_attr_e('Save API Token', 'teamtailor-integrator'); ?>">
+                <input type="submit" name="submit" id="submit" class="button button-primary" value="<?php esc_attr_e('Save API Token', 'dotmavriq-job-sync'); ?>">
             </form>
         </div>
         <?php
@@ -505,7 +473,7 @@ class TeamTailor_Integrator_Admin {
 
         if (!$api_key && !$use_mock) {
             echo '<div class="teamtailor-notice teamtailor-notice-error">';
-            echo '<p>' . esc_html__('API Key is not set. Please configure your API token in the Settings tab or enable "Use Mock Data" in the Advanced tab.', 'teamtailor-integrator') . '</p>';
+            echo '<p>' . esc_html__('API Key is not set. Please configure your API token in the Settings tab or enable "Use Mock Data" in the Advanced tab.', 'dotmavriq-job-sync') . '</p>';
             echo '</div>';
             return;
         }
@@ -516,7 +484,7 @@ class TeamTailor_Integrator_Admin {
 
         if ($response === false) {
             echo '<div class="teamtailor-notice teamtailor-notice-error">';
-            echo '<p>' . esc_html__('Connection failed: Unable to connect to TeamTailor API. Please check your API token and try again.', 'teamtailor-integrator') . '</p>';
+            echo '<p>' . esc_html__('Connection failed: Unable to connect to TeamTailor API. Please check your API token and try again.', 'dotmavriq-job-sync') . '</p>';
             echo '</div>';
         } else {
             // Get a count of jobs
@@ -525,7 +493,7 @@ class TeamTailor_Integrator_Admin {
             echo '<div class="teamtailor-notice teamtailor-notice-success">';
             echo '<p>' . esc_html( sprintf(
                 /* translators: %s: number of job listings received */
-                _n( 'Connection successful! Received data for %s job listing.', 'Connection successful! Received data for %s job listings.', $job_count, 'teamtailor-integrator' ),
+                _n( 'Connection successful! Received data for %s job listing.', 'Connection successful! Received data for %s job listings.', $job_count, 'dotmavriq-job-sync'),
                 number_format_i18n( $job_count )
             ) ) . '</p>';
             echo '</div>';
@@ -537,9 +505,9 @@ class TeamTailor_Integrator_Admin {
             ?>
             <div class="teamtailor-json-container">
                 <div class="teamtailor-json-header">
-                    <h3><?php esc_html_e('Raw JSON Response', 'teamtailor-integrator'); ?></h3>
+                    <h3><?php esc_html_e('Raw JSON Response', 'dotmavriq-job-sync'); ?></h3>
                     <button id="teamtailor-copy-json" class="button" data-clipboard-target="#teamtailor-json-code">
-                        <?php esc_html_e('Copy JSON', 'teamtailor-integrator'); ?>
+                        <?php esc_html_e('Copy JSON', 'dotmavriq-job-sync'); ?>
                     </button>
                 </div>
 
@@ -582,27 +550,27 @@ class TeamTailor_Integrator_Admin {
     public function register_custom_post_type() {
         register_post_type('teamtailor_jobs', [
             'labels' => [
-                'name' => __('TeamTailor Jobs', 'teamtailor-integrator'),
-                'singular_name' => __('TeamTailor Job', 'teamtailor-integrator'),
-                'add_new' => __('Add New', 'teamtailor-integrator'),
-                'add_new_item' => __('Add New Job', 'teamtailor-integrator'),
-                'edit_item' => __('Edit Job', 'teamtailor-integrator'),
-                'new_item' => __('New Job', 'teamtailor-integrator'),
-                'view_item' => __('View Job', 'teamtailor-integrator'),
-                'search_items' => __('Search Jobs', 'teamtailor-integrator'),
-                'not_found' => __('No jobs found', 'teamtailor-integrator'),
-                'not_found_in_trash' => __('No jobs found in Trash', 'teamtailor-integrator'),
-                'all_items' => __('All Jobs', 'teamtailor-integrator'),
-                'archives' => __('Job Archives', 'teamtailor-integrator'),
-                'insert_into_item' => __('Insert into job', 'teamtailor-integrator'),
-                'uploaded_to_this_item' => __('Uploaded to this job', 'teamtailor-integrator'),
-                'featured_image' => __('Job Image', 'teamtailor-integrator'),
-                'set_featured_image' => __('Set job image', 'teamtailor-integrator'),
-                'remove_featured_image' => __('Remove job image', 'teamtailor-integrator'),
-                'use_featured_image' => __('Use as job image', 'teamtailor-integrator'),
-                'filter_items_list' => __('Filter jobs list', 'teamtailor-integrator'),
-                'items_list_navigation' => __('Jobs list navigation', 'teamtailor-integrator'),
-                'items_list' => __('Jobs list', 'teamtailor-integrator'),
+                'name' => __('TeamTailor Jobs', 'dotmavriq-job-sync'),
+                'singular_name' => __('TeamTailor Job', 'dotmavriq-job-sync'),
+                'add_new' => __('Add New', 'dotmavriq-job-sync'),
+                'add_new_item' => __('Add New Job', 'dotmavriq-job-sync'),
+                'edit_item' => __('Edit Job', 'dotmavriq-job-sync'),
+                'new_item' => __('New Job', 'dotmavriq-job-sync'),
+                'view_item' => __('View Job', 'dotmavriq-job-sync'),
+                'search_items' => __('Search Jobs', 'dotmavriq-job-sync'),
+                'not_found' => __('No jobs found', 'dotmavriq-job-sync'),
+                'not_found_in_trash' => __('No jobs found in Trash', 'dotmavriq-job-sync'),
+                'all_items' => __('All Jobs', 'dotmavriq-job-sync'),
+                'archives' => __('Job Archives', 'dotmavriq-job-sync'),
+                'insert_into_item' => __('Insert into job', 'dotmavriq-job-sync'),
+                'uploaded_to_this_item' => __('Uploaded to this job', 'dotmavriq-job-sync'),
+                'featured_image' => __('Job Image', 'dotmavriq-job-sync'),
+                'set_featured_image' => __('Set job image', 'dotmavriq-job-sync'),
+                'remove_featured_image' => __('Remove job image', 'dotmavriq-job-sync'),
+                'use_featured_image' => __('Use as job image', 'dotmavriq-job-sync'),
+                'filter_items_list' => __('Filter jobs list', 'dotmavriq-job-sync'),
+                'items_list_navigation' => __('Jobs list navigation', 'dotmavriq-job-sync'),
+                'items_list' => __('Jobs list', 'dotmavriq-job-sync'),
             ],
             'public' => true,
             'has_archive' => false,
@@ -644,13 +612,13 @@ class TeamTailor_Integrator_Admin {
         $teamtailor_job_type = get_post_meta($post->ID, '_teamtailor_job_type', true);
 
         // Metabox HTML
-        echo '<label for="teamtailor_job_id">' . esc_html__( 'Job ID:', 'teamtailor-integrator' ) . '</label>';
+        echo '<label for="teamtailor_job_id">' . esc_html__( 'Job ID:', 'dotmavriq-job-sync') . '</label>';
         echo '<input type="text" id="teamtailor_job_id" name="teamtailor_job_id" value="' . esc_attr($teamtailor_job_id) . '" size="25" />';
 
-        echo '<label for="teamtailor_job_type">' . esc_html__( 'Job Type:', 'teamtailor-integrator' ) . '</label>';
+        echo '<label for="teamtailor_job_type">' . esc_html__( 'Job Type:', 'dotmavriq-job-sync') . '</label>';
         echo '<input type="text" id="teamtailor_job_type" name="teamtailor_job_type" value="' . esc_attr($teamtailor_job_type) . '" size="25" />';
 
-        echo '<label for="teamtailor_company">' . esc_html__( 'Company:', 'teamtailor-integrator' ) . '</label>';
+        echo '<label for="teamtailor_company">' . esc_html__( 'Company:', 'dotmavriq-job-sync') . '</label>';
         echo '<input type="text" id="teamtailor_company" name="teamtailor_company" value="' . esc_attr(get_post_meta($post->ID, 'teamtailor_company', true)) . '" size="25" />';
     }
 
@@ -661,7 +629,7 @@ class TeamTailor_Integrator_Admin {
      * @param    int    $post_id    The ID of the post being saved.
      */
     public function save_job_metaboxes($post_id) {
-        if (!isset($_POST['teamtailor_job_nonce']) || !wp_verify_nonce(wp_unslash($_POST['teamtailor_job_nonce']), plugin_basename(__FILE__))) {
+        if (!isset($_POST['teamtailor_job_nonce']) || !wp_verify_nonce(sanitize_text_field(wp_unslash($_POST['teamtailor_job_nonce'])), plugin_basename(__FILE__))) {
             return $post_id;
         }
         if (defined('DOING_AUTOSAVE') && DOING_AUTOSAVE) {
@@ -690,7 +658,7 @@ class TeamTailor_Integrator_Admin {
      * @return   array                The modified columns.
      */
     public function jobs_add_id_column($columns) {
-        $columns['job_id'] = __('Job ID', 'teamtailor-integrator');
+        $columns['job_id'] = __('Job ID', 'dotmavriq-job-sync');
         return $columns;
     }
 
@@ -716,7 +684,7 @@ class TeamTailor_Integrator_Admin {
      * @return   array                The modified columns.
      */
     public function jobs_add_company_column($columns) {
-        $columns['company'] = __('Company', 'teamtailor-integrator');
+        $columns['company'] = __('Company', 'dotmavriq-job-sync');
         return $columns;
     }
 
@@ -780,12 +748,12 @@ class TeamTailor_Integrator_Admin {
         foreach($columns as $key => $value) {
             if ($key == 'title') {
                 $new_order[$key] = $value;
-                $new_order['job_id'] = __('Job ID', 'teamtailor-integrator');
+                $new_order['job_id'] = __('Job ID', 'dotmavriq-job-sync');
             } else if ($key != 'date') {
                 $new_order[$key] = $value;
             }
         }
-        $new_order['date'] = __('Date', 'teamtailor-integrator');
+        $new_order['date'] = __('Date', 'dotmavriq-job-sync');
         return $new_order;
     }
 
@@ -798,35 +766,35 @@ class TeamTailor_Integrator_Admin {
         if (function_exists('acf_add_local_field_group')) {
             acf_add_local_field_group(array(
                 'key' => 'group_teamtailor_jobs',
-                'title' => __('TeamTailor Jobs Fields', 'teamtailor-integrator'),
+                'title' => __('TeamTailor Jobs Fields', 'dotmavriq-job-sync'),
                 'fields' => array(
                     array(
                         'key' => 'field_teamtailor_job_id',
-                        'label' => __('Job ID', 'teamtailor-integrator'),
+                        'label' => __('Job ID', 'dotmavriq-job-sync'),
                         'name' => '_teamtailor_job_id',
                         'type' => 'text',
                     ),
                     array(
                         'key' => 'field_teamtailor_departments',
-                        'label' => __('Departments', 'teamtailor-integrator'),
+                        'label' => __('Departments', 'dotmavriq-job-sync'),
                         'name' => 'teamtailor_departments',
                         'type' => 'text',
                     ),
                     array(
                         'key' => 'field_teamtailor_locations',
-                        'label' => __('Locations', 'teamtailor-integrator'),
+                        'label' => __('Locations', 'dotmavriq-job-sync'),
                         'name' => 'teamtailor_locations',
                         'type' => 'text',
                     ),
                     array(
                         'key' => 'field_teamtailor_roles',
-                        'label' => __('Roles', 'teamtailor-integrator'),
+                        'label' => __('Roles', 'dotmavriq-job-sync'),
                         'name' => 'teamtailor_roles',
                         'type' => 'text',
                     ),
                     array(
                         'key' => 'field_teamtailor_countries',
-                        'label' => __('Countries', 'teamtailor-integrator'),
+                        'label' => __('Countries', 'dotmavriq-job-sync'),
                         'name' => 'teamtailor_countries',
                         'type' => 'text',
                     ),
@@ -888,9 +856,9 @@ class TeamTailor_Integrator_Admin {
         };
 
         // Register each custom field (labels are already passed through __())
-        $register_custom_field('_teamtailor_job_id', __('TeamTailor Job ID', 'teamtailor-integrator'));
-        $register_custom_field('teamtailor_departments', __('TeamTailor Departments', 'teamtailor-integrator'));
-        $register_custom_field('teamtailor_locations', __('TeamTailor Locations', 'teamtailor-integrator'));
-        $register_custom_field('teamtailor_roles', __('TeamTailor Roles', 'teamtailor-integrator'));
+        $register_custom_field('_teamtailor_job_id', __('TeamTailor Job ID', 'dotmavriq-job-sync'));
+        $register_custom_field('teamtailor_departments', __('TeamTailor Departments', 'dotmavriq-job-sync'));
+        $register_custom_field('teamtailor_locations', __('TeamTailor Locations', 'dotmavriq-job-sync'));
+        $register_custom_field('teamtailor_roles', __('TeamTailor Roles', 'dotmavriq-job-sync'));
     }
 }

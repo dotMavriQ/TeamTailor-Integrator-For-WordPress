@@ -1,19 +1,21 @@
-=== TeamTailor Integrator ===
+=== dotMavriQ's Job Sync for Teamtailor ===
 Contributors: dotmavriq
 Donate link: https://github.com/sponsors/dotMavriQ
 Tags: teamtailor, jobs, recruitment, careers, job listings
 Requires at least: 5.8
 Tested up to: 6.9
 Requires PHP: 7.4
-Stable tag: 1.2.2
+Stable tag: 1.2.3
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
-Integrate TeamTailor recruitment with WordPress. Sync job listings, display via shortcodes, and manage recruitment directly from your dashboard.
+Sync job listings from Teamtailor into WordPress as a custom post type, with shortcode display and admin tooling. Independent integration; not affiliated with Teamtailor AB.
 
 == Description ==
 
-The TeamTailor Integrator plugin seamlessly integrates TeamTailor's recruitment services with your WordPress site, enabling you to display job listings, receive applications, and manage your recruitment process directly through your website. This plugin utilizes the TeamTailor API to offer a straightforward method for enhancing your site with powerful recruitment capabilities.
+dotMavriQ's Job Sync for Teamtailor connects WordPress to the Teamtailor recruitment platform via its public API, importing your active job listings as a custom post type so they can be displayed, themed, and queried like any other WordPress content. It is built for organisations that already use Teamtailor as their applicant tracking system and want their careers page to live inside WordPress.
+
+This plugin is an independent third-party integration. "Teamtailor" is a trademark of Teamtailor AB; this plugin is not affiliated with, endorsed by, or sponsored by Teamtailor AB.
 
 = Features =
 
@@ -35,9 +37,19 @@ This plugin is compatible with:
 * Advanced Custom Fields (ACF)
 * Any theme following WordPress coding standards
 
-= External Services =
+== External services ==
 
-This plugin communicates with the TeamTailor API (api.teamtailor.com) to fetch job listings. No personal data is sent to TeamTailor from your WordPress site. The API key is stored in your WordPress database and used solely for authenticating with TeamTailor's services.
+This plugin connects to the Teamtailor API (https://api.teamtailor.com), a third-party recruitment service operated by Teamtailor AB. The connection is required to fetch job listings, departments, locations, and roles so they can be displayed on your WordPress site.
+
+What is sent and when:
+* When an administrator clicks "Test API" in the plugin settings, or when a sync runs (manually triggered from the admin UI), the plugin makes authenticated HTTP GET requests to api.teamtailor.com using the API token you have configured. Only the API token (in the Authorization header) and standard request metadata (User-Agent, IP address of your server) are transmitted. No site visitor data and no personal data from your WordPress users are sent.
+* When "Use Mock Data" is enabled in the Advanced tab, no requests are made to Teamtailor at all — the plugin uses bundled local fixture data.
+
+This service is provided by Teamtailor AB. By using this plugin you agree to their terms and privacy policy:
+* Terms of Service: https://www.teamtailor.com/en/terms-of-service/
+* Privacy Policy: https://www.teamtailor.com/en/privacy-policy/
+
+Note: "Teamtailor" is a trademark of Teamtailor AB. This plugin is an independent integration and is not affiliated with, endorsed by, or sponsored by Teamtailor AB.
 
 == Installation ==
 
@@ -80,6 +92,15 @@ This plugin only reads data from TeamTailor's API. It fetches job listings using
 3. API Test tab showing raw JSON response from TeamTailor.
 
 == Changelog ==
+
+= 1.2.3 =
+* Renamed plugin and slug to "dotMavriQ's Job Sync for Teamtailor" / `dotmavriq-job-sync` to comply with WordPress.org trademark guidelines (no implied affiliation with Teamtailor AB)
+* Sanitised nonce values with `sanitize_text_field( wp_unslash( ... ) )` before passing to `wp_verify_nonce`
+* Escaped admin logo URL with `esc_url()`
+* Removed inline `<script>` block from admin page; moved handler into the enqueued admin JS and passed data via `wp_localize_script`
+* Updated bundled Prism.js from 1.28.0 to 1.30.0
+* Expanded "External services" section in readme with full disclosure of Teamtailor API usage and links to Teamtailor's terms and privacy policy
+* Bumped version to 1.2.3
 
 = 1.2.2 =
 * Fix CSRF - added nonce validation to API key save form

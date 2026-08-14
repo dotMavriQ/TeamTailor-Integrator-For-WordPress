@@ -1,0 +1,581 @@
+# Copyright (C) 2026 Jonatan Jansson
+# This file is distributed under the GPLv2 or later.
+msgid ""
+msgstr ""
+"Project-Id-Version: dotMavriQ's Job Sync for Teamtailor 1.2.3\n"
+"Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/dotmavriq-job-sync\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2026-08-14T19:59:51+00:00\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"X-Generator: WP-CLI 2.12.0\n"
+"X-Domain: dotmavriq-job-sync\n"
+
+#. Plugin Name of the plugin
+#: teamtailor-integrator.php
+#: admin/class-teamtailor-integrator-admin.php:141
+#: admin/class-teamtailor-integrator-admin.php:142
+msgid "dotMavriQ's Job Sync for Teamtailor"
+msgstr ""
+
+#. Plugin URI of the plugin
+#: teamtailor-integrator.php
+msgid "https://github.com/dotMavriQ/TeamTailor-Integrator-For-WordPress"
+msgstr ""
+
+#. Description of the plugin
+#: teamtailor-integrator.php
+msgid "Sync job listings from Teamtailor to your WordPress site. Display jobs via shortcodes and manage them from your dashboard. Independent integration; not affiliated with Teamtailor AB."
+msgstr ""
+
+#. Author of the plugin
+#: teamtailor-integrator.php
+msgid "Jonatan Jansson"
+msgstr ""
+
+#. Author URI of the plugin
+#: teamtailor-integrator.php
+msgid "https://github.com/dotMavriQ"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:119
+msgid "Loading API response..."
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:120
+msgid "Error: Failed to fetch API response. Please try again."
+msgstr ""
+
+#. translators: %s: time since last sync
+#: admin/class-teamtailor-integrator-admin.php:174
+#, php-format
+msgid "%s ago"
+msgstr ""
+
+#. translators: %s: time since last sync
+#: admin/class-teamtailor-integrator-admin.php:174
+msgid "Never"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:201
+msgid "Settings"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:202
+#: admin/class-teamtailor-integrator-admin.php:266
+msgid "API Test"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:203
+msgid "Advanced"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:209
+msgid "API Configuration"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:211
+msgid "To connect with TeamTailor, you need to provide your TeamTailor API token. You can find this in your TeamTailor account under Settings > Integrations > API."
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:219
+msgid "Synchronization"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:221
+msgid "Sync your TeamTailor job listings to WordPress. This will import all active job listings and update any existing ones."
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:225
+msgid "Last Sync:"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:230
+msgid "Sync from TeamTailor"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:230
+msgid "Syncing..."
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:241
+msgid "Sync initiated"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:254
+#: admin/class-teamtailor-integrator-admin.php:412
+msgid "Security verification failed. Please try again."
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:268
+msgid "Test your TeamTailor API connection and view the raw JSON data returned by the API. This helps you understand the structure of the data that will be imported."
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:274
+msgid "You need to set up your API token in the Settings tab or enable \"Use Mock Data\" in the Advanced tab before testing the API."
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:277
+msgid "Test API"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:289
+msgid "Advanced Settings"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:291
+msgid "These advanced settings allow you to customize the behavior of the TeamTailor Integrator plugin."
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:305
+msgid "Debugging"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:305
+msgid "Show detailed debug information during sync"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:317
+msgid "Use Mock Data"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:317
+msgid "Use simulated job data (Meridian ERP) instead of the live TeamTailor API — useful for testing and development without a real API key"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:325
+msgid "Save Advanced Settings"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:337
+msgid "Quick Help"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:339
+#: admin/class-teamtailor-integrator-admin.php:443
+msgid "API Token:"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:339
+msgid "Required to connect to TeamTailor"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:340
+msgid "Mock Data:"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:340
+msgid "Enable in Advanced tab to test without a live API key"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:341
+msgid "Sync:"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:341
+msgid "Import and update jobs from TeamTailor"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:342
+msgid "Shortcode:"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:342
+msgid "Use"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:342
+msgid "to display jobs"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:348
+msgid "About the API Test"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:349
+msgid "The API Test helps you verify that your TeamTailor connection is working correctly. Additionally:"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:351
+msgid "See the exact format of data from TeamTailor"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:352
+msgid "Verify job listings are available"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:353
+msgid "Understand the data structure before import"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:355
+msgid "Currently showing mock data (Meridian ERP)"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:363
+msgid "Documentation"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:367
+msgid "For TeamTailor API documentation, visit:"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:369
+msgid "TeamTailor API Docs"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:372
+msgid "See our plugin documentation and keep up with updates:"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:374
+msgid "GitHub Repository"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:377
+msgid "Request features or report bugs:"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:379
+msgid "GitHub Issues"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:406
+msgid "API Token saved successfully."
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:409
+msgid "API Token cannot be empty. Please check your token and try again."
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:424
+#: admin/class-teamtailor-integrator-admin.php:428
+#: admin/class-teamtailor-integrator-admin.php:432
+msgid "Status:"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:424
+msgid "Mock data mode — using test data (Meridian ERP)"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:428
+msgid "Connected to TeamTailor API"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:432
+msgid "Not connected — API token or mock data required"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:449
+msgid "Enter your TeamTailor API token"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:452
+msgid "Enter your TeamTailor API token here."
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:453
+msgid "Learn how to get your API token"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:458
+msgid "Save API Token"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:476
+msgid "API Key is not set. Please configure your API token in the Settings tab or enable \"Use Mock Data\" in the Advanced tab."
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:487
+msgid "Connection failed: Unable to connect to TeamTailor API. Please check your API token and try again."
+msgstr ""
+
+#. translators: %s: number of job listings received
+#: admin/class-teamtailor-integrator-admin.php:496
+#, php-format
+msgid "Connection successful! Received data for %s job listing."
+msgid_plural "Connection successful! Received data for %s job listings."
+msgstr[0] ""
+msgstr[1] ""
+
+#: admin/class-teamtailor-integrator-admin.php:508
+msgid "Raw JSON Response"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:510
+msgid "Copy JSON"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:553
+msgid "TeamTailor Jobs"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:554
+msgid "TeamTailor Job"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:555
+msgid "Add New"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:556
+msgid "Add New Job"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:557
+msgid "Edit Job"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:558
+msgid "New Job"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:559
+msgid "View Job"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:560
+msgid "Search Jobs"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:561
+msgid "No jobs found"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:562
+msgid "No jobs found in Trash"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:563
+msgid "All Jobs"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:564
+msgid "Job Archives"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:565
+msgid "Insert into job"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:566
+msgid "Uploaded to this job"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:567
+msgid "Job Image"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:568
+msgid "Set job image"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:569
+msgid "Remove job image"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:570
+msgid "Use as job image"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:571
+msgid "Filter jobs list"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:572
+msgid "Jobs list navigation"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:573
+msgid "Jobs list"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:615
+msgid "Job ID:"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:618
+msgid "Job Type:"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:621
+msgid "Company:"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:661
+#: admin/class-teamtailor-integrator-admin.php:751
+#: admin/class-teamtailor-integrator-admin.php:773
+msgid "Job ID"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:687
+msgid "Company"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:756
+msgid "Date"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:769
+msgid "TeamTailor Jobs Fields"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:779
+msgid "Departments"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:785
+msgid "Locations"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:791
+msgid "Roles"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:797
+msgid "Countries"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:859
+msgid "TeamTailor Job ID"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:860
+msgid "TeamTailor Departments"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:861
+msgid "TeamTailor Locations"
+msgstr ""
+
+#: admin/class-teamtailor-integrator-admin.php:862
+msgid "TeamTailor Roles"
+msgstr ""
+
+#. translators: %s: HTTP error message from WordPress HTTP API
+#: includes/class-teamtailor-integrator-api.php:176
+#, php-format
+msgid "HTTP Error: %s"
+msgstr ""
+
+#: includes/class-teamtailor-integrator-api.php:180
+msgid "Error connecting to TeamTailor API. Enable debugging for more details."
+msgstr ""
+
+#. translators: %d: HTTP status code
+#: includes/class-teamtailor-integrator-api.php:196
+#, php-format
+msgid "API returned non-successful code: %d"
+msgstr ""
+
+#. translators: %s: JSON error message
+#: includes/class-teamtailor-integrator-api.php:207
+#, php-format
+msgid "JSON decode error: %s"
+msgstr ""
+
+#: includes/class-teamtailor-integrator-api.php:265
+msgid "Fetching jobs from mock data (Meridian ERP)..."
+msgstr ""
+
+#: includes/class-teamtailor-integrator-api.php:267
+msgid "Fetching jobs from TeamTailor API..."
+msgstr ""
+
+#: includes/class-teamtailor-integrator-api.php:272
+msgid "API call: jobs"
+msgstr ""
+
+#: includes/class-teamtailor-integrator-api.php:285
+msgid "Mock data mode active — using test data from Meridian ERP"
+msgstr ""
+
+#: includes/class-teamtailor-integrator-api.php:287
+msgid "Successfully connected to TeamTailor!"
+msgstr ""
+
+#. translators: %d: number of jobs fetched
+#: includes/class-teamtailor-integrator-api.php:293
+#, php-format
+msgid "Successfully fetched %d jobs from API"
+msgstr ""
+
+#: includes/class-teamtailor-integrator-api.php:296
+msgid "API Error: Invalid response format. Expected array with data field."
+msgstr ""
+
+#: includes/class-teamtailor-integrator-sync.php:108
+msgid "Starting sync"
+msgstr ""
+
+#: includes/class-teamtailor-integrator-sync.php:114
+msgid "API Key is not set. Please configure your API token in the Settings tab before syncing, or enable \"Use Mock Data\" in the Advanced tab for testing without a live API key."
+msgstr ""
+
+#: includes/class-teamtailor-integrator-sync.php:121
+msgid "Connecting with token:"
+msgstr ""
+
+#: includes/class-teamtailor-integrator-sync.php:130
+msgid "Fetching job listings"
+msgstr ""
+
+#: includes/class-teamtailor-integrator-sync.php:138
+msgid "Error fetching data from TeamTailor. Please check your API token and try again."
+msgstr ""
+
+#: includes/class-teamtailor-integrator-sync.php:140
+msgid "Debug info:"
+msgstr ""
+
+#: includes/class-teamtailor-integrator-sync.php:148
+msgid "No jobs found in TeamTailor API response. The API connected successfully but no job listings were returned."
+msgstr ""
+
+#: includes/class-teamtailor-integrator-sync.php:155
+msgid "Processing job data"
+msgstr ""
+
+#. translators: %1$d: number of jobs imported, %2$s: job/jobs
+#: includes/class-teamtailor-integrator-sync.php:229
+#, php-format
+msgid "<strong>%1$d</strong> new %2$s imported"
+msgstr ""
+
+#. translators: %1$d: number of jobs imported, %2$s: job/jobs
+#. translators: %1$d: number of jobs updated, %2$s: job/jobs
+#. translators: %1$d: number of jobs removed, %2$s: job/jobs
+#: includes/class-teamtailor-integrator-sync.php:229
+#: includes/class-teamtailor-integrator-sync.php:234
+#: includes/class-teamtailor-integrator-sync.php:239
+msgid "job"
+msgid_plural "jobs"
+msgstr[0] ""
+msgstr[1] ""
+
+#. translators: %1$d: number of jobs updated, %2$s: job/jobs
+#: includes/class-teamtailor-integrator-sync.php:234
+#, php-format
+msgid "<strong>%1$d</strong> existing %2$s updated"
+msgstr ""
+
+#. translators: %1$d: number of jobs removed, %2$s: job/jobs
+#: includes/class-teamtailor-integrator-sync.php:239
+#, php-format
+msgid "<strong>%1$d</strong> obsolete %2$s removed"
+msgstr ""
+
+#: includes/class-teamtailor-integrator-sync.php:243
+msgid "No changes made"
+msgstr ""
+
+#: includes/class-teamtailor-integrator-sync.php:247
+msgid "Sync completed successfully!"
+msgstr ""
+
+#: includes/class-teamtailor-integrator-sync.php:251
+msgid "View All Jobs"
+msgstr ""

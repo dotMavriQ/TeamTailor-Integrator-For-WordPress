@@ -105,20 +105,20 @@ class TeamTailor_Integrator_Sync {
 
         if ( $debug_mode ) {
             echo '<div class="teamtailor-status-box">';
-            echo '<p><strong>▶</strong> ' . esc_html__( 'Starting sync', 'teamtailor-integrator' ) . '</p>';
+            echo '<p><strong>▶</strong> ' . esc_html__( 'Starting sync', 'dotmavriq-job-sync') . '</p>';
             echo '</div>';
         }
 
         if ( ! $api_key && ! $use_mock ) {
             echo '<div class="teamtailor-notice teamtailor-notice-error">';
-            echo '<p>' . esc_html__( 'API Key is not set. Please configure your API token in the Settings tab before syncing, or enable "Use Mock Data" in the Advanced tab for testing without a live API key.', 'teamtailor-integrator' ) . '</p>';
+            echo '<p>' . esc_html__( 'API Key is not set. Please configure your API token in the Settings tab before syncing, or enable "Use Mock Data" in the Advanced tab for testing without a live API key.', 'dotmavriq-job-sync') . '</p>';
             echo '</div>';
             return;
         }
 
         if ( $debug_mode ) {
             echo '<div class="teamtailor-status-box">';
-            echo '<p><strong>▶</strong> ' . esc_html__( 'Connecting with token:', 'teamtailor-integrator' ) . ' ' . esc_html( substr( $api_key, 0, 5 ) ) . '...</p>';
+            echo '<p><strong>▶</strong> ' . esc_html__( 'Connecting with token:', 'dotmavriq-job-sync') . ' ' . esc_html( substr( $api_key, 0, 5 ) ) . '...</p>';
             echo '</div>';
         }
 
@@ -127,7 +127,7 @@ class TeamTailor_Integrator_Sync {
 
         if ( $debug_mode ) {
             echo '<div class="teamtailor-status-box">';
-            echo '<p><strong>▶</strong> ' . esc_html__( 'Fetching job listings', 'teamtailor-integrator' ) . '</p>';
+            echo '<p><strong>▶</strong> ' . esc_html__( 'Fetching job listings', 'dotmavriq-job-sync') . '</p>';
             echo '</div>';
         }
 
@@ -135,9 +135,9 @@ class TeamTailor_Integrator_Sync {
 
         if ( ! is_array( $jobs ) ) {
             echo '<div class="teamtailor-notice teamtailor-notice-error">';
-            echo '<p>' . esc_html__( 'Error fetching data from TeamTailor. Please check your API token and try again.', 'teamtailor-integrator' ) . '</p>';
+            echo '<p>' . esc_html__( 'Error fetching data from TeamTailor. Please check your API token and try again.', 'dotmavriq-job-sync') . '</p>';
             if ( $debug_mode ) {
-                echo '<p>' . esc_html__( 'Debug info:', 'teamtailor-integrator' ) . ' ' . esc_html( print_r( $jobs, true ) ) . '</p>';
+                echo '<p>' . esc_html__( 'Debug info:', 'dotmavriq-job-sync') . ' ' . esc_html( print_r( $jobs, true ) ) . '</p>';
             }
             echo '</div>';
             return;
@@ -145,14 +145,14 @@ class TeamTailor_Integrator_Sync {
 
         if ( empty( $jobs['data'] ) ) {
             echo '<div class="teamtailor-notice teamtailor-notice-warning">';
-            echo '<p>' . esc_html__( 'No jobs found in TeamTailor API response. The API connected successfully but no job listings were returned.', 'teamtailor-integrator' ) . '</p>';
+            echo '<p>' . esc_html__( 'No jobs found in TeamTailor API response. The API connected successfully but no job listings were returned.', 'dotmavriq-job-sync') . '</p>';
             echo '</div>';
             return;
         }
 
         if ( $debug_mode ) {
             echo '<div class="teamtailor-status-box">';
-            echo '<p><strong>▶</strong> ' . esc_html__( 'Processing job data', 'teamtailor-integrator' ) . '</p>';
+            echo '<p><strong>▶</strong> ' . esc_html__( 'Processing job data', 'dotmavriq-job-sync') . '</p>';
             echo '</div>';
         }
 
@@ -226,28 +226,28 @@ class TeamTailor_Integrator_Sync {
 
         if ( $jobs_synced > 0 ) {
             /* translators: %1$d: number of jobs imported, %2$s: job/jobs */
-            $summary[] = sprintf( __( '<strong>%1$d</strong> new %2$s imported', 'teamtailor-integrator' ), $jobs_synced, _n( 'job', 'jobs', $jobs_synced, 'teamtailor-integrator' ) );
+            $summary[] = sprintf( __( '<strong>%1$d</strong> new %2$s imported', 'dotmavriq-job-sync'), $jobs_synced, _n( 'job', 'jobs', $jobs_synced, 'dotmavriq-job-sync') );
         }
 
         if ( $jobs_updated > 0 ) {
             /* translators: %1$d: number of jobs updated, %2$s: job/jobs */
-            $summary[] = sprintf( __( '<strong>%1$d</strong> existing %2$s updated', 'teamtailor-integrator' ), $jobs_updated, _n( 'job', 'jobs', $jobs_updated, 'teamtailor-integrator' ) );
+            $summary[] = sprintf( __( '<strong>%1$d</strong> existing %2$s updated', 'dotmavriq-job-sync'), $jobs_updated, _n( 'job', 'jobs', $jobs_updated, 'dotmavriq-job-sync') );
         }
 
         if ( $jobs_removed > 0 ) {
             /* translators: %1$d: number of jobs removed, %2$s: job/jobs */
-            $summary[] = sprintf( __( '<strong>%1$d</strong> obsolete %2$s removed', 'teamtailor-integrator' ), $jobs_removed, _n( 'job', 'jobs', $jobs_removed, 'teamtailor-integrator' ) );
+            $summary[] = sprintf( __( '<strong>%1$d</strong> obsolete %2$s removed', 'dotmavriq-job-sync'), $jobs_removed, _n( 'job', 'jobs', $jobs_removed, 'dotmavriq-job-sync') );
         }
 
         if ( empty( $summary ) ) {
-            $summary[] = __( 'No changes made', 'teamtailor-integrator' );
+            $summary[] = __( 'No changes made', 'dotmavriq-job-sync');
         }
 
         echo '<div class="teamtailor-notice teamtailor-notice-success">';
-        echo '<p><strong>' . esc_html__( 'Sync completed successfully!', 'teamtailor-integrator' ) . '</strong></p>';
+        echo '<p><strong>' . esc_html__( 'Sync completed successfully!', 'dotmavriq-job-sync') . '</strong></p>';
         echo '<p>' . wp_kses_post( implode( ', ', $summary ) ) . '.</p>';
         echo '</div>';
 
-        echo '<p><a href="' . esc_url( admin_url( 'edit.php?post_type=teamtailor_jobs' ) ) . '" class="button button-secondary">' . esc_html__( 'View All Jobs', 'teamtailor-integrator' ) . '</a></p>';
+        echo '<p><a href="' . esc_url( admin_url( 'edit.php?post_type=teamtailor_jobs' ) ) . '" class="button button-secondary">' . esc_html__( 'View All Jobs', 'dotmavriq-job-sync') . '</a></p>';
     }
 }
