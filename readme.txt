@@ -5,7 +5,7 @@ Tags: teamtailor, jobs, recruitment, careers, job listings
 Requires at least: 5.8
 Tested up to: 7.0
 Requires PHP: 7.4
-Stable tag: 1.2.5
+Stable tag: 1.2.6
 License: GPLv2 or later
 License URI: https://www.gnu.org/licenses/gpl-2.0.html
 
@@ -92,6 +92,9 @@ This plugin only reads data from TeamTailor's API. It fetches job listings using
 3. API Test tab showing raw JSON response from TeamTailor.
 
 == Changelog ==
+
+= 1.2.6 =
+* Removed the Google Fonts stylesheet. No request is made to any third-party CDN and no visitor data leaves the site; the front-end now uses a system font stack. This also resolved a missing enqueue version, as that call was the one lacking it
 
 = 1.2.5 =
 * Filtered buffered AJAX output through `wp_kses_post()` in the API test and sync handlers

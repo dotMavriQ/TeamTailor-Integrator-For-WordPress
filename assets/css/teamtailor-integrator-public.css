@@ -2,7 +2,7 @@
  * TeamTailor Integrator — Public Styles
  *
  * All classes are prefixed with tt-jobs- to avoid conflicts with theme styles.
- * The component uses its own font stack (Inter via Google Fonts) and a
+ * The component uses a system font stack (no webfont request) and a
  * neutral colour palette so it works in any WordPress theme.
  *
  * @package TeamTailor_Integrator
@@ -17,7 +17,7 @@
 }
 
 .tt-jobs {
-  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   font-size: 16px;
   line-height: 1.6;
   color: #1a1a2e;
@@ -120,7 +120,7 @@
   width: 100%;
   padding: 0.5rem 0.75rem;
   font-size: 0.875rem;
-  font-family: 'Inter', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   color: #1a1a2e;
   background: #f9fafb;
   border: 1px solid #d1d5db;
@@ -151,7 +151,7 @@
   padding: 0.5rem 1rem;
   font-size: 0.8125rem;
   font-weight: 500;
-  font-family: 'Inter', sans-serif;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
   color: #6b7280;
   background: #f3f4f6;
   border: 1px solid #d1d5db;

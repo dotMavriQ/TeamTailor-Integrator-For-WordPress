@@ -68,13 +68,9 @@ class DotMavriQ_Job_Sync_Public {
             'all'
         );
 
-        // Load Google Font (Inter) for a clean, modern look — only on pages with the shortcode.
-        wp_enqueue_style(
-            $this->plugin_name . '-fonts',
-            'https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&display=swap',
-            array(),
-            null
-        );
+        // No webfont is enqueued. The stylesheet uses a system font stack so
+        // that no request is made to a third-party CDN and no visitor data
+        // leaves the site.
     }
 
     /**
